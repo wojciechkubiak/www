@@ -1,0 +1,51 @@
+@font-face {
+  font-family: AstroSpace;
+  src: url('./assets/astrospace.otf');
+}
+
+@font-face {
+  font-family: Mandalore;
+  src: url('./assets/MandaloreTitle.otf');
+}
+
+@font-face {
+  font-family: DancingScript, cursive;
+  src: url('./assets/DancingScript-Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: DancingScript, cursive;
+  src: url('./assets/DancingScript-Medium.ttf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: DancingScript, cursive;
+  src: url('./assets/DancingScript-SemiBold.ttf');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: DancingScript, cursive;
+  src: url('./assets/DancingScript-Bold.ttf');
+  font-weight: 700;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar{
+  height: 10px;
+  width: 4px;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+::-webkit-scrollbar-thumb:horizontal{
+  background:#2e305cda;
+  border-radius: 10px;
+}
+
