@@ -5,6 +5,7 @@ import Loader from "react-loader-spinner";
 import { FaHeadphonesAlt, FaSign, FaBuffer, FaRegIdCard } from "react-icons/fa";
 import { HiHome } from "react-icons/hi";
 import { RiMenuFoldLine, RiMenuUnfoldLine } from "react-icons/ri";
+import device from "./../utils/devices";
 
 const Menu = styled.div`
   position: fixed;
@@ -43,6 +44,18 @@ const ShowMenuBtn = styled.button`
   width: 48px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+
+  @media only screen and ${device.tablet} {
+    top: 70%;
+  }
+
+  @media only screen and ${device.laptop} {
+    top: 80%;
+  }
+
+  @media only screen and ${device.desktop} {
+    top: 90%;
+  }
 `;
 
 const LanguageBtn = styled.button`
@@ -56,6 +69,18 @@ const LanguageBtn = styled.button`
   width: 48px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+
+  @media only screen and ${device.tablet} {
+    top: 60%;
+  }
+  
+  @media only screen and ${device.laptop} {
+    top: 70%;
+  }
+
+  @media only screen and ${device.desktop} {
+    top: 80%;
+  }
 `;
 
 const Navbar = (props) => {

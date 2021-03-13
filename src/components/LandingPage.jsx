@@ -5,6 +5,7 @@ import Loader from "react-loader-spinner";
 import { gsap } from "gsap";
 import { MdMessage } from "react-icons/md";
 import * as animationData from "../assets/astronaut.json";
+import device from "../utils/devices";
 import "./../App.css";
 
 const CommunicationCloudContainer = styled.div`
@@ -21,6 +22,10 @@ const CommunicationElementsContainer = styled.div`
   top: 50%;
   transform: translate(-50%, -50%);
   width: 400px;
+
+  @media only screen and ${device.laptopMax} {
+    width: 197px;
+  }
 `;
 
 const Cloud = styled.div`
@@ -28,6 +33,8 @@ const Cloud = styled.div`
   left: 50%;
   width: 328px;
   transform: translate(-50%, 0%);
+
+
 `;
 
 const Dots = styled.div`
@@ -35,6 +42,7 @@ const Dots = styled.div`
   left: 50%;
   width: 128px;
   transform: translate(-50%, 0%);
+
 `;
 
 const Text = styled.div`
@@ -46,6 +54,7 @@ const Text = styled.div`
 
 const Message = styled.h1`
   color: rgba(0, 0, 0, 0.8);
+
 `;
 
 const GetToKnowContainer = styled.div`
@@ -54,12 +63,19 @@ const GetToKnowContainer = styled.div`
   justify-content: space-evenly;
   opacity: 0;
   height: 300px;
+
+  @media only screen and ${device.laptopMax} {
+    height: 128px;
+  }
 `;
 
 const GetToKnowHeader = styled.h1`
   text-align: center;
   color: white;
   font-family: "Dancing Script", cursive;
+  @media only screen and ${device.laptopMax} {
+    font-size: 16px;
+  }
 `;
 
 const GetToKnowBtn = styled.button`
@@ -73,15 +89,21 @@ const GetToKnowBtn = styled.button`
   border-radius: 40px;
   font-family: "Ubuntu", sans-serif;
   font-weight: 500;
+
+  @media only screen and ${device.laptopMax} {
+    font-size: 11px;
+    padding: 10px;
+  }
 `;
 
 const NameContainer = styled.div`
   height: 100vh;
   background-color: white;
-  width: 37vw;
-  min-width: 500px;
+  min-width: 37vw;
+  // min-width: 500px;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   justify-content: space-evenly;
 `;
 

@@ -1,18 +1,19 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
-
 import HorizontalScroll from "react-scroll-horizontal";
-
 import backgroundMusic from "./assets/bgsound.mp3";
 import Background from "./assets/bg.svg";
 import Navbar from "./components/Navbar";
 import LandingPage from "./components/LandingPage";
+import About from "./components/About";
+import Projects from "./components/Projects";
+
 import "./App.css";
+import devices from "./utils/devices";
 
 const AppMain = styled.div`
   overflow-x: scroll;
   overflow-y: hidden;
-  white-space: nowrap;
   height: 100vh;
   background-image: url(${Background});
   background-repeat: no-repeat;
@@ -54,13 +55,13 @@ const App = () => {
       <HorizontalScroll reverseScroll={true}>
         <div style={{ display: "inline-flex" }}>
           <LandingPage/>
-          <div className="card">
-            <h2>Projekty</h2>
-          </div>
-          <div className="card">
+          <About/>
+          <Projects/>
+          <div style={{backgroundColor: "white", minWidth: "101vw"}}>
+
             <h2>Umiejętności</h2>
           </div>
-          <div className="card">
+          <div style={{backgroundColor: "#373963", minWidth: "101vw"}}>
             <h2>Kontakt</h2>
           </div>
         </div>
