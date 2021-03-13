@@ -14,24 +14,33 @@ const Card = styled.div`
   padding-top: 50px;
 `;
 
-const ImgContainer = styled.div`
+const MobileImgContainer = styled.div`
   width: 300px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  //   border-radius: 50%;
+`;
+
+const WebImgContainer = styled.div`
+  width: 500px;
   height: 300px;
   position: relative;
   overflow: hidden;
-  border-radius: 50%;
+  //   border-radius: 50%;
 `;
 
 const ProjectText = styled.h1`
   margin-top: 50px;
+  
   text-align: center;
-//   color: white;
+  //   color: white;
 `;
 
 const ProjectType = styled.h1`
   font-family: "Dancing Script", cursive;
   text-align: center;
-//   color: white;
+  //   color: white;
 `;
 
 const Image = styled.img`
@@ -42,30 +51,78 @@ const Image = styled.img`
 `;
 
 const Projects = (props) => {
-  const ProjectCard = ({name, type, description, img, backgroundColor, textColor}) => {
+  const ProjectCard = ({
+    name,
+    type,
+    description,
+    img,
+    backgroundColor,
+    textColor,
+  }) => {
     return (
       <Card
         style={{
           backgroundColor: backgroundColor,
         }}
       >
-        <ImgContainer>
-          <Image src={img}></Image>
-        </ImgContainer>
-        <ProjectText style={{color: textColor}}>{name}</ProjectText>
-        <ProjectType style={{color: textColor}}>{type}</ProjectType>
+        {type.toLowerCase() === "mobile" && (
+          <MobileImgContainer>
+            <Image className="projects-card-img" src={img}></Image>
+          </MobileImgContainer>
+        )}
+        {type.toLowerCase() !== "mobile" && (
+          <WebImgContainer>
+            <Image className="projects-card-img" src={img}></Image>
+          </WebImgContainer>
+        )}
+        <ProjectText style={{ color: textColor }}>{name}</ProjectText>
+        <ProjectType style={{ color: textColor }}>{type}</ProjectType>
       </Card>
     );
   };
 
   return (
     <ProjectsContainer>
-      {ProjectCard({name: "TESTOWA NAZWA", type: "Web", description: "", img: ObbSys, backgroundColor: "#373963", textColor: "white"})}
-      {ProjectCard({name: "TESTOWA NAZWA", type: "Web", description: "", img: ObbSys, backgroundColor: "white", textColor: "rgba(0, 0, 0, 0.8)"})}
-      {ProjectCard({name: "TESTOWA NAZWA", type: "Web", description: "", img: ObbSys, backgroundColor: "#373963", textColor: "white"})}
-      {ProjectCard({name: "TESTOWA NAZWA", type: "Web", description: "", img: ObbSys, backgroundColor: "white", textColor: "rgba(0, 0, 0, 0.8)"})}
-      {ProjectCard({name: "TESTOWA NAZWA", type: "Web", description: "", img: ObbSys, backgroundColor: "#373963", textColor: "white"})}
-
+      {ProjectCard({
+        name: "TESTOWA NAZWA",
+        type: "Web",
+        description: "",
+        img: ObbSys,
+        backgroundColor: "white",
+        textColor: "rgba(0, 0, 0, 0.8)"
+      })}
+      {ProjectCard({
+        name: "TESTOWA NAZWA",
+        type: "Web",
+        description: "",
+        img: ObbSys,
+        backgroundColor: "white",
+        textColor: "rgba(0, 0, 0, 0.8)",
+      })}
+     {ProjectCard({
+        name: "TESTOWA NAZWA",
+        type: "Mobile",
+        description: "",
+        img: ObbSys,
+        backgroundColor: "white",
+        textColor: "rgba(0, 0, 0, 0.8)",
+      })}
+       {ProjectCard({
+        name: "TESTOWA NAZWA",
+        type: "Mobile",
+        description: "",
+        img: ObbSys,
+        backgroundColor: "white",
+        textColor: "rgba(0, 0, 0, 0.8)",
+      })}
+      {ProjectCard({
+        name: "TESTOWA NAZWA",
+        type: "Mobile",
+        description: "",
+        img: ObbSys,
+        backgroundColor: "white",
+        textColor: "rgba(0, 0, 0, 0.8)",
+      })}
     </ProjectsContainer>
   );
 };

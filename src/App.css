@@ -32,6 +32,20 @@
   font-weight: 700;
 }
 
+.projects-card-img {
+  filter: grayscale(1);
+  transition-property: all;
+  transition-property: transform;
+  transition-duration: 1s;
+}
+
+.projects-card-img:hover {
+  filter: grayscale(0);
+  transform: scale(1.2);
+  transition-property: all;
+  transition-property: transform;
+  transition-duration: 1s;
+}
 
 * {
   margin: 0;
@@ -41,7 +55,7 @@
 ::-webkit-scrollbar{
   height: 10px;
   width: 4px;
-  background:#373963
+  background:#383a63
 }
 
 ::-webkit-scrollbar-thumb:horizontal{

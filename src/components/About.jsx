@@ -30,10 +30,10 @@ const Download = styled.button`
 
 const About = (props) => {
   return (
-    <div style={{ height: "100vh", width: "400px", wordWrap: "break-word", backgroundColor: "white", padding: "50px" }}>   
-                <h1 style={{color: "rgba(0, 0, 0, 0.8)"}}>O mnie słów kilka:</h1>
+    <div style={{ height: "100vh", width: "400px", wordWrap: "break-word", backgroundColor: "#383a63", color: "white", padding: "50px" }}>   
+                <h1 style={{color: "white"}}>O mnie słów kilka:</h1>
 
-        <p style={{fontSize: "20px", wordSpacing: "12px", lineHeight: "36px", fontFamily: '"Ubuntu", sans-serif', color: "rgba(0, 0, 0, 0.8)", paddingTop: "30px"}}>
+        <p style={{fontSize: "20px", wordSpacing: "12px", lineHeight: "36px", fontFamily: '"Ubuntu", sans-serif',color: "white", paddingTop: "30px"}}>
         Cześć! Jestem developerem oraz studentem na ostatnim roku Informatyki
         Stosowanej i Systemów Pomiarowych. Komercyjnie - zajmuję się tworzeniem
         aplikacji mobilnych. Prywatnie uwielbiam również tworzyć strony
@@ -41,7 +41,7 @@ const About = (props) => {
         z czego będę dumny. Jeśli chcesz dowiedzieć się więcej, pobierz moje CV:
         </p>
         <Download><RiDownloadCloud2Line size={32}/></Download>
-        <h1 style={{color: "rgba(0, 0, 0, 0.8)"}}>Sprawdź moje projekty:</h1>
+        <h1 style={{ccolor: "white",}}>Sprawdź moje projekty:</h1>
     </div>
   );
 };
