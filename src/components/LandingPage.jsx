@@ -100,7 +100,6 @@ const NameContainer = styled.div`
   height: 100vh;
   background-color: white;
   min-width: 37vw;
-  // min-width: 500px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

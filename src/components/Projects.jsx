@@ -12,6 +12,8 @@ const Card = styled.div`
   padding-left: 100px;
   padding-right: 100px;
   padding-top: 50px;
+  border-left: 1px solid #383a6355;
+  border-right: 1px solid #383a6355;
 `;
 
 const MobileImgContainer = styled.div`

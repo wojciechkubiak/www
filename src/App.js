@@ -57,11 +57,11 @@ const App = () => {
           <LandingPage/>
           <About/>
           <Projects/>
-          <div style={{backgroundColor: "white", minWidth: "101vw"}}>
+          <div style={{backgroundColor: "#383a63", minWidth: "101vw"}}>
 
             <h2>Umiejętności</h2>
           </div>
-          <div style={{backgroundColor: "#373963", minWidth: "101vw"}}>
+          <div style={{backgroundColor: "white", minWidth: "40vw"}}>
             <h2>Kontakt</h2>
           </div>
         </div>
