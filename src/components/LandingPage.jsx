@@ -26,7 +26,7 @@ const CommunicationElementsContainer = styled.div`
 const Cloud = styled.div`
   position: relative;
   left: 50%;
-  width: 228px;
+  width: 328px;
   transform: translate(-50%, 0%);
 `;
 
@@ -48,12 +48,69 @@ const Message = styled.h1`
   color: rgba(0, 0, 0, 0.8);
 `;
 
+const GetToKnowContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  opacity: 0;
+  height: 300px;
+`;
+
+const GetToKnowHeader = styled.h1`
+  text-align: center;
+  color: white;
+  font-family: "Dancing Script", cursive;
+`;
+
+const GetToKnowBtn = styled.button`
+  position: relative;
+  width: 100%;
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  background-color: #ff3b69;
+  color: white;
+  border-radius: 40px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+`;
+
+const NameContainer = styled.div`
+  height: 100vh;
+  background-color: white;
+  width: 37vw;
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+`;
+
+const NameSubcontainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Name = styled.h1`
+  font-size: 48px;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 600;
+  color: #464689;
+`;
+
+const Role = styled.h1`
+  font-size: 34px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+`;
+
 const LandingPage = (props) => {
   const [message, setMessage] = useState("Cześć!");
   let loadingDotsRef = useRef(null);
   let text1Ref = useRef(null);
   let buttonsRef = useRef(null);
   let containerRef = useRef(null);
+  let cloudRef = useRef(null);
 
   const animationConfig = {
     loop: true,
@@ -71,26 +128,29 @@ const LandingPage = (props) => {
       .to(text1Ref, {
         opacity: 0,
         duration: 1,
-
+        y: -80,
+        delay: 1,
         onComplete: () => setMessage("Nazywam się Wojtek"),
       })
+      .to(text1Ref, { y: 0 })
       .fromTo(
         loadingDotsRef,
         { opacity: 1, duration: 1 },
         { opacity: 0, duration: 2 }
       )
       .to(text1Ref, { opacity: 1, duration: 1 })
-      .to(text1Ref, { y: -80, opacity: 0, duration: 1 })
+      .to(text1Ref, { opacity: 0, duration: 1, y: -80, delay: 1 })
       .to(buttonsRef, { opacity: 1, y: -80, duration: 1 })
-      .to(containerRef, { width: "65vw", duration: 2 });
+      .to(containerRef, { width: "65vw", duration: 2 })
+      .to(cloudRef, { scale: 0.8, duration: 1 });
   }, []);
 
   return (
     <>
       <CommunicationCloudContainer ref={(r) => (containerRef = r)}>
         <CommunicationElementsContainer>
-          <Cloud>
-            <MdMessage color="white" size={228} />
+          <Cloud ref={(r) => (cloudRef = r)}>
+            <MdMessage color="white" size={328} />
           </Cloud>
           <Dots ref={(r) => (loadingDotsRef = r)}>
             <Loader type="ThreeDots" color="white" height="128" width="128" />
@@ -98,71 +158,28 @@ const LandingPage = (props) => {
           <Text ref={(r) => (text1Ref = r)} style={{ opacity: 0 }}>
             <Message>{message}</Message>
           </Text>
-          <div
-            ref={(r) => (buttonsRef = r)}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "space-evenly",
-              opacity: 0,
-              height: "300px",
-            }}
-          >
-            <h1
+          <GetToKnowContainer ref={(r) => (buttonsRef = r)}>
+            <GetToKnowHeader>Dowiedz się więcej</GetToKnowHeader>
+            <GetToKnowBtn
               style={{
-                textAlign: "center",
-                color: "white",
-                fontFamily: "'Dancing Script', cursive",
-              }}
-            >
-              Dowiedz się więcej
-            </h1>
-            <button
-              style={{
-                position: "relative",
-                width: "100%",
-                padding: "20px",
-                fontSize: "20px",
-                border: "none",
                 backgroundColor: "#ff3b69",
                 color: "white",
-                borderRadius: "40px",
-                fontFamily: "Ubuntu",
-                fontWeight: "500",
               }}
             >
               O mnie
-            </button>
-            <button
+            </GetToKnowBtn>
+            <GetToKnowBtn
               style={{
-                position: "relative",
-                width: "100%",
-                padding: "20px",
-                fontSize: "20px",
-                border: "none",
                 backgroundColor: "white",
                 color: "rgba(0, 0, 0, 0.8)",
-                borderRadius: "40px",
-                fontFamily: "Ubuntu",
-                fontWeight: "500",
               }}
             >
               Kontakt
-            </button>
-          </div>
+            </GetToKnowBtn>
+          </GetToKnowContainer>
         </CommunicationElementsContainer>
       </CommunicationCloudContainer>
-      <div
-        style={{
-          height: "100vh",
-          backgroundColor: "white",
-          width: "37vw",
-          minWidth: "500px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-evenly",
-        }}
-      >
+      <NameContainer>
         <Lottie
           options={animationConfig}
           height={500}
@@ -170,34 +187,11 @@ const LandingPage = (props) => {
           isStopped={false}
           isPaused={false}
         />
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          <h1
-            style={{
-              fontSize: 48,
-              textAlign: "center",
-              fontFamily: "Ubuntu",
-              fontWeight: "600",
-              color: "#464689",
-            }}
-          >
-            WOJCIECH KUBIAK
-          </h1>
-          <h1
-            style={{
-              fontSize: 34,
-              textAlign: "center",
-              color: "rgba(0, 0, 0, 0.6)",
-            }}
-          >
-            Developer
-          </h1>
-        </div>
-      </div>
+        <NameSubcontainer style={{}}>
+          <Name>WOJCIECH KUBIAK</Name>
+          <Role>Developer</Role>
+        </NameSubcontainer>
+      </NameContainer>
     </>
   );
 };

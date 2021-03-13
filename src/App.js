@@ -3,11 +3,10 @@ import styled from "styled-components";
 
 import HorizontalScroll from "react-scroll-horizontal";
 
-import backgroundMusic from "./assets/bg.mp3";
+import backgroundMusic from "./assets/bgsound.mp3";
 import Background from "./assets/bg.svg";
 import Navbar from "./components/Navbar";
 import LandingPage from "./components/LandingPage";
-
 import "./App.css";
 
 const AppMain = styled.div`
@@ -33,7 +32,7 @@ const App = () => {
     setTimeout(() => {
       setMusicLoaded(true);
       setPlayMusic(true);
-    }, 3000);
+    }, 2000);
   }, []);
 
   useEffect(() => {

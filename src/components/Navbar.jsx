@@ -33,10 +33,22 @@ const MenuContainer = styled.div`
 `;
 
 const ShowMenuBtn = styled.button`
-  position: relative;
+  position: absolute;
   top: 90%;
-  transform: translateY(-50%);
   color: white;
+  background-color: #464689;
+  border: none;
+  outline: none;
+  height: 64px;
+  width: 48px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+`;
+
+const LanguageBtn = styled.button`
+  position: absolute;
+  top: 80%;
+  color: #464689;
   background-color: white;
   border: none;
   outline: none;
@@ -94,10 +106,15 @@ const Navbar = (props) => {
           </div>
         )}
       </MenuContainer>
+      <div style={{display: "flex", flexDirection: "column"}}>
+      <LanguageBtn>
+        <p>PL</p>
+      </LanguageBtn>
       <ShowMenuBtn onClick={() => setShowMenu(!showMenu)}>
-        {showMenu && <RiMenuFoldLine size={24} color="#464689" />}
-        {!showMenu && <RiMenuUnfoldLine size={24} color="#464689" />}
+        {showMenu && <RiMenuFoldLine size={24} color="white" />}
+        {!showMenu && <RiMenuUnfoldLine size={24} color="white" />}
       </ShowMenuBtn>
+      </div>
     </Menu>
   );
 };
