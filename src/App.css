@@ -51,15 +51,3 @@
   margin: 0;
   padding: 0;
 }
-
-::-webkit-scrollbar{
-  height: 10px;
-  width: 4px;
-  background:#383a63
-}
-
-::-webkit-scrollbar-thumb:horizontal{
-  background:#2e305cda;
-  border-radius: 10px;
-}
-

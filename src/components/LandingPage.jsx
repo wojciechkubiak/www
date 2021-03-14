@@ -14,6 +14,10 @@ const CommunicationCloudContainer = styled.div`
   background-color: #2e305cda;
   position: relative;
   min-width: 600px;
+
+  @media only screen and (max-height: 600px) {
+    min-height: 1280px
+  }
 `;
 
 const CommunicationElementsContainer = styled.div`
@@ -33,8 +37,7 @@ const Cloud = styled.div`
   left: 50%;
   width: 328px;
   transform: translate(-50%, 0%);
-
-
+  font-family: 'Roboto', sans-serif;
 `;
 
 const Dots = styled.div`
@@ -54,7 +57,8 @@ const Text = styled.div`
 
 const Message = styled.h1`
   color: rgba(0, 0, 0, 0.8);
-
+  font-family: 'Lato', sans-serif;
+  font-weight: 800;
 `;
 
 const GetToKnowContainer = styled.div`
@@ -84,11 +88,10 @@ const GetToKnowBtn = styled.button`
   padding: 20px;
   font-size: 20px;
   border: none;
-  background-color: #ff3b69;
   color: white;
   border-radius: 40px;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 500;
+  font-family: 'Roboto', sans-serif;
+
 
   @media only screen and ${device.laptopMax} {
     font-size: 11px;
@@ -102,8 +105,11 @@ const NameContainer = styled.div`
   min-width: 37vw;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: space-evenly;
+
+  @media only screen and (max-height: 600px) {
+    min-height: 1280px
+  }
 `;
 
 const NameSubcontainer = styled.div`
@@ -114,14 +120,15 @@ const NameSubcontainer = styled.div`
 const Name = styled.h1`
   font-size: 48px;
   text-align: center;
-  font-family: "Ubuntu", sans-serif;
-  font-weight: 600;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
   color: #464689;
 `;
 
 const Role = styled.h1`
   font-size: 34px;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
   color: rgba(0, 0, 0, 0.6);
 `;
 
@@ -183,7 +190,7 @@ const LandingPage = (props) => {
             <GetToKnowHeader>Dowiedz się więcej</GetToKnowHeader>
             <GetToKnowBtn
               style={{
-                backgroundColor: "#ff3b69",
+                backgroundColor: "#5e6196",
                 color: "white",
               }}
             >

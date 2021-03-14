@@ -1,25 +1,24 @@
 import React from "react";
 import styled from "styled-components";
 import device from "../utils/devices";
-import {RiDownloadCloud2Line} from "react-icons/ri";
+import { RiDownloadCloud2Line } from "react-icons/ri";
 
 const Download = styled.button`
   position: relative;
-  width: 40%;
-  left: 30%;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  width: 60%;
+  left: 20%;
+
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
 
-  font-size: 20px;
+  font-size: 18px;
   border: none;
-  background-color: #ff3b69;
+  background-color: #5e6196;
   color: white;
   border-radius: 40px;
-  font-family: "Ubuntu", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
 
   @media only screen and ${device.laptopMax} {
@@ -28,21 +27,52 @@ const Download = styled.button`
   }
 `;
 
+const AboutContainer = styled.div`
+  height: 100vh;
+  width: 400px;
+  word-wrap: break-word;
+  background-color: #383a63;
+  color: white;
+  padding: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  @media only screen and (max-height: 600px) {
+    min-height: 1280px
+  }
+`;
+
+const AboutHeader = styled.h1`
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-weight: 800;
+`;
+
+const Description = styled.p`
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 16px;
+  word-spacing: 6px;
+  line-height: 32px;
+  color: white;
+  padding-top: 30px;
+  font-family: "Roboto", sans-serif;
+`;
+
 const About = (props) => {
   return (
-    <div style={{ height: "100vh", width: "400px", wordWrap: "break-word", backgroundColor: "#383a63", color: "white", padding: "50px" }}>   
-                <h1 style={{color: "white"}}>O mnie słów kilka:</h1>
+    <AboutContainer>
+      <AboutHeader>{props.t("aboutme.header", { framework: "react-i18next" })}</AboutHeader>
 
-        <p style={{fontSize: "20px", wordSpacing: "12px", lineHeight: "36px", fontFamily: '"Ubuntu", sans-serif',color: "white", paddingTop: "30px"}}>
-        Cześć! Jestem developerem oraz studentem na ostatnim roku Informatyki
-        Stosowanej i Systemów Pomiarowych. Komercyjnie - zajmuję się tworzeniem
-        aplikacji mobilnych. Prywatnie uwielbiam również tworzyć strony
-        internetowe. Wszystko to z zamysłem skomponowania czegoś miłego dla oka
-        z czego będę dumny. Jeśli chcesz dowiedzieć się więcej, pobierz moje CV:
-        </p>
-        <Download><RiDownloadCloud2Line size={32}/></Download>
-        <h1 style={{ccolor: "white",}}>Sprawdź moje projekty:</h1>
-    </div>
+      <Description>
+      {props.t("aboutme.content", { framework: "react-i18next" })}
+      </Description>
+      <Download>
+        <RiDownloadCloud2Line size={32} />
+      </Download>
+    </AboutContainer>
   );
 };
 

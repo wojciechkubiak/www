@@ -14,6 +14,10 @@ const Card = styled.div`
   padding-top: 50px;
   border-left: 1px solid #383a6355;
   border-right: 1px solid #383a6355;
+
+  @media only screen and (max-height: 600px) {
+    min-height: 1280px
+  }
 `;
 
 const MobileImgContainer = styled.div`
@@ -21,7 +25,6 @@ const MobileImgContainer = styled.div`
   height: 500px;
   position: relative;
   overflow: hidden;
-  //   border-radius: 50%;
 `;
 
 const WebImgContainer = styled.div`

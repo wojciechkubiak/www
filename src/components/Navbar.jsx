@@ -18,7 +18,10 @@ const Menu = styled.div`
   z-index: 2000;
   display: flex;
   flex-direction: row;
-  //   justify-content: center;
+  
+  @media only screen and (max-height: 600px) {
+    min-height: 1280px
+  }
 `;
 
 const MenuContainer = styled.div`
@@ -132,8 +135,8 @@ const Navbar = (props) => {
         )}
       </MenuContainer>
       <div style={{display: "flex", flexDirection: "column"}}>
-      <LanguageBtn>
-        <p>PL</p>
+      <LanguageBtn onClick={() => props.langHandler()}>
+        <p>{props.lang}</p>
       </LanguageBtn>
       <ShowMenuBtn onClick={() => setShowMenu(!showMenu)}>
         {showMenu && <RiMenuFoldLine size={24} color="white" />}

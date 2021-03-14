@@ -1,0 +1,83 @@
+{
+    "header": {
+        "home": "STRONA GŁÓWNA",
+        "about": "O MNIE",
+        "skills": "TECHNOLOGIE",
+        "projects": "PROJEKTY",
+        "contact": "KONTAKT"
+    },
+    "landing": {
+        "pos": "Student"
+    },
+    "aboutme": {
+        "header": "O MNIE",
+        "greeting": "Cześć!",
+        "mynameis": "Nazywam się",
+        "content": "Jestem studentem Informatyki Stosowanej i Systemów Pomiarowych, UWr. Moją pasją jest tworzenie miłych dla oka aplikacji webowych z użyciem nowoczesnych technologii. Pasja ta została zapoczątkowana podczas licznych indywidualnych i studenckich projektów. W każdym z nich wykazałem się kreatywnością, konsekwencją oraz dbałością o jakość aplikacji i kodu. Podczas moich studiów miałem również okazję uczestniczyć w praktyce oraz stażu programistycznym. Podczas ich trwania nauczyłem się specyfiki pracy w systemie SCRUM, komunikacji z klientem podczas otrzymywania zlecenia oraz jak programować z zachowaniem nowoczesnych standardów. Aktualnie pracuję w ACN, gdzie tworzę aplikacje oraz skrypty automatyzujące przy użyciu technologii opartych na jęzuku JavaScript. \nWięcej informacji "
+    },
+    "skills": {
+        "header": "TECHNOLOGIE"
+    },
+    "projects": {
+        "header": "PROJEKTY",
+        "opqnAbout": "Aplikacja mobilna dla dietetyków",
+        "obbsysAbout": "Aplikacja webowa dla weterynarza",
+        "fittrackerAbout": "Aplikacja webowa dla dietetyków"
+    },
+    "contact": {
+        "header": "Kontakt",
+        "box": "SKONTAKTUJ SIĘ",
+        "firstLine": "Jesteś zainteresowana/y pracą ze mną lub masz jakieś pytanie?",
+        "contactMe": "Napisz na adres:",
+        "or": "/",
+        "phone": "Zadzwoń:",
+        "mail": "Email",
+        "subject": "Temat",
+        "message": "Wiadomość",
+        "success": "Wysłano",
+        "subsuccess": "Odpowiem najszybciej jak to tylko możliwe"
+    },
+    "footer": {
+        "text": "Strona stworzona przez"
+    },
+    "javascript": {
+        "desc": "ES6+,Modyfikacja DOM,Programowanie Funkcyjne,Programowanie Obiektowe,Async"
+    },
+    "typescript": {
+        "desc": "Konwersja ES6 na Typescript,React Typescript"
+    },
+    "python": {
+        "desc": "Podstawowa znajomość składni,Podstawowe funkcjonalności,Proste aplikacje webowe"
+    },
+    "reactjs": {
+        "desc": "React Hooks,Programowanie Funkcyjne,Programowanie Obiektowe,Integracja z bibliotekami"
+    },
+    "nodejs": {
+        "desc": "ExpressJS,REST API,MVC,Sequelize"
+    },
+    "html": {
+        "desc": "Średnio-zaaw. składnia"
+    },
+    "css": {
+        "desc": "CSS Grid,Flexbox,SASS,Animacje"
+    },
+    "bootstrap": {
+        "desc": "Użytkowanie,Edycja"
+    },
+    "postgres": {
+        "desc": "Zaaw. składnia,MySQL / MSSQL / Oracle,T-SQL"
+    },
+    "download": {
+        "cv": "CV"
+    },
+    "tooltip": {
+        "info": "Więcej informacji po kliknięciu",
+        "copied": "Skopiowano!"
+    },
+    "here": {
+        "text": "tutaj"
+    },
+    "subinfo": {
+        "content": "oraz inne aplikacje studenckie / wykonane w pracy"
+    }
+}
