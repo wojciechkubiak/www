@@ -27,7 +27,19 @@ const AppMain = styled.div`
   @media only screen and (max-height: 500px) {
     overflow-x: hidden;
     overflow-y: scroll;
-    min-height: 1280px
+    min-height: 1280px;
+  }
+`;
+
+const ComponentsContainer = styled.div`
+  display: inline-flex;
+
+  @media only screen and (max-width: 600px) {
+   display: flex;
+   flex-direction: column;
+   overflow-x: hidden;
+    overflow-y: scroll;
+
   }
 `;
 
@@ -48,12 +60,10 @@ const App = (props) => {
   }, []);
 
   const langHandler = () => {
-    if (lang === 'en') {
-      
-      setLang('pl');
+    if (lang === "en") {
+      setLang("pl");
     } else {
-     
-      setLang('en');
+      setLang("en");
     }
   };
 
@@ -81,20 +91,18 @@ const App = (props) => {
         <source src={backgroundMusic}></source>
       </audio>
       <HorizontalScroll reverseScroll={true}>
-        <div style={{ display: "inline-flex" }}>
-          <LandingPage/>
-          <About t={t}/>
-          <Projects/>
-          <div style={{backgroundColor: "#292930", minWidth: "101vw"}}>
-
+        <ComponentsContainer>
+          <LandingPage />
+          <About t={t} />
+          <Projects />
+          <div style={{ backgroundColor: "#292930", minWidth: "101vw" }}>
             <h2>Umiejętności</h2>
           </div>
-          <Contact t={t}/>
-        </div>
+          <Contact t={t} />
+        </ComponentsContainer>
       </HorizontalScroll>
     </AppMain>
   );
 };
 
 export default withTranslation("common")(App);
-
