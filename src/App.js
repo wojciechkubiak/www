@@ -34,6 +34,7 @@ const AppMain = styled.div`
   @media only screen and (max-width: 600px) {
     overflow-y: scroll;
     height: auto;
+    background-image: none;
   }
 `;
 
@@ -58,10 +59,12 @@ const App = (props) => {
   const [lang, setLang] = useState("en");
 
   useEffect(() => {
-    setTimeout(() => {
-      setMusicLoaded(true);
-      setPlayMusic(true);
-    }, 2000);
+    if (!isMobile) {
+      setTimeout(() => {
+        setMusicLoaded(true);
+        setPlayMusic(true);
+      }, 2000);
+    }
   }, []);
 
   const langHandler = () => {

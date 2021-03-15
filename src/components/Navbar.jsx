@@ -6,6 +6,7 @@ import { FaHeadphonesAlt, FaSign, FaBuffer, FaRegIdCard } from "react-icons/fa";
 import { HiHome } from "react-icons/hi";
 import { RiMenuFoldLine, RiMenuUnfoldLine } from "react-icons/ri";
 import device from "./../utils/devices";
+import { isMobile } from "react-device-detect";
 
 const Menu = styled.div`
   position: fixed;
@@ -123,12 +124,12 @@ const Navbar = (props) => {
           size={54}
           color="white"
         />
-        {props.playMusic && (
+        {props.playMusic && !isMobile && (
           <div onClick={() => props.setPlayMusic(!props.playMusic)}>
             <Loader type="Bars" color="white" width="54" />{" "}
           </div>
         )}
-        {!props.playMusic && (
+        {!props.playMusic && !isMobile && (
           <div onClick={() => props.setPlayMusic(!props.playMusic)}>
             <Loader type="Oval" color="white" width="54" />{" "}
           </div>
