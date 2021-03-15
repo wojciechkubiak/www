@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import Lottie from "react-lottie";
 import Loader from "react-loader-spinner";
-import { isMobile } from "react-device-detect";
+import {isMobile} from "react-device-detect";
 import { gsap } from "gsap";
 import { MdMessage } from "react-icons/md";
 import * as animationData from "../assets/astronaut.json";
@@ -146,7 +146,7 @@ const Role = styled.h1`
 const LottieContainer = styled.div`
   @media only screen and (max-width: 600px) {
     position: relative;
-    transform: scale(0.85);
+    transform: scale(0.85) ;
   }
 `;
 
@@ -226,17 +226,15 @@ const LandingPage = (props) => {
         </CommunicationElementsContainer>
       </CommunicationCloudContainer>
       <NameContainer>
-        {!isMobile && (
-          <LottieContainer>
-            <Lottie
-              options={animationConfig}
-              height={400}
-              width={400}
-              isStopped={false}
-              isPaused={false}
-            />
-          </LottieContainer>
-        )}
+        <LottieContainer>
+          <Lottie
+            options={animationConfig}
+            height={400}
+            width={400}
+            isStopped={false}
+            isPaused={false}
+          />
+        </LottieContainer>
         <NameSubcontainer style={{}}>
           <Name>WOJCIECH KUBIAK</Name>
           <Role>Developer</Role>
