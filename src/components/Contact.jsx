@@ -16,11 +16,20 @@ const ContactContainer = styled.div`
   background-color: #5e6196;
   position: relative;
   padding: 50px !important;
-  padding-bottom: 50px !important;
   width: 80%;
   left: 50%;
   transform: translate(-50%, 0%);
   border-radius: 40px;
+
+  @media only screen and (max-width: 600px) {
+    width: auto;
+    max-width: 100vw;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 0px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
 `;
 
 const ContactMain = styled.div`
@@ -34,6 +43,14 @@ const ContactMain = styled.div`
 
   @media only screen and (max-height: 600px) {
     min-height: 1280px
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: auto;
+    max-width: 100vw;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 `;
 
@@ -98,6 +115,9 @@ const SubHeader = styled.h1`
   font-family: "Dancing Script", cursive;
 
   color: rgba(0, 0, 0, 0.7);
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
 `;
 
 const Label = styled.p`

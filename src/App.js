@@ -25,10 +25,10 @@ const AppMain = styled.div`
   position: relative;
   -webkit-overflow-scrolling: touch;
 
-  @media only screen and (max-height: 500px) {
+  @media only screen and (max-height: 800px) {
     overflow-x: hidden;
     overflow-y: scroll;
-    min-height: 1280px;
+    min-height: 1120px;
   }
 `;
 

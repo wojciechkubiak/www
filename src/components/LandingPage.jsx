@@ -16,7 +16,12 @@ const CommunicationCloudContainer = styled.div`
   min-width: 600px;
 
   @media only screen and (max-height: 600px) {
-    min-height: 1280px
+    min-height: 1280px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+    visibility: hidden;
   }
 `;
 
@@ -37,7 +42,7 @@ const Cloud = styled.div`
   left: 50%;
   width: 328px;
   transform: translate(-50%, 0%);
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 `;
 
 const Dots = styled.div`
@@ -45,7 +50,6 @@ const Dots = styled.div`
   left: 50%;
   width: 128px;
   transform: translate(-50%, 0%);
-
 `;
 
 const Text = styled.div`
@@ -57,7 +61,7 @@ const Text = styled.div`
 
 const Message = styled.h1`
   color: rgba(0, 0, 0, 0.8);
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 800;
 `;
 
@@ -90,8 +94,7 @@ const GetToKnowBtn = styled.button`
   border: none;
   color: white;
   border-radius: 40px;
-  font-family: 'Roboto', sans-serif;
-
+  font-family: "Roboto", sans-serif;
 
   @media only screen and ${device.laptopMax} {
     font-size: 11px;
@@ -108,7 +111,14 @@ const NameContainer = styled.div`
   justify-content: space-evenly;
 
   @media only screen and (max-height: 600px) {
-    min-height: 1280px
+    min-height: 1280px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    max-width: 100vw;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 `;
 
@@ -120,7 +130,7 @@ const NameSubcontainer = styled.div`
 const Name = styled.h1`
   font-size: 48px;
   text-align: center;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
   color: #464689;
 `;
@@ -128,8 +138,15 @@ const Name = styled.h1`
 const Role = styled.h1`
   font-size: 34px;
   text-align: center;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   color: rgba(0, 0, 0, 0.6);
+`;
+
+const LottieContainer = styled.div`
+  @media only screen and (max-width: 600px) {
+    position: relative;
+    transform: scale(0.85) ;
+  }
 `;
 
 const LandingPage = (props) => {
@@ -208,13 +225,15 @@ const LandingPage = (props) => {
         </CommunicationElementsContainer>
       </CommunicationCloudContainer>
       <NameContainer>
-        <Lottie
-          options={animationConfig}
-          height={500}
-          width={500}
-          isStopped={false}
-          isPaused={false}
-        />
+        <LottieContainer>
+          <Lottie
+            options={animationConfig}
+            height={400}
+            width={400}
+            isStopped={false}
+            isPaused={false}
+          />
+        </LottieContainer>
         <NameSubcontainer style={{}}>
           <Name>WOJCIECH KUBIAK</Name>
           <Role>Developer</Role>

@@ -29,7 +29,6 @@ const Download = styled.button`
 
 const AboutContainer = styled.div`
   height: 100vh;
-  width: 400px;
   word-wrap: break-word;
   background-color: #383a63;
   color: white;
@@ -39,6 +38,18 @@ const AboutContainer = styled.div`
 
   @media only screen and (max-height: 600px) {
     min-height: 1280px
+  }
+
+  @media only screen and (min-width: 601px) {
+    width: 400px;
+  }
+  @media only screen and (max-width: 600px) {
+    max-width: 100vw;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 `;
 

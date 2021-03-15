@@ -5,6 +5,12 @@ import ObbSys from "./../assets/obbsys.png";
 const ProjectsContainer = styled.div`
   display: flex;
   flex-direction: row;
+
+  @media only screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+  }
 `;
 
 const Card = styled.div`
@@ -16,7 +22,15 @@ const Card = styled.div`
   border-right: 1px solid #383a6355;
 
   @media only screen and (max-height: 600px) {
-    min-height: 1280px
+    min-height: 1280px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 `;
 
@@ -37,7 +51,7 @@ const WebImgContainer = styled.div`
 
 const ProjectText = styled.h1`
   margin-top: 50px;
-  
+
   text-align: center;
   //   color: white;
 `;
@@ -94,7 +108,7 @@ const Projects = (props) => {
         description: "",
         img: ObbSys,
         backgroundColor: "white",
-        textColor: "rgba(0, 0, 0, 0.8)"
+        textColor: "rgba(0, 0, 0, 0.8)",
       })}
       {ProjectCard({
         name: "TESTOWA NAZWA",
@@ -104,7 +118,7 @@ const Projects = (props) => {
         backgroundColor: "white",
         textColor: "rgba(0, 0, 0, 0.8)",
       })}
-     {ProjectCard({
+      {ProjectCard({
         name: "TESTOWA NAZWA",
         type: "Mobile",
         description: "",
@@ -112,7 +126,7 @@ const Projects = (props) => {
         backgroundColor: "white",
         textColor: "rgba(0, 0, 0, 0.8)",
       })}
-       {ProjectCard({
+      {ProjectCard({
         name: "TESTOWA NAZWA",
         type: "Mobile",
         description: "",
