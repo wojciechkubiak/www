@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 import { withTranslation } from "react-i18next";
+import { isMobile } from "react-device-detect";
 import HorizontalScroll from "react-scroll-horizontal";
 import backgroundMusic from "./assets/bgsound.mp3";
 import Background from "./assets/bg.svg";
@@ -35,11 +36,10 @@ const ComponentsContainer = styled.div`
   display: inline-flex;
 
   @media only screen and (max-width: 600px) {
-   display: flex;
-   flex-direction: column;
-   overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
     overflow-y: scroll;
-
   }
 `;
 
@@ -90,7 +90,20 @@ const App = (props) => {
       <audio ref={(r) => (audioRef = r)}>
         <source src={backgroundMusic}></source>
       </audio>
-      <HorizontalScroll reverseScroll={true}>
+      {!isMobile && (
+        <HorizontalScroll reverseScroll={true}>
+          <ComponentsContainer>
+            <LandingPage />
+            <About t={t} />
+            <Projects />
+            <div style={{ backgroundColor: "#292930", minWidth: "101vw" }}>
+              <h2>Umiejętności</h2>
+            </div>
+            <Contact t={t} />
+          </ComponentsContainer>
+        </HorizontalScroll>
+      )}
+      {isMobile && (
         <ComponentsContainer>
           <LandingPage />
           <About t={t} />
@@ -100,7 +113,7 @@ const App = (props) => {
           </div>
           <Contact t={t} />
         </ComponentsContainer>
-      </HorizontalScroll>
+      )}
     </AppMain>
   );
 };
