@@ -60,6 +60,10 @@ const ShowMenuBtn = styled.button`
   @media only screen and ${device.desktop} {
     top: 90%;
   }
+
+  @media only screen and (max-width: 600px) {
+    top: 70%;
+  }
 `;
 
 const LanguageBtn = styled.button`
@@ -84,6 +88,10 @@ const LanguageBtn = styled.button`
 
   @media only screen and ${device.desktop} {
     top: 80%;
+  }
+  
+  @media only screen and (max-width: 600px) {
+    top: 60%;
   }
 `;
 

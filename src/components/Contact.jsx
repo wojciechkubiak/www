@@ -29,6 +29,8 @@ const ContactContainer = styled.div`
     border-radius: 0px;
     margin-top: 30px;
     margin-bottom: 10px;
+    padding: 20px !important;
+    border-radius: 20px;
   }
 `;
 
@@ -52,6 +54,8 @@ const ContactMain = styled.div`
     justify-content: center;
     padding-top: 50px;
     padding-bottom: 50px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 `;
 
@@ -298,7 +302,7 @@ const Contact = (props) => {
             </>
           )}
 
-          <button style={{width: "100%", border: "none", backgroundColor: "transparent", color: "white", fontSize: "24px", paddingTop: "24px"}} type="submit">SEND</button>
+          <button style={{width: "100%", border: "none", backgroundColor: "transparent", color: "white", fontSize: "20px", paddingTop: "24px"}} type="submit">SEND</button>
         </form>
       </ContactContainer>
     </ContactMain>

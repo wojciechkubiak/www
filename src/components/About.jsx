@@ -6,7 +6,6 @@ import { RiDownloadCloud2Line } from "react-icons/ri";
 const Download = styled.button`
   position: relative;
   width: 60%;
-  left: 20%;
 
   padding-top: 10px;
   padding-bottom: 10px;
@@ -36,8 +35,6 @@ const AboutContainer = styled.div`
   padding-left: 50px;
   padding-right: 50px;
 
-
-
   @media only screen and (min-width: 601px) {
     width: 400px;
   }
@@ -46,10 +43,11 @@ const AboutContainer = styled.div`
     max-width: 100vw;
     height: auto;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 100px;
     padding-bottom: 50px;
     padding-left: 20px;
     padding-right: 20px;
+    text-align: center;
   }
 `;
 

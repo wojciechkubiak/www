@@ -119,9 +119,14 @@ const NameContainer = styled.div`
   @media only screen and (max-width: 600px) {
     max-width: 100vw;
     height: auto;
+    min-height: 40vh;
     justify-content: center;
     padding-top: 50px;
     padding-bottom: 50px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    margin-bottom: -50px;
+    z-index: 1000;
   }
 `;
 
