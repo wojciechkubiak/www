@@ -41,8 +41,10 @@ const AboutContainer = styled.div`
   @media only screen and (min-width: 601px) {
     width: 400px;
   }
+
   @media only screen and (max-width: 600px) {
     max-width: 100vw;
+    height: auto;
     justify-content: center;
     padding-top: 50px;
     padding-bottom: 50px;

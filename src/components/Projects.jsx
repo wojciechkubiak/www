@@ -31,6 +31,7 @@ const Card = styled.div`
     width: 100vw;
     padding-left: 10px;
     padding-right: 10px;
+    height: auto;
   }
 `;
 

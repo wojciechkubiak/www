@@ -46,6 +46,7 @@ const ContactMain = styled.div`
   }
 
   @media only screen and (max-width: 600px) {
+    height: auto;
     width: auto;
     max-width: 100vw;
     justify-content: center;
