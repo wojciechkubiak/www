@@ -36,9 +36,7 @@ const AboutContainer = styled.div`
   padding-left: 50px;
   padding-right: 50px;
 
-  @media only screen and (max-height: 600px) {
-    min-height: 1280px
-  }
+
 
   @media only screen and (min-width: 601px) {
     width: 400px;
