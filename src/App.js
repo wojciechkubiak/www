@@ -28,9 +28,13 @@ const AppMain = styled.div`
   @media only screen and (max-height: 800px) {
     overflow-x: hidden;
     overflow-y: hidden;
-    min-height: 920px;
+    min-height: 1120px;
   }
-  
+
+  @media only screen and (max-width: 600px) {
+    overflow-y: scroll;
+    height: auto;
+  }
 `;
 
 const ComponentsContainer = styled.div`
