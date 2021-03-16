@@ -4,7 +4,7 @@ import { withTranslation } from "react-i18next";
 import { isMobile } from "react-device-detect";
 import HorizontalScroll from "react-scroll-horizontal";
 import backgroundMusic from "./assets/bgsound.mp3";
-import Background from "./assets/bg.svg";
+import Background from "./assets/astronaut.svg";
 import Navbar from "./components/Navbar";
 import LandingPage from "./components/LandingPage";
 import About from "./components/About";
@@ -32,7 +32,8 @@ const AppMain = styled.div`
   }
 
   @media only screen and (max-width: 600px) {
-    overflow-y: scroll;
+    overflow-x: hidden;
+    overflow-y: hidden;
     height: auto;
     background-image: none;
   }
@@ -45,7 +46,7 @@ const ComponentsContainer = styled.div`
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    overflow-y: scroll;
+    overflow-y: hidden;
   }
 `;
 
@@ -54,9 +55,22 @@ const App = (props) => {
 
   const [isMusicLoaded, setMusicLoaded] = useState(false);
   const [playMusic, setPlayMusic] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
   let appRef = useRef(null);
   let audioRef = useRef(null);
+  let homeRef = useRef(null);
+  let projectsRef = useRef(null);
+  let skillsRef = useRef(null);
+  let contactRef = useRef(null);
+
+  const smooth = { behavior: "smooth", block: "start", inline: "nearest" };
+
   const [lang, setLang] = useState("en");
+
+  const goHome = () => homeRef.current.scrollIntoView(smooth); 
+  const goProjects = () => projectsRef.current.scrollIntoView(smooth);
+  const goSkills = () => skillsRef.current.scrollIntoView(smooth);
+  const goContact = () => contactRef.current.scrollIntoView(smooth);
 
   useEffect(() => {
     if (!isMobile) {
@@ -93,35 +107,32 @@ const App = (props) => {
           isMusicLoaded={isMusicLoaded}
           langHandler={langHandler}
           lang={lang}
+          goHome={goHome}
+          goProjects={goProjects}
+          goSkills={goSkills}
+          goContact={goContact}
         />
       </div>
       <audio ref={(r) => (audioRef = r)}>
         <source src={backgroundMusic}></source>
       </audio>
-      {!isMobile && (
-        <HorizontalScroll reverseScroll={true}>
-          <ComponentsContainer>
-            <LandingPage />
-            <About t={t} />
-            <Projects />
-            <div style={{ backgroundColor: "#292930", minWidth: "101vw" }}>
-              <h2>Umiejętności</h2>
-            </div>
-            <Contact t={t} />
-          </ComponentsContainer>
-        </HorizontalScroll>
-      )}
-      {isMobile && (
-        <ComponentsContainer>
+      <ComponentsContainer>
+        <div ref={homeRef}>
           <LandingPage />
-          <About t={t} />
+        </div>
+        <div ref={projectsRef}>
           <Projects />
-          <div style={{ backgroundColor: "#292930", minWidth: "101vw" }}>
-            <h2>Umiejętności</h2>
-          </div>
+        </div>
+        <div
+          ref={skillsRef}
+          style={{ backgroundColor: "#292930", minWidth: "100vw" }}
+        >
+          <h2>Umiejętności</h2>
+        </div>
+        <div ref={contactRef}>
           <Contact t={t} />
-        </ComponentsContainer>
-      )}
+        </div>
+      </ComponentsContainer>
     </AppMain>
   );
 };

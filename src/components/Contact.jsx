@@ -11,12 +11,14 @@ import {
   FaFacebookSquare,
   FaInstagramSquare,
 } from "react-icons/fa";
+import Lottie from "react-lottie";
+import * as animationData from "../assets/rocket.json";
 
 const ContactContainer = styled.div`
   background-color: #5e6196;
   position: relative;
   padding: 50px !important;
-  width: 80%;
+  width:70%;
   left: 50%;
   transform: translate(-50%, 0%);
   border-radius: 40px;
@@ -37,14 +39,14 @@ const ContactContainer = styled.div`
 const ContactMain = styled.div`
   background-color: white;
   position: relative;
-  min-width: 40vw;
+  width: 50%;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 
   @media only screen and (max-height: 600px) {
-    min-height: 1280px
+    min-height: 1280px;
   }
 
   @media only screen and (max-width: 600px) {
@@ -91,7 +93,6 @@ const TextArea = styled.textarea`
   height: 200px !important;
   font-family: "Roboto", sans-serif;
 
-
   &:focus {
     border: none !important;
     outline: none !important;
@@ -133,6 +134,26 @@ const Label = styled.p`
   font-weight: 500;
 `;
 
+const LottieContainer = styled.div`
+  @media only screen and (max-width: 600px) {
+    position: relative;
+    transform: scale(0.85);
+  }
+`;
+
+const ContactBody = styled.div`
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: white;
+  
+  @media only screen and (max-width: 600px) {
+    // flex
+  }
+`;
+
 const Contact = (props) => {
   const [showSend, setShowSend] = useState(true);
   const [send, setSend] = useState(false);
@@ -141,62 +162,18 @@ const Contact = (props) => {
   const [content, setContent] = useState("");
   const [animated, setAnimated] = useState(false);
   const [inputDisabled, setInputDisabled] = useState(false);
-  // const { ref, inView, entry } = useInView({
-  //     threshold: .3,
-  // });
 
-  // const styleSend = { backgroundImage: `url(${bgSend})` };
-  // const styleLoad = { backgroundImage: `url(${bgLoad})` };
-
-  let contactHeader = useRef(null);
   let contactSubHeader = useRef(null);
   let contactForm = useRef(null);
 
-  // useEffect(() => {
-  //     if (inView) setAnimated(true);
-  //     if (inView && !isMobile) {
-  //         props.setNavbar(false, false, false, false, true);
-  //     }
-  // }, [inView]);
-
-  // useEffect(() => {
-  //     if (animated) {
-  //         gsap.fromTo(
-  //             contactHeader,
-  //             {
-  //                 opacity: 0
-  //             },
-  //             {
-  //                 duration: 1,
-  //                 opacity: 1
-  //             }
-  //         );
-
-  //         gsap.fromTo(
-  //             contactSubHeader,
-  //             {
-  //                 opacity: 0
-  //             },
-  //             {
-  //                 duration: 4,
-  //                 opacity: 1
-  //             }
-  //         )
-
-  //         gsap.fromTo(
-  //             contactForm,
-  //             {
-  //                 opacity: 0,
-  //                 bottom: -100
-  //             },
-  //             {
-  //                 duration: 1,
-  //                 bottom: 0,
-  //                 opacity: 1
-  //             }
-  //         )
-  //     }
-  // }, [animated]);
+  const animationConfig = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData.default,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   const clearData = () => {
     setEmail("");
@@ -230,82 +207,105 @@ const Contact = (props) => {
   };
 
   return (
-    <ContactMain>
-      <div>
-        <Header ref={(e) => (contactHeader = e)}>
-          {props.t("contact.box", { framework: "react-i18next" })}
-        </Header>
-        <SubHeader ref={(e) => (contactSubHeader = e)}>
-          {props.t("contact.firstLine", { framework: "react-i18next" })}
-        </SubHeader>
-      </div>
-      <ContactContainer>
-        <div></div>
-        <form
-          ref={(e) => (contactForm = e)}
-          onSubmit={(event) => handleSubmit(event)}
-        >
-          {!send && (
-            <>
-              <Links>
-                <a href="https://www.linkedin.com/in/wojciechkubiakin">
-                  <FaLinkedin color="white" size={42} />
-                </a>
-                <a href="https://www.github.com/wojciechkubiak">
-                  <FaGitSquare color="white" size={42} />
-                </a>
-                <a href="https://www.facebook.com/wojciechkubiakfb">
-                  <FaFacebookSquare color="white" size={42} />
-                </a>
-                <a href="https://www.instagram.com/biaqe/">
-                  <FaInstagramSquare color="white" size={42} />
-                </a>
-              </Links>
-              <figure>
-                <Label>
-                  {props.t("contact.mail", { framework: "react-i18next" })}
-                </Label>
-                <Input
-                  type="text"
-                  onChange={(event) => setEmail(event.target.value)}
-                  type="email"
-                  value={email}
-                  disabled={inputDisabled || send}
-                  required
-                />
-              </figure>
-              <figure>
-                <Label>
-                  {props.t("contact.subject", { framework: "react-i18next" })}
-                </Label>
-                <Input
-                  type="text"
-                  onChange={(event) => setSubject(event.target.value)}
-                  type="text"
-                  value={subject}
-                  disabled={send}
-                  required
-                />
-              </figure>
-              <figure>
-                <Label>
-                  {props.t("contact.message", { framework: "react-i18next" })}
-                </Label>
-                <TextArea
-                  type="text"
-                  onChange={(event) => setContent(event.target.value)}
-                  value={content}
-                  disabled={send}
-                  required
-                ></TextArea>
-              </figure>
-            </>
-          )}
+    <ContactBody>
+      <LottieContainer>
+        <Lottie
+          options={animationConfig}
+          height={850}
+          width={600}
+          isStopped={false}
+          isPaused={false}
+        />
+      </LottieContainer>
+      <ContactMain>
+        <div>
+          <Header>
+            {props.t("contact.box", { framework: "react-i18next" })}
+          </Header>
+          <SubHeader ref={(e) => (contactSubHeader = e)}>
+            {props.t("contact.firstLine", { framework: "react-i18next" })}
+          </SubHeader>
+        </div>
+        <ContactContainer>
+          <div></div>
+          <form
+            ref={(e) => (contactForm = e)}
+            onSubmit={(event) => handleSubmit(event)}
+          >
+            {!send && (
+              <>
+                <Links>
+                  <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                    <FaLinkedin color="white" size={42} />
+                  </a>
+                  <a href="https://www.github.com/wojciechkubiak">
+                    <FaGitSquare color="white" size={42} />
+                  </a>
+                  <a href="https://www.facebook.com/wojciechkubiakfb">
+                    <FaFacebookSquare color="white" size={42} />
+                  </a>
+                  <a href="https://www.instagram.com/biaqe/">
+                    <FaInstagramSquare color="white" size={42} />
+                  </a>
+                </Links>
+                <figure>
+                  <Label>
+                    {props.t("contact.mail", { framework: "react-i18next" })}
+                  </Label>
+                  <Input
+                    type="text"
+                    onChange={(event) => setEmail(event.target.value)}
+                    type="email"
+                    value={email}
+                    disabled={inputDisabled || send}
+                    required
+                  />
+                </figure>
+                <figure>
+                  <Label>
+                    {props.t("contact.subject", { framework: "react-i18next" })}
+                  </Label>
+                  <Input
+                    type="text"
+                    onChange={(event) => setSubject(event.target.value)}
+                    type="text"
+                    value={subject}
+                    disabled={send}
+                    required
+                  />
+                </figure>
+                <figure>
+                  <Label>
+                    {props.t("contact.message", { framework: "react-i18next" })}
+                  </Label>
+                  <TextArea
+                    type="text"
+                    onChange={(event) => setContent(event.target.value)}
+                    value={content}
+                    disabled={send}
+                    required
+                  ></TextArea>
+                </figure>
+              </>
+            )}
 
-          <button style={{width: "100%", border: "none", backgroundColor: "transparent", color: "white", fontSize: "20px", paddingTop: "24px"}} type="submit">SEND</button>
-        </form>
-      </ContactContainer>
-    </ContactMain>
+            <button
+              style={{
+                width: "100%",
+                border: "none",
+                backgroundColor: "transparent",
+                color: "white",
+                fontSize: "20px",
+                paddingTop: "24px",
+              }}
+              type="submit"
+            >
+              SEND
+            </button>
+          </form>
+        </ContactContainer>
+      </ContactMain>
+    </ContactBody>
   );
 };
 

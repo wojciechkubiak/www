@@ -113,22 +113,22 @@ const Navbar = (props) => {
     <Menu ref={(r) => (menuRef = r)} style={menuStyleTransparent}>
       <MenuContainer>
         <HiHome
-          onClick={() => props.setPlayMusic(!props.playMusic)}
+          onClick={() => props.goHome()}
           size={54}
           color="white"
         />
         <FaSign
-          onClick={() => props.setPlayMusic(!props.playMusic)}
+           onClick={() => props.goProjects()}
           size={54}
           color="white"
         />
         <FaBuffer
-          onClick={() => props.setPlayMusic(!props.playMusic)}
+           onClick={() => props.goSkills()}
           size={54}
           color="white"
         />
         <FaRegIdCard
-          onClick={() => props.setPlayMusic(!props.playMusic)}
+          onClick={() => props.goContact()}
           size={54}
           color="white"
         />
