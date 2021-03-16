@@ -120,6 +120,7 @@ const App = (props) => {
         <div ref={homeRef}>
           <LandingPage />
         </div>
+        {isMobile && <About t={t}/>}
         <div ref={projectsRef}>
           <Projects />
         </div>
