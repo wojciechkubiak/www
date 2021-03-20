@@ -176,7 +176,6 @@ const Projects = (props) => {
   };
 
   const prevProject = () => {
-    console.log("prev");
     if (index === 0) {
       setIndex(projects.length - 1);
       return;
@@ -189,7 +188,7 @@ const Projects = (props) => {
     const t1 = gsap.timeline();
     t1.fromTo(
       projectsRef,
-      { scale: 1.1 },
+      { scale: !isMobile ? 1.1 : 1.0 },
       {
         scale: 1,
         opacity: 0,
@@ -199,7 +198,7 @@ const Projects = (props) => {
     ).fromTo(
       projectsRef,
       { scale: 1 },
-      { opacity: 1, scale: 1.1, duration: 0.5, delay: 0.5 }
+      { opacity: 1, scale: !isMobile ? 1.1 : 1.0, duration: 0.5, delay: 0.5 }
     );
   };
 
