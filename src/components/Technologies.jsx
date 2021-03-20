@@ -74,7 +74,7 @@ const Image = styled.img`
   background-color: white;
   padding: 15px;
   border-radius: 24px;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
 `;
 
 const BottomHeader = styled.h1`
