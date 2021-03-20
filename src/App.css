@@ -35,15 +35,12 @@
 .projects-card-img {
   filter: grayscale(1);
   transition-property: all;
-  transition-property: transform;
   transition-duration: 1s;
 }
 
 .projects-card-img:hover {
   filter: grayscale(0);
-  transform: scale(1.2);
   transition-property: all;
-  transition-property: transform;
   transition-duration: 1s;
 }
 
@@ -56,4 +53,11 @@
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .projects-card-img {
+    filter: grayscale(0);
+  }
 }

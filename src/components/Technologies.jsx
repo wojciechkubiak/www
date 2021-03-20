@@ -21,19 +21,19 @@ const TechnologiesMain = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
+  padding-top: 50px;
 `;
 
 const TechnologiesContainer = styled.div`
   position: relative;
-  left: 15%;
-  width: 70%;
+  left: 10%;
+  width: 80%;
   margin-top: 25px;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-between;
 
   @media only screen and (max-width: 600px) {
     width: 98%;
@@ -51,29 +51,15 @@ const Image = styled.img`
   padding: 5px;
 `;
 
-const Option = styled.h1`
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 26px;
-  margin-left: 20px;
-  margin-right: 20px;
-  padding: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
-  border-radius: 30px;
-  min-width: 200px;
-  outline: none;
-  font-family: "Lato", sans-serif;
-  font-weight: 600;
-`;
-
 const DescriptionContainer = styled.div`
   background-color: #5e6196;
   padding: 50px;
   padding-top: 20px;
   margin-top: 50px;
-  min-height: 300px;
+  min-height: 600px;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
   border-radius: 40px;
+  width: 400px;
 
   @media only screen and (max-width: 600px) {
     padding: 20px;
@@ -103,11 +89,9 @@ const DescriptionImages = styled.div`
   justify-content: center;
 `;
 
-const OptionsContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
+const DescriptionHeader = styled.h1`
+  font-family: "Dancing Script", cursive;
+  color: white;
 `;
 
 const Technologies = (props) => {
@@ -134,9 +118,10 @@ const Technologies = (props) => {
     );
   };
 
-  const Desc = (data, description) => {
+  const Desc = (data, type, description) => {
     return (
       <DescriptionContainer>
+        <DescriptionHeader>{type}</DescriptionHeader>
         <DescriptionImages>
           {data.map((skill) => Skill(skill))}
         </DescriptionImages>
@@ -149,30 +134,9 @@ const Technologies = (props) => {
     <TechnologiesMain>
       <Header>MOJE TECHNOLOGIE</Header>
       <TechnologiesContainer>
-        <OptionsContainer>
-          <Option
-            style={option === "fe" ? active : {}}
-            onClick={() => setOption("fe")}
-          >
-            Frontend
-          </Option>
-          <Option
-            style={option === "be" ? active : {}}
-            onClick={() => setOption("be")}
-          >
-            Backend
-          </Option>
-          <Option
-            style={option === "db" ? active : {}}
-            onClick={() => setOption("db")}
-          >
-            Bazy danych
-          </Option>
-        </OptionsContainer>
-
-        {option === "fe" && Desc(frontend, lorem)}
-        {option === "be" && Desc(backend, lorem)}
-        {option === "db" && Desc(databases, lorem)}
+        {Desc(frontend, "Frontend", lorem)}
+        {Desc(backend, "Backend", lorem)}
+        {Desc(databases, "DBMS", lorem)}
       </TechnologiesContainer>
     </TechnologiesMain>
   );

@@ -14,7 +14,7 @@ const Download = styled.button`
 
   font-size: 18px;
   border: none;
-  background-color: #5e6196;
+  background-color: white;
   color: white;
   border-radius: 40px;
   font-family: "Roboto", sans-serif;
@@ -80,7 +80,7 @@ const About = (props) => {
       {props.t("aboutme.content", { framework: "react-i18next" })}
       </Description>
       <Download>
-        <RiDownloadCloud2Line size={32} />
+        <RiDownloadCloud2Line size={32} color="#5e6196"/>
       </Download>
     </AboutContainer>
   );
