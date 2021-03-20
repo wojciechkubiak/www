@@ -111,6 +111,7 @@ const NameContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  box-shadow: -5px 0 10px 2px rgba(0, 0, 0, .5);
 
   @media only screen and (max-height: 600px) {
     min-height: 1280px;

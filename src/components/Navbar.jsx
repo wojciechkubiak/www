@@ -35,6 +35,8 @@ const MenuContainer = styled.div`
   padding-right: 7px;
   margin-left: -68px;
   background-color: #464689;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .5);
+
 `;
 
 const ShowMenuBtn = styled.button`
@@ -48,6 +50,7 @@ const ShowMenuBtn = styled.button`
   width: 48px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .3);
 
   @media only screen and ${device.tablet} {
     top: 70%;
@@ -77,6 +80,7 @@ const LanguageBtn = styled.button`
   width: 48px;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .3);
 
   @media only screen and ${device.tablet} {
     top: 60%;

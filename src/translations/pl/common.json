@@ -41,31 +41,58 @@
         "text": "Strona stworzona przez"
     },
     "javascript": {
-        "desc": "ES6+,Modyfikacja DOM,Programowanie Funkcyjne,Programowanie Obiektowe,Async"
-    },
-    "typescript": {
-        "desc": "Konwersja ES6 na Typescript,React Typescript"
+        "1": "ES6+",
+        "2": "Modyfikacja DOM",
+        "3": "Programowanie funkcyjne",
+        "4": "Async",
+        "5": "Podstawy typescript-u"
     },
     "python": {
-        "desc": "Podstawowa znajomość składni,Podstawowe funkcjonalności,Proste aplikacje webowe"
+        "1": "Podstawowa znajomość składni",
+        "2": "Podstawowe funkcjonalności",
+        "3": "Proste aplikacje webowe"
     },
     "reactjs": {
-        "desc": "React Hooks,Programowanie Funkcyjne,Programowanie Obiektowe,Integracja z bibliotekami"
+        "1": "React Hooks", 
+        "2": "Programowanie Funkcyjne", 
+        "3": "Programowanie Obiektowe", 
+        "4": "Integracja z bibliotekami",
+        "5": "Podstawy Redux"
     },
     "nodejs": {
-        "desc": "ExpressJS,REST API,MVC,Sequelize"
+        "1": "ExpressJS",
+        "2": "REST API",
+        "3": "MVC",
+        "4": "Sequelize"
     },
     "html": {
-        "desc": "Średnio-zaaw. składnia"
+        "1": "Średnio-zaaw. składnia"
     },
     "css": {
-        "desc": "CSS Grid,Flexbox,SASS,Animacje"
+        "1": "CSS Grid",
+        "2": "Flexbox",
+        "3": "SASS",
+        "4": "Animacje"
+    },
+    "flutter": {
+        "1": "Programowanie obiektowe",
+        "2": "Tworzenie widoków oraz logiki aplikacji",
+        "3": "Implementacja i modyfikacja paczek",
+        "4": "Animacje",
+        "5": "Architektura BLoC-a"
+    },
+    "android": {
+        "1": "Basic native functionalities"
     },
     "bootstrap": {
         "desc": "Użytkowanie,Edycja"
     },
     "postgres": {
-        "desc": "Zaaw. składnia,MySQL / MSSQL / Oracle,T-SQL"
+        "1": "Zaaw. składnia", 
+        "2": "T-SQL"
+    },
+    "mysql": {
+        "1": "Zaaw. składnia"
     },
     "download": {
         "cv": "CV"

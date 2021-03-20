@@ -9,6 +9,7 @@ import Navbar from "./components/Navbar";
 import LandingPage from "./components/LandingPage";
 import About from "./components/About";
 import Projects from "./components/Projects";
+import Technologies from "./components/Technologies";
 import Contact from "./components/Contact";
 
 import "./App.css";
@@ -67,7 +68,7 @@ const App = (props) => {
 
   const [lang, setLang] = useState("en");
 
-  const goHome = () => homeRef.current.scrollIntoView(smooth); 
+  const goHome = () => homeRef.current.scrollIntoView(smooth);
   const goProjects = () => projectsRef.current.scrollIntoView(smooth);
   const goSkills = () => skillsRef.current.scrollIntoView(smooth);
   const goContact = () => contactRef.current.scrollIntoView(smooth);
@@ -120,15 +121,12 @@ const App = (props) => {
         <div ref={homeRef}>
           <LandingPage />
         </div>
-        {isMobile && <About t={t}/>}
+        {isMobile && <About t={t} />}
         <div ref={projectsRef}>
           <Projects />
         </div>
-        <div
-          ref={skillsRef}
-          style={{ backgroundColor: "#292930", minWidth: "100vw" }}
-        >
-          <h2>Umiejętności</h2>
+        <div ref={skillsRef}>
+          <Technologies t={t} />
         </div>
         <div ref={contactRef}>
           <Contact t={t} />

@@ -18,10 +18,11 @@ const ContactContainer = styled.div`
   background-color: #5e6196;
   position: relative;
   padding: 50px !important;
-  width:70%;
+  width: 70%;
   left: 50%;
   transform: translate(-50%, 0%);
   border-radius: 40px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .2);
 
   @media only screen and (max-width: 600px) {
     width: auto;
@@ -148,7 +149,7 @@ const ContactBody = styled.div`
   flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: white;
-  
+
   @media only screen and (max-width: 600px) {
     // flex
   }

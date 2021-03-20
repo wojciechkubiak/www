@@ -41,31 +41,59 @@
         "text": "Created by"
     },
     "javascript": {
-        "desc": "ES6+,DOM Manipulation,Functional Programming,Objective Programming,Async"
-    },
-    "typescript": {
-        "desc": "ES6 into Typescript conversion,Angular implementation,React implementation"
+        "1": "ES6+",
+        "2": "DOM Manipulation",
+        "3": "Functional Programming",
+        "4": "Async",
+        "5": "Typescript basics"
     },
     "python": {
-        "desc": "Basic syntax,Basic functionalities,Implementation of the simple web apps"
+        "1": "Basic syntax",
+        "2": "Basic functionalities",
+        "3": "Implementation of the simple web apps"
     },
     "reactjs": {
-        "desc": "React Hooks,Functional Programming,Objective Programming,External libraries implementation"
+        "1": "React Hooks",
+        "2": "Functional Programming",
+        "3": "Objective Programming",
+        "4": "External libraries implementation",
+        "5": "Basics of Redux"
+    },
+    "flutter": {
+        "1": "Objective Programming",
+        "2": "Making of views and app logic",
+        "3": "Implementation and modification of packages",
+        "4": "Animations",
+        "5": "BLoC architecture"
     },
     "nodejs": {
-        "desc": "ExpressJS,REST API,MVC,Sequelize"
+        "1": "ExpressJS",
+        "2": "REST API",
+        "3": "MVC",
+        "4": "Sequelize"
     },
     "html": {
-        "desc": "Semi-advanced syntax"
+        "1": "Semi-advanced syntax"
     },
     "css": {
-        "desc": "CSS Grid,Flexbox,SASS,Animations"
+        "1": "CSS Grid",
+        "2": "Flexbox",
+        "3": "SASS",
+        "4": "Animations"
+    },
+    "android": {
+        "1": "Podstawowe natywne funkcjonalności"
     },
     "bootstrap": {
         "desc": "Using,Editing"
     },
     "postgres": {
-        "desc": "Advanced syntax,MySQL / MSSQL / Oracle,T-SQL"
+        "1": "Advanced syntax", 
+        "2": "T-SQL"
+    },
+    "mysql": {
+        "1": "Advanced syntax", 
+        "2": "T-SQL"
     },
     "download": {
         "cv": "RESUME"
