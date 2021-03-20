@@ -5,12 +5,15 @@ import Animacare from "./../assets/animacare_1.jpg";
 import gsap from "gsap";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { isMobile } from "react-device-detect";
+import Lottie from "react-lottie";
+import * as animationData from "../assets/lotties/space.json";
 
 const ProjectsMain = styled.div`
   width: 100vw;
   min-height: 100vh;
   background-color: white;
   padding-top: 50px;
+  position: relative;
 
   @media only screen and (max-width: 600px) {
     display: flex;
@@ -135,8 +138,36 @@ const Button = styled.button`
   }
 `;
 
+const LottieContainer = styled.div`
+  position: absolute;
+  height: 1028px;
+  width: 1028px;
+  top: 0;
+  right: 0;
+`;
+
+const DescriptionParagraph = styled.div`
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+`;
+
 const Projects = (props) => {
   const [index, setIndex] = useState(0);
+
+  const animationConfig = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData.default,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   let projectsRef = useRef(null);
 
@@ -187,21 +218,26 @@ const Projects = (props) => {
 
   const animate = (func) => {
     const t1 = gsap.timeline();
-    t1.to(
-      projectsRef,
-      {
-        opacity: 0,
-        duration: 0.5,
-        onComplete: () => func(),
-      }
-    ).to(
-      projectsRef,
-      { opacity: 1, duration: 0.5, delay: 0.5 }
-    );
+    t1.to(projectsRef, {
+      opacity: 0,
+      duration: 0.5,
+      onComplete: () => func(),
+    }).to(projectsRef, { opacity: 1, duration: 0.5, delay: 0.5 });
   };
 
   return (
     <ProjectsMain>
+      {!isMobile && (
+        <LottieContainer>
+          <Lottie
+            options={animationConfig}
+            height={850}
+            width={850}
+            isStopped={false}
+            isPaused={false}
+          />
+        </LottieContainer>
+      )}
       <ProjectsContainer>
         <ButtonContainer>
           <Button>
@@ -219,7 +255,7 @@ const Projects = (props) => {
           <Description>
             {isMobile && <p>(click to see next project)</p>}
             <DescriptionHeader>{projects[index].header}</DescriptionHeader>
-            {projects[index].desc}
+            <DescriptionParagraph>{projects[index].desc}</DescriptionParagraph>
           </Description>
         </ProjectsBody>
         <ButtonContainer>

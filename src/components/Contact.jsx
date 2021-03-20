@@ -55,7 +55,7 @@ const ContactMain = styled.div`
     width: auto;
     max-width: 100vw;
     justify-content: center;
-    padding-top: 50px;
+    padding-top: 20px;
     padding-bottom: 50px;
     padding-left: 5px;
     padding-right: 5px;
