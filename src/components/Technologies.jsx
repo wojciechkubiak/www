@@ -36,8 +36,8 @@ const TechnologiesContainer = styled.div`
   justify-content: center;
 
   @media only screen and (max-width: 600px) {
-    width: 90%;
-    left: 5%;
+    width: 98%;
+    left: 1%;
   }
 `;
 
@@ -79,6 +79,7 @@ const DescriptionContainer = styled.div`
     padding: 20px;
     padding-top: 20px;
     padding-bottom: 40px;
+    border-radius: 20px;
   }
 `;
 

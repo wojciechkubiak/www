@@ -19,6 +19,7 @@ const Download = styled.button`
   border-radius: 40px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.4);
 
   @media only screen and ${device.laptopMax} {
     font-size: 11px;
@@ -29,7 +30,7 @@ const Download = styled.button`
 const AboutContainer = styled.div`
   height: 100vh;
   word-wrap: break-word;
-  background-color: #383a63;
+  background-color: #5e6196;
   color: white;
   padding: 20px;
   padding-left: 50px;
