@@ -111,9 +111,10 @@ const NameContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  box-shadow: -5px 0 10px 2px rgba(0, 0, 0, .5);
+  box-shadow: -5px 0 10px 2px rgba(0, 0, 0, 0.5);
 
   @media only screen and (max-height: 600px) {
+    box-shadow: 0px 0 10px 2px rgba(0, 0, 0, 0.2);
     min-height: 1280px;
   }
 
@@ -196,11 +197,13 @@ const LandingPage = (props) => {
       .to(text1Ref, { opacity: 0, duration: 1, y: -80, delay: 1 })
       .to(buttonsRef, { opacity: 1, y: -80, duration: 1 })
       .to(containerRef, { width: "65vw", duration: 2 })
-      .to(cloudRef, { scale: 0.8, duration: 1});
+      .to(cloudRef, { scale: 0.8, duration: 1 });
   }, []);
 
   return (
-    <div style={{position: "relative", display: "flex", flexDirection: "row"}}>
+    <div
+      style={{ position: "relative", display: "flex", flexDirection: "row" }}
+    >
       <CommunicationCloudContainer ref={(r) => (containerRef = r)}>
         <CommunicationElementsContainer>
           <Cloud ref={(r) => (cloudRef = r)}>

@@ -16,6 +16,7 @@ const ProjectsMain = styled.div`
     display: flex;
     flex-direction: column;
     width: 100vw;
+    padding-top: 10px;
   }
 `;
 
@@ -186,19 +187,16 @@ const Projects = (props) => {
 
   const animate = (func) => {
     const t1 = gsap.timeline();
-    t1.fromTo(
+    t1.to(
       projectsRef,
-      { scale: !isMobile ? 1.1 : 1.0 },
       {
-        scale: 1,
         opacity: 0,
         duration: 0.5,
         onComplete: () => func(),
       }
-    ).fromTo(
+    ).to(
       projectsRef,
-      { scale: 1 },
-      { opacity: 1, scale: !isMobile ? 1.1 : 1.0, duration: 0.5, delay: 0.5 }
+      { opacity: 1, duration: 0.5, delay: 0.5 }
     );
   };
 

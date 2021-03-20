@@ -46,8 +46,8 @@ const AboutContainer = styled.div`
     justify-content: center;
     padding-top: 100px;
     padding-bottom: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: center;
   }
 `;
