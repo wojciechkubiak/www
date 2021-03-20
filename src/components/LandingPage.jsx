@@ -141,7 +141,7 @@ const Name = styled.h1`
   text-align: center;
   font-family: "Lato", sans-serif;
   font-weight: 700;
-  color: #464689;
+  color: #5e6196;
 `;
 
 const Role = styled.h1`

@@ -22,7 +22,7 @@ const ContactContainer = styled.div`
   left: 50%;
   transform: translate(-50%, 0%);
   border-radius: 40px;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, .2);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
 
   @media only screen and (max-width: 600px) {
     width: auto;
@@ -136,6 +136,7 @@ const Label = styled.p`
 `;
 
 const LottieContainer = styled.div`
+  position: relative;
   @media only screen and (max-width: 600px) {
     position: relative;
     transform: scale(0.85);
@@ -163,9 +164,11 @@ const Contact = (props) => {
   const [content, setContent] = useState("");
   const [animated, setAnimated] = useState(false);
   const [inputDisabled, setInputDisabled] = useState(false);
+  const [alreadySend, setAlreadySend] = useState(false);
 
   let contactSubHeader = useRef(null);
   let contactForm = useRef(null);
+  let animRef = useRef(null);
 
   const animationConfig = {
     loop: true,
@@ -182,6 +185,19 @@ const Contact = (props) => {
     setContent("");
   };
 
+  const animShip = (ref) => {
+    const t1 = gsap.timeline();
+
+    if (!alreadySend) {
+      console.log("Ship starts moving");
+      t1.to(ref, {
+        y: -3000,
+        duration: 3,
+        onComplete: () => setAlreadySend(true),
+      });
+    }
+  };
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setInputDisabled(true);
@@ -192,13 +208,10 @@ const Contact = (props) => {
       content: content,
     };
 
-    console.log(mail);
-
     axios
       .post(`https://portolio-email-sender.herokuapp.com/`, { mail })
       .then((res) => {
-        console.log(res);
-        console.log(res.data);
+        // animShip(animRef);
         clearData();
         setInputDisabled(false);
       })
@@ -209,7 +222,7 @@ const Contact = (props) => {
 
   return (
     <ContactBody>
-      <LottieContainer>
+      <LottieContainer ref={(r) => (animRef = r)}>
         <Lottie
           options={animationConfig}
           height={850}

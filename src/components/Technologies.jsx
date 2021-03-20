@@ -1,153 +1,178 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
-import Flutter from "./../assets/img/flutter.png";
+import Flutter from "./../assets/img/flutterb.png";
 import Android from "./../assets/img/android.png";
-import CSS from "./../assets/img/css.png";
-import HTML from "./../assets/img/html.png";
-import JS from "./../assets/img/js.png";
-import MySQL from "./../assets/img/mysql.png";
-import Node from "./../assets/img/node.png";
-import PostgreSQL from "./../assets/img/psql.png";
-import Python from "./../assets/img/py.png";
-import Rc from "./../assets/img/react.png";
+import CSS from "./../assets/img/cssb.png";
+import HTML from "./../assets/img/htmlb.png";
+import JS from "./../assets/img/jsb.png";
+import MySQL from "./../assets/img/mysqlb.png";
+import Node from "./../assets/img/nodeb.png";
+import PostgreSQL from "./../assets/img/psqlb.png";
+import Python from "./../assets/img/pyb.png";
+import Rc from "./../assets/img/reactb.png";
 import gsap from "gsap";
-import uuid from 'react-uuid'
+import uuid from "react-uuid";
 import Translations from "./../translations/translations";
 
 const TechnologiesMain = styled.div`
-  padding-top: 5%;
   min-height: 100vh;
   min-width: 100vw;
-  background-color: #464689;
+  background-color: white;
   text-align: center;
   display: flex;
   flex-direction: column;
+  padding-top: 100px;
 `;
 
 const TechnologiesContainer = styled.div`
   position: relative;
   left: 15%;
   width: 70%;
+  margin-top: 25px;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  margin-bottom: 100px;
+
+  @media only screen and (max-width: 600px) {
+    width: 90%;
+    left: 5%;
+  }
 `;
 
 const ImageContainer = styled.div`
   margin: 10px;
-  margin-top: 80px;
-  width: 240px;
-`;
-
-const Header = styled.h1`
-  font-family: "Dancing Script", cursive;
-  font-weight: 400;
-  font-size: 24px;
-  margin-top: 10px;
-  color: rgba(255, 255, 255, 0.7);
-`;
-
-const DescriptionContainer = styled.div`
-  position: absolute;
-  width: 220px;
-  background-color: white;
-  padding: 10px;
-  margin-top: 10px;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.3);
-  display: none;
-  opacity: 0;
-  z-index: 2000
-`;
-
-const DescriptionText = styled.p`
-  color: #464689de;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-family: "Roboto", sans-serif;
-  padding-bottom: 5px;
+  margin-top: 20px;
+  width: 60px;
 `;
 
 const Image = styled.img`
-  background-color: white;
-  padding: 15px;
-  border-radius: 24px;
-  box-shadow: 0 0 15px 2px rgba(0, 0, 0, 0.2);
+  padding: 5px;
 `;
 
-const BottomHeader = styled.h1`
-  color: white;
+const Option = styled.h1`
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 26px;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 30px;
+  min-width: 200px;
+  outline: none;
   font-family: "Lato", sans-serif;
   font-weight: 600;
+`;
+
+const DescriptionContainer = styled.div`
+  background-color: #5e6196;
+  padding: 50px;
+  padding-top: 20px;
+  margin-top: 50px;
+  min-height: 300px;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 40px;
+
+  @media only screen and (max-width: 600px) {
+    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+`;
+
+const Header = styled.h1`
+  text-align: center;
   font-size: 42px;
+  color: rgba(0, 0, 0, 0.7);
+`;
+
+const Description = styled.p`
+  color: white;
+  font-size: 20px;
+  margin-top: 50px;
+  line-height: 30px;
+`;
+
+const DescriptionImages = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+const OptionsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
 `;
 
 const Technologies = (props) => {
-  const Skill = (img, skill, description = {}) => {
-    const [show, setShow] = useState(false);
-    let imgRef = useRef(null);
-    let descriptionRef = useRef(null);
-    useEffect(() => {
-      const t1 = gsap.timeline();
+  const [option, setOption] = useState("fe");
 
-      if (show) {
-        t1.to(imgRef, { y: -10, duration: 0.1 }).
-        to(descriptionRef, { display: "block", zIndex: 2000, duration: 0.1})
-        .to(descriptionRef, { 
-          opacity: 1,
-          delay: 0.1,
-          duration: 0.5,
-        });
-      }
+  const lorem =
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
-      if (!show) {
-        t1.to(imgRef, { y: 0 })
-          .to(descriptionRef, { opacity: 0, duration: 0.5 })
-          .to(descriptionRef, { display: "none", delay: 0.5 });
-      }
-    }, [show]);
+  const active = {
+    backgroundColor: "#5e6196",
+    color: "white",
+    boxShadow: "0 0 10px 2px rgba(0, 0, 0, 0.2)",
+  };
+
+  const frontend = [Rc, Flutter, JS, CSS, HTML];
+  const backend = [Node, Python];
+  const databases = [MySQL, PostgreSQL];
+
+  const Skill = (img) => {
     return (
       <ImageContainer key={uuid()}>
-        <Image
-          src={img}
-          height={96}
-          width={96}
-          onMouseOver={() => setShow(true)}
-          onMouseOut={() => setShow(false)}
-          ref={(r) => (imgRef = r)}
-          onClick={() => setShow(!show)}
-        />
-        <Header>{skill}</Header>
-        <DescriptionContainer ref={(r) => (descriptionRef = r)}>
-          {description.map((element) => {
-            return (
-              <DescriptionText>
-                {props.t(element, { framework: "react-i18next" })}
-              </DescriptionText>
-            );
-          })}
-        </DescriptionContainer>
+        <Image src={img} height={42} width={42} />
       </ImageContainer>
+    );
+  };
+
+  const Desc = (data, description) => {
+    return (
+      <DescriptionContainer>
+        <DescriptionImages>
+          {data.map((skill) => Skill(skill))}
+        </DescriptionImages>
+        <Description>{description}</Description>
+      </DescriptionContainer>
     );
   };
 
   return (
     <TechnologiesMain>
+      <Header>MOJE TECHNOLOGIE</Header>
       <TechnologiesContainer>
-        {Skill(Rc, "ReactJS", Translations.Skills.React)}
-        {Skill(Flutter, "Flutter", Translations.Skills.Flutter)}
-        {Skill(JS, "JavaScript", Translations.Skills.JavaScript)}
-        {Skill(Node, "NodeJS", Translations.Skills.NodeJS)}
-        {Skill(PostgreSQL, "PostgreSQL", Translations.Skills.PostgreSQL)}
-        {Skill(MySQL, "MySQL", Translations.Skills.MySQL)}
-        {Skill(Python, "Python", Translations.Skills.Python)}
-        {Skill(CSS, "CSS", Translations.Skills.CSS)}
-        {Skill(HTML, "HTML", Translations.Skills.HTML)}
-        {Skill(Android, "Android", Translations.Skills.Android)}
+        <OptionsContainer>
+          <Option
+            style={option === "fe" ? active : {}}
+            onClick={() => setOption("fe")}
+          >
+            Frontend
+          </Option>
+          <Option
+            style={option === "be" ? active : {}}
+            onClick={() => setOption("be")}
+          >
+            Backend
+          </Option>
+          <Option
+            style={option === "db" ? active : {}}
+            onClick={() => setOption("db")}
+          >
+            Bazy danych
+          </Option>
+        </OptionsContainer>
+
+        {option === "fe" && Desc(frontend, lorem)}
+        {option === "be" && Desc(backend, lorem)}
+        {option === "db" && Desc(databases, lorem)}
       </TechnologiesContainer>
-      <BottomHeader>MOJE TECHNOLOGIE</BottomHeader>
     </TechnologiesMain>
   );
 };
