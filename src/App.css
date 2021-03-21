@@ -55,9 +55,13 @@
   -ms-user-select: none;
 }
 
+button {
+  outline: none;
+}
 
 @media only screen and (max-width: 600px) {
   .projects-card-img {
     filter: grayscale(0);
   }
 }
+

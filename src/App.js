@@ -119,17 +119,17 @@ const App = (props) => {
       </audio>
       <ComponentsContainer>
         <div ref={homeRef}>
-          <LandingPage />
+          <LandingPage t={t} lang={lang} goContact={goContact}/>
         </div>
         {isMobile && <About t={t} />}
         <div ref={projectsRef}>
-          <Projects />
+          <Projects t={t} />
         </div>
         <div ref={skillsRef}>
           <Technologies t={t} />
         </div>
         <div ref={contactRef}>
-          <Contact t={t} />
+          <Contact t={t} lang={lang} />
         </div>
       </ComponentsContainer>
     </AppMain>

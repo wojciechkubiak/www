@@ -8,6 +8,8 @@ import { MdMessage } from "react-icons/md";
 import * as animationData from "../assets/astronaut.json";
 import device from "../utils/devices";
 import "./../App.css";
+import resumePL from "../assets/docs/WojciechKubiakCV_PL.pdf";
+import resumeEN from "../assets/docs/WojciechKubiakCV_EN.pdf"
 
 const CommunicationCloudContainer = styled.div`
   height: 100vh;
@@ -97,6 +99,7 @@ const GetToKnowBtn = styled.button`
   color: white;
   border-radius: 40px;
   font-family: "Roboto", sans-serif;
+  outline: none;
 
   @media only screen and ${device.laptopMax} {
     font-size: 11px;
@@ -160,7 +163,7 @@ const LottieContainer = styled.div`
 `;
 
 const LandingPage = (props) => {
-  const [message, setMessage] = useState("Cześć!");
+  const [message, setMessage] = useState(`${props.t("landing.welcome", { framework: "react-i18next" })}`);
   let loadingDotsRef = useRef(null);
   let text1Ref = useRef(null);
   let buttonsRef = useRef(null);
@@ -185,7 +188,7 @@ const LandingPage = (props) => {
         duration: 1,
         y: -80,
         delay: 1,
-        onComplete: () => setMessage("Nazywam się Wojtek"),
+        onComplete: () => setMessage(`${props.t("landing.nameis", { framework: "react-i18next" })}`),
       })
       .to(text1Ref, { y: 0 })
       .fromTo(
@@ -216,22 +219,28 @@ const LandingPage = (props) => {
             <Message>{message}</Message>
           </Text>
           <GetToKnowContainer ref={(r) => (buttonsRef = r)}>
-            <GetToKnowHeader>Dowiedz się więcej</GetToKnowHeader>
-            <GetToKnowBtn
-              style={{
-                backgroundColor: "#5e6196",
-                color: "white",
-              }}
+            <GetToKnowHeader>{props.t("landing.more", { framework: "react-i18next" })}</GetToKnowHeader>
+            <a
+              href={props.lang === "pl" ? resumePL : resumeEN}
+              download={`WojciechKubiakCV_${props.lang}`}
             >
-              O mnie
-            </GetToKnowBtn>
+              <GetToKnowBtn
+                style={{
+                  backgroundColor: "#5e6196",
+                  color: "white",
+                }}
+              >
+                {props.t("landing.aboutme", { framework: "react-i18next" })}
+              </GetToKnowBtn>
+            </a>
             <GetToKnowBtn
               style={{
                 backgroundColor: "white",
                 color: "rgba(0, 0, 0, 0.8)",
               }}
+              onClick={() => props.goContact()}
             >
-              Kontakt
+              {props.t("landing.contact", { framework: "react-i18next" })}
             </GetToKnowBtn>
           </GetToKnowContainer>
         </CommunicationElementsContainer>

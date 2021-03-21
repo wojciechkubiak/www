@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import device from "../utils/devices";
 import { RiDownloadCloud2Line } from "react-icons/ri";
+import resumePL from "../assets/docs/WojciechKubiakCV_PL.pdf";
+import resumeEN from "../assets/docs/WojciechKubiakCV_EN.pdf";
 
 const Download = styled.button`
   position: relative;
@@ -74,14 +76,21 @@ const Description = styled.p`
 const About = (props) => {
   return (
     <AboutContainer>
-      <AboutHeader>{props.t("aboutme.header", { framework: "react-i18next" })}</AboutHeader>
+      <AboutHeader>
+        {props.t("aboutme.header", { framework: "react-i18next" })}
+      </AboutHeader>
 
       <Description>
-      {props.t("aboutme.content", { framework: "react-i18next" })}
+        {props.t("aboutme.content", { framework: "react-i18next" })}
       </Description>
-      <Download>
-        <RiDownloadCloud2Line size={32} color="#5e6196"/>
-      </Download>
+      <a
+        href={props.lang === "pl" ? resumePL : resumeEN}
+        download={`WojciechKubiakCV_${props.lang}`}
+      >
+        <Download>
+          <RiDownloadCloud2Line size={32} color="#5e6196" />
+        </Download>
+      </a>
     </AboutContainer>
   );
 };

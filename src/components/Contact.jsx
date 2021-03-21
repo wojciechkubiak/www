@@ -314,7 +314,7 @@ const Contact = (props) => {
               }}
               type="submit"
             >
-              SEND
+             {props.t("contact.send", { framework: "react-i18next" })}
             </button>
           </form>
         </ContactContainer>

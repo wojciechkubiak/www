@@ -149,7 +149,7 @@ const Navbar = (props) => {
       </MenuContainer>
       <div style={{display: "flex", flexDirection: "column"}}>
       <LanguageBtn onClick={() => props.langHandler()}>
-        <p>{props.lang}</p>
+        <p>{props.lang === "en" ? "PL" : "EN" }</p>
       </LanguageBtn>
       <ShowMenuBtn onClick={() => setShowMenu(!showMenu)}>
         {showMenu && <RiMenuFoldLine size={24} color="white" />}
