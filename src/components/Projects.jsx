@@ -151,10 +151,6 @@ const DescriptionParagraph = styled.div`
   padding: 20px;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
-
-  @media only screen and (max-width: 600px) {
-    display: none;
-  }
 `;
 
 const Projects = (props) => {
