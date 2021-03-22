@@ -16,9 +16,7 @@ import "./App.css";
 import devices from "./utils/devices";
 
 const AppMain = styled.div`
-  overflow-x: hidden;
-  overflow-y: hidden;
-  height: 100vh;
+  height: 100%;
   background-image: url(${Background});
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -26,28 +24,23 @@ const AppMain = styled.div`
   position: relative;
   -webkit-overflow-scrolling: touch;
 
-  @media only screen and (max-height: 800px) {
-    overflow-x: hidden;
-    overflow-y: hidden;
-    min-height: 1120px;
-  }
-
   @media only screen and (max-width: 600px) {
-    overflow-x: hidden;
-    overflow-y: hidden;
     height: auto;
     background-image: none;
+  }
+  
+  @media only screen and (max-width: 1080px) {
+    display: flex;
+    flex-direction: column;
   }
 `;
 
 const ComponentsContainer = styled.div`
-  display: inline-flex;
+background-color: #2e305cda;
 
   @media only screen and (max-width: 600px) {
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
-    overflow-y: hidden;
   }
 `;
 
@@ -121,7 +114,7 @@ const App = (props) => {
         <div ref={homeRef}>
           <LandingPage t={t} lang={lang} goContact={goContact}/>
         </div>
-        {isMobile && <About t={t} />}
+        <About t={t} />
         <div ref={projectsRef}>
           <Projects t={t} />
         </div>

@@ -59,9 +59,29 @@ button {
   outline: none;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: white;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #5e6196;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #464689;
+}
+
 @media only screen and (max-width: 600px) {
   .projects-card-img {
     filter: grayscale(0);
   }
 }
-

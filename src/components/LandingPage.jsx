@@ -9,14 +9,12 @@ import * as animationData from "../assets/astronaut.json";
 import device from "../utils/devices";
 import "./../App.css";
 import resumePL from "../assets/docs/WojciechKubiakCV_PL.pdf";
-import resumeEN from "../assets/docs/WojciechKubiakCV_EN.pdf"
+import resumeEN from "../assets/docs/WojciechKubiakCV_EN.pdf";
 
 const CommunicationCloudContainer = styled.div`
-  height: 100vh;
+  min-height: 105vh;
   width: 100vw;
-  background-color: #2e305cda;
   position: relative;
-  min-width: 600px;
 
   @media only screen and (max-height: 600px) {
     min-height: 1280px;
@@ -163,7 +161,9 @@ const LottieContainer = styled.div`
 `;
 
 const LandingPage = (props) => {
-  const [message, setMessage] = useState(`${props.t("landing.welcome", { framework: "react-i18next" })}`);
+  const [message, setMessage] = useState(
+    `${props.t("landing.welcome", { framework: "react-i18next" })}`
+  );
   let loadingDotsRef = useRef(null);
   let text1Ref = useRef(null);
   let buttonsRef = useRef(null);
@@ -188,7 +188,10 @@ const LandingPage = (props) => {
         duration: 1,
         y: -80,
         delay: 1,
-        onComplete: () => setMessage(`${props.t("landing.nameis", { framework: "react-i18next" })}`),
+        onComplete: () =>
+          setMessage(
+            `${props.t("landing.nameis", { framework: "react-i18next" })}`
+          ),
       })
       .to(text1Ref, { y: 0 })
       .fromTo(
@@ -199,7 +202,6 @@ const LandingPage = (props) => {
       .to(text1Ref, { opacity: 1, duration: 1 })
       .to(text1Ref, { opacity: 0, duration: 1, y: -80, delay: 1 })
       .to(buttonsRef, { opacity: 1, y: -80, duration: 1 })
-      .to(containerRef, { width: "65vw", duration: 2 })
       .to(cloudRef, { scale: 0.8, duration: 1 });
   }, []);
 
@@ -219,7 +221,9 @@ const LandingPage = (props) => {
             <Message>{message}</Message>
           </Text>
           <GetToKnowContainer ref={(r) => (buttonsRef = r)}>
-            <GetToKnowHeader>{props.t("landing.more", { framework: "react-i18next" })}</GetToKnowHeader>
+            <GetToKnowHeader>
+              {props.t("landing.more", { framework: "react-i18next" })}
+            </GetToKnowHeader>
             <a
               href={props.lang === "pl" ? resumePL : resumeEN}
               download={`WojciechKubiakCV_${props.lang}`}
@@ -245,23 +249,14 @@ const LandingPage = (props) => {
           </GetToKnowContainer>
         </CommunicationElementsContainer>
       </CommunicationCloudContainer>
-      <NameContainer>
-        {!isMobile && (
-          <LottieContainer>
-            <Lottie
-              options={animationConfig}
-              height={400}
-              width={400}
-              isStopped={false}
-              isPaused={false}
-            />
-          </LottieContainer>
-        )}
-        <NameSubcontainer style={{}}>
-          <Name>WOJCIECH KUBIAK</Name>
-          <Role>Developer</Role>
-        </NameSubcontainer>
-      </NameContainer>
+      {isMobile && (
+        <NameContainer>
+          <NameSubcontainer style={{}}>
+            <Name>WOJCIECH KUBIAK</Name>
+            <Role>Developer</Role>
+          </NameSubcontainer>
+        </NameContainer>
+      )}
     </div>
   );
 };

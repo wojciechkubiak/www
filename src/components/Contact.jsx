@@ -38,7 +38,6 @@ const ContactContainer = styled.div`
 `;
 
 const ContactMain = styled.div`
-  background-color: white;
   position: relative;
   width: 50%;
   height: 100vh;
@@ -144,13 +143,12 @@ const LottieContainer = styled.div`
 `;
 
 const ContactBody = styled.div`
-  width: 100vw;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  background-color: white;
-
+  background: rgb(134,134,191);
+  background: linear-gradient(180deg, rgba(134,134,191,1) 0%, rgba(187,187,224,1) 100%);
   @media only screen and (max-width: 600px) {
     // flex
   }

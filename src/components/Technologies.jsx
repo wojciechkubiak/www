@@ -1,23 +1,22 @@
 import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
-import Flutter from "./../assets/img/flutterb.png";
-import Android from "./../assets/img/android.png";
-import CSS from "./../assets/img/cssb.png";
-import HTML from "./../assets/img/htmlb.png";
-import JS from "./../assets/img/jsb.png";
-import MySQL from "./../assets/img/mysqlb.png";
-import Node from "./../assets/img/nodeb.png";
-import PostgreSQL from "./../assets/img/psqlb.png";
-import Python from "./../assets/img/pyb.png";
-import Rc from "./../assets/img/reactb.png";
+import Flutter from "./../assets/img/flutter.png";
+import CSS from "./../assets/img/css.png";
+import HTML from "./../assets/img/html.png";
+import JS from "./../assets/img/js.png";
+import MySQL from "./../assets/img/mysql.png";
+import Node from "./../assets/img/node.png";
+import PostgreSQL from "./../assets/img/psql.png";
+import Python from "./../assets/img/py.png";
+import Rc from "./../assets/img/react.png";
 import gsap from "gsap";
 import uuid from "react-uuid";
 import Translations from "./../translations/translations";
 
 const TechnologiesMain = styled.div`
   min-height: 100vh;
-  min-width: 100vw;
-  background-color: white;
+  background: rgb(78,78,163);
+  background: linear-gradient(180deg, rgba(78,78,163,1) 0%, rgba(134,134,191,1) 100%);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -52,7 +51,7 @@ const Image = styled.img`
 `;
 
 const DescriptionContainer = styled.div`
-  background-color: #5e6196;
+  background-color: white;
   padding: 50px;
   padding-top: 20px;
   margin-top: 50px;
@@ -72,11 +71,11 @@ const DescriptionContainer = styled.div`
 const Header = styled.h1`
   text-align: center;
   font-size: 42px;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.9);
 `;
 
 const Description = styled.p`
-  color: white;
+  color: rgba(0, 0, 0, 0.67);
   font-size: 20px;
   margin-top: 50px;
   line-height: 30px;
@@ -91,7 +90,7 @@ const DescriptionImages = styled.div`
 
 const DescriptionHeader = styled.h1`
   font-family: "Dancing Script", cursive;
-  color: white;
+  color: rgba(0, 0, 0, 0.7);
 `;
 
 const Technologies = (props) => {

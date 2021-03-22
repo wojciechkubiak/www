@@ -7,13 +7,13 @@ import resumeEN from "../assets/docs/WojciechKubiakCV_EN.pdf";
 
 const Download = styled.button`
   position: relative;
-  width: 60%;
+  left: 80%;
+  width: 300px;
 
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
-
   font-size: 18px;
   border: none;
   background-color: white;
@@ -21,26 +21,31 @@ const Download = styled.button`
   border-radius: 40px;
   font-family: "Roboto", sans-serif;
   font-weight: 500;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
 
   @media only screen and ${device.laptopMax} {
     font-size: 11px;
     padding: 10px;
   }
+
+  @media only screen and (max-width: 600px) {
+    left: 0%;
+  }
 `;
 
 const AboutContainer = styled.div`
-  height: 100vh;
+  position: relative;
   word-wrap: break-word;
-  background-color: #5e6196;
+  background: rgb(70,70,137);
+  background: linear-gradient(180deg, rgba(70,70,137,1) 0%, rgba(92,92,170,1) 100%);
   color: white;
-  padding: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
-
-  @media only screen and (min-width: 601px) {
-    width: 400px;
-  }
+  padding: 50px;
+  padding-left: 240px;
+  padding-right: 240px;
+  margin-top: -20px;
+  border-top-left-radius: 60px;
+  border-top-right-radius: 60px;
+  z-index: 1000;
 
   @media only screen and (max-width: 600px) {
     max-width: 100vw;
@@ -51,6 +56,9 @@ const AboutContainer = styled.div`
     padding-left: 10px;
     padding-right: 10px;
     text-align: center;
+    margin-top: 0px;
+    z-index: 0;
+    border-radius: 0px;
   }
 `;
 
@@ -65,10 +73,10 @@ const Description = styled.p`
   padding-right: 30px;
   padding-top: 50px;
   padding-bottom: 50px;
-  font-size: 16px;
+  font-size: 20px;
   word-spacing: 6px;
   line-height: 32px;
-  color: white;
+  color: rgba(255, 255, 255, 0.7);
   padding-top: 30px;
   font-family: "Roboto", sans-serif;
 `;

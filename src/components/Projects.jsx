@@ -9,9 +9,13 @@ import Lottie from "react-lottie";
 import * as animationData from "../assets/lotties/space.json";
 
 const ProjectsMain = styled.div`
-  width: 100vw;
   min-height: 100vh;
-  background-color: white;
+  background: rgb(92, 92, 170);
+  background: linear-gradient(
+    180deg,
+    rgba(92, 92, 170, 1) 0%,
+    rgba(78, 78, 163, 1) 100%
+  );
   padding-top: 50px;
   position: relative;
 
@@ -31,6 +35,7 @@ const ProjectsContainer = styled.div`
   left: 20%;
   display: flex;
   flex-direction: row;
+  margin-top: 50px;
 
   @media only screen and (max-width: 600px) {
     width: 100vw;
@@ -93,7 +98,7 @@ const Description = styled.div`
   font-size: 20px;
   text-align: center;
   line-height: 30px;
-  color: rgba(0, 0, 0, 0.7);
+  color: rgba(255, 255, 255, 0.7);
   font-family: "Roboto", sans-serif;
 
   @media only screen and (max-width: 600px) {
@@ -117,7 +122,7 @@ const DescriptionHeader = styled.h1`
   font-size: 42px;
   margin-top: 12px;
   margin-bottom: 12px;
-  color: rgba(0, 0, 0, 0.7);
+  color: white;
 
   @media only screen and (max-width: 600px) {
     margin-top: 24px;
@@ -140,16 +145,14 @@ const Button = styled.button`
 
 const LottieContainer = styled.div`
   position: absolute;
-  height: 1028px;
-  width: 1028px;
+  height: 512px;
+  width: 512px;
   top: 0;
-  right: 0;
+  right: 512px;
 `;
 
 const DescriptionParagraph = styled.div`
-  background-color: white;
   padding: 20px;
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
   border-radius: 20px;
 `;
 
@@ -239,7 +242,7 @@ const Projects = (props) => {
           <Button>
             <FaArrowLeft
               size={42}
-              color="#5e6196"
+              color="white"
               onClick={() => animate(prevProject)}
             />
           </Button>
@@ -258,7 +261,7 @@ const Projects = (props) => {
           <Button>
             <FaArrowRight
               size={42}
-              color="#5e6196"
+              color="white"
               onClick={() => animate(nextProject)}
             />
           </Button>
