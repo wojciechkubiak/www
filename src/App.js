@@ -1,132 +1,118 @@
-import React, { useState, useEffect, useRef } from "react";
-import styled from "styled-components";
-import { withTranslation } from "react-i18next";
-import { isMobile } from "react-device-detect";
-import HorizontalScroll from "react-scroll-horizontal";
-import backgroundMusic from "./assets/bgsound.mp3";
-import Background from "./assets/astronaut.svg";
-import Navbar from "./components/Navbar";
-import LandingPage from "./components/LandingPage";
-import About from "./components/About";
-import Projects from "./components/Projects";
-import Technologies from "./components/Technologies";
-import Contact from "./components/Contact";
+import React, { useEffect, useRef, useState } from "react";
+import { Navbar, LandingPage } from "./components/Components";
 
 import "./App.css";
-import devices from "./utils/devices";
 
-const AppMain = styled.div`
-  height: 100%;
-  background-image: url(${Background});
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  position: relative;
-  -webkit-overflow-scrolling: touch;
-
-  @media only screen and (max-width: 600px) {
-    height: auto;
-    background-image: none;
-  }
-  
-  @media only screen and (max-width: 1080px) {
-    display: flex;
-    flex-direction: column;
-  }
-`;
-
-const ComponentsContainer = styled.div`
-background-color: #2e305cda;
-
-  @media only screen and (max-width: 600px) {
-    display: flex;
-    flex-direction: column;
-  }
-`;
-
-const App = (props) => {
-  const { t, i18n } = props;
-
-  const [isMusicLoaded, setMusicLoaded] = useState(false);
-  const [playMusic, setPlayMusic] = useState(false);
-  const [showMenu, setShowMenu] = useState(false);
-  let appRef = useRef(null);
-  let audioRef = useRef(null);
-  let homeRef = useRef(null);
-  let projectsRef = useRef(null);
-  let skillsRef = useRef(null);
-  let contactRef = useRef(null);
-
-  const smooth = { behavior: "smooth", block: "start", inline: "nearest" };
-
-  const [lang, setLang] = useState("en");
-
-  const goHome = () => homeRef.current.scrollIntoView(smooth);
-  const goProjects = () => projectsRef.current.scrollIntoView(smooth);
-  const goSkills = () => skillsRef.current.scrollIntoView(smooth);
-  const goContact = () => contactRef.current.scrollIntoView(smooth);
+const App = () => {
+  const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {
-    if (!isMobile) {
-      setTimeout(() => {
-        setMusicLoaded(true);
-        setPlayMusic(true);
-      }, 2000);
-    }
+    window.addEventListener("scroll", scrollValue);
   }, []);
 
-  const langHandler = () => {
-    if (lang === "en") {
-      setLang("pl");
-    } else {
-      setLang("en");
-    }
+  const scrollValue = () => {
+    setScrollY(window.scrollY);
   };
 
-  useEffect(() => {
-    document.documentElement.lang = lang;
-    i18n.changeLanguage(lang);
-  }, [lang, i18n]);
-
-  useEffect(() => {
-    playMusic ? audioRef.play() : audioRef.pause();
-  }, [playMusic]);
-
   return (
-    <AppMain ref={(r) => (appRef = r)}>
-      <div>
-        <Navbar
-          setPlayMusic={setPlayMusic}
-          playMusic={playMusic}
-          isMusicLoaded={isMusicLoaded}
-          langHandler={langHandler}
-          lang={lang}
-          goHome={goHome}
-          goProjects={goProjects}
-          goSkills={goSkills}
-          goContact={goContact}
-        />
+    <div className="App">
+      <Navbar scrollY={scrollY} />
+      <LandingPage scrollY={scrollY} />
+      <div
+        className="about-page"
+        style={{ padding: "80px", paddingTop: "60px" }}
+      >
+        <h1
+          style={{
+            fontFamily: "'Poppins', sans-serif",
+            fontStyle: "italic",
+            fontWeight: "700",
+            fontSize: "84px",
+            textAlign: "center",
+            color: "rgba(0, 0, 0, 0.8)",
+          }}
+        >
+          ABOUT ME
+        </h1>
+        <p
+          style={{
+            fontSize: "20px",
+            fontFamily: "'Roboto', sans-serif",
+            fontWeight: "400",
+            lineHeight: "30px",
+          }}
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc eget
+          lorem dolor sed viverra ipsum nunc aliquet bibendum. Pharetra magna ac
+          placerat vestibulum lectus mauris ultrices eros. Justo nec ultrices
+          dui sapien eget. Ante in nibh mauris cursus mattis molestie a. Sit
+          amet cursus sit amet dictum sit amet justo donec. Id nibh tortor id
+          aliquet lectus. Cursus in hac habitasse platea dictumst quisque. Enim
+          facilisis gravida neque convallis a cras. Netus et malesuada fames ac
+          turpis egestas integer eget aliquet. Scelerisque in dictum non
+          consectetur a erat nam. Velit scelerisque in dictum non consectetur a
+          erat nam at. Sit amet porttitor eget dolor morbi. Elementum tempus
+          egestas sed sed. Cursus euismod quis viverra nibh cras pulvinar.
+          Nullam non nisi est sit amet. Cursus sit amet dictum sit amet justo
+          donec.
+        </p>
       </div>
-      <audio ref={(r) => (audioRef = r)}>
-        <source src={backgroundMusic}></source>
-      </audio>
-      <ComponentsContainer>
-        <div ref={homeRef}>
-          <LandingPage t={t} lang={lang} goContact={goContact}/>
-        </div>
-        <About t={t} />
-        <div ref={projectsRef}>
-          <Projects t={t} />
-        </div>
-        <div ref={skillsRef}>
-          <Technologies t={t} />
-        </div>
-        <div ref={contactRef}>
-          <Contact t={t} lang={lang} />
-        </div>
-      </ComponentsContainer>
-    </AppMain>
+      <div className="projects-page">
+        <h1
+          style={{
+            fontFamily: "'Poppins', sans-serif",
+            padding: "40px",
+            paddingTop: "82px",
+            fontStyle: "italic",
+            fontWeight: "700",
+            fontSize: "84px",
+            textAlign: "left",
+            color: "rgba(255, 255, 255, 0.8)",
+          }}
+        >
+          PROJECTS
+        </h1>
+      </div>
+      <div className="skills-page">
+        <h1
+          style={{
+            fontFamily: "'Poppins', sans-serif",
+            padding: "40px",
+            paddingTop: "82px",
+            fontStyle: "italic",
+            fontWeight: "700",
+            fontSize: "84px",
+            textAlign: "right",
+            color: "rgba(0, 0, 0, 0.8)",
+          }}
+        >
+          SKILLS
+        </h1>
+      </div>
+      <div className="contact-page">
+        <h1
+          style={{
+            fontFamily: "'Poppins', sans-serif",
+            padding: "40px",
+            paddingTop: "82px",
+            fontStyle: "italic",
+            fontWeight: "700",
+            fontSize: "84px",
+            textAlign: "center",
+            color: "rgba(255, 255, 255, 1)",
+          }}
+        >
+          HAVE A QUESTION?
+        </h1>
+        <input style={{marginTop: "30px", marginBottom: "50px", width: "60%", left: "20%", position: "relative", fontSize: "38px", backgroundColor: "transparent", border: "none", borderBottom: "2px solid white"}} placeholder="Email"></input>
+        <input style={{marginTop: "30px", marginBottom: "50px", width: "60%", left: "20%", position: "relative", fontSize: "38px", backgroundColor: "transparent", border: "none", borderBottom: "2px solid white"}} placeholder="Subject"></input>
+        <textarea style={{marginTop: "30px", marginBottom: "50px", width: "60%", left: "20%", position: "relative", fontSize: "24px", backgroundColor: "transparent", border: "none", minHeight: "200px", borderBottom: "2px solid white"}} placeholder="Your message"></textarea>
+      </div>
+      <div className="footer">
+      </div>
+    </div>
   );
 };
 
-export default withTranslation("common")(App);
+export default App;
