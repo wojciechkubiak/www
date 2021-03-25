@@ -7,6 +7,54 @@
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
 }
 
+.contact-content {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  justify-content: center;
+}
+
+.contact-data {
+  min-width: 600px;
+  width: 20%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 50px;
+  padding-bottom: 180px;
+  text-align: right;
+  min-height: 400px;
+}
+
+.contact-data > div > span> h1 {
+  font-size: 28px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.contact-data > div > p, .contact-data > div > a {
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1520px) {
+  .contact-data {
+    text-align: center;
+  }
+}
+
+.contact-form {
+  min-width: 600px;
+  width: 60%;
+}
+
 .contact-header {
   font-family: "Poppins", sans-serif;
   padding: 40px;
