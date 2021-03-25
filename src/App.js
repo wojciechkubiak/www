@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Navbar, LandingPage } from "./components/Components";
+import { Navbar, LandingPage, About } from "./components/Components";
 import { IoMdSend } from "react-icons/io";
 import Loader from "react-loader-spinner";
 
@@ -7,6 +7,21 @@ import "./App.css";
 
 const App = () => {
   const [scrollY, setScrollY] = useState(0);
+  const [currentPage, setCurrentPage] = useState("home");
+
+  let homeRef = useRef(null);
+  let aboutRef = useRef(null);
+  let projectsRef = useRef(null);
+  let skillsRef = useRef(null);
+  let contactRef = useRef(null);
+
+  const smooth = { behavior: "smooth", block: "start", inline: "nearest" };
+
+  const goHome = () => homeRef.current.scrollIntoView(smooth);
+  const goAbout = () => aboutRef.current.scrollIntoView(smooth);
+  const goProjects = () => projectsRef.current.scrollIntoView(smooth);
+  const goSkills = () => skillsRef.current.scrollIntoView(smooth);
+  const goContact = () => contactRef.current.scrollIntoView(smooth);
 
   useEffect(() => {
     window.addEventListener("scroll", scrollValue);
@@ -18,70 +33,20 @@ const App = () => {
 
   return (
     <div className="App">
-      <Navbar scrollY={scrollY} />
-      <LandingPage scrollY={scrollY} />
-      <div
-        className="about-page"
-        style={{ padding: "80px", paddingTop: "60px" }}
-      >
-        <h1
-          style={{
-            fontFamily: "'Poppins', sans-serif",
-            fontStyle: "italic",
-            fontWeight: "700",
-            fontSize: "84px",
-            textAlign: "center",
-            color: "rgba(0, 0, 0, 0.8)",
-          }}
-        >
-          ABOUT ME
-        </h1>
-        <p
-          style={{
-            fontSize: "20px",
-            fontFamily: "'Roboto', sans-serif",
-            fontWeight: "400",
-            lineHeight: "30px",
-            wordSpacing: "2px",
-            marginBottom: "30px",
-          }}
-        >
-          Hi! My name is <strong>Wojtek Kubiak</strong> and I'm a{" "}
-          <strong>developer</strong>. In my career I had opportunity to create{" "}
-          <strong>web</strong> and <strong>mobile</strong> applications, both{" "}
-          <strong>client</strong> and <strong>server side</strong>.
-        </p>
-        <p
-          style={{
-            fontSize: "20px",
-            fontFamily: "'Roboto', sans-serif",
-            fontWeight: "400",
-            lineHeight: "30px",
-            wordSpacing: "2px",
-            textAlign: "justify",
-            textJustify: "inter-word",
-          }}
-        >
-          Ok, but <strong>how it all started?</strong> <br />I used to draw a
-          lot in my childhood - and I am doing that until now. Later, in high
-          school I was creating building designs. There was always that one
-          particle inside of me which makes me enjoy creating things. After high
-          school fate wanted me to start <strong>study programming</strong>. Of
-          course the first thing that caught my eye was web and mobile
-          development. From that first weeks - even days - all I'm doing is
-          thinking about what fancy application I could do, that would be{" "}
-          <strong>nice looking</strong> and <strong>functional</strong>.
-          <br />I <strong>accept</strong> various types of{" "}
-          <strong>orders</strong>, I am working <strong>full time</strong> job
-          as a <strong>programmer</strong> - currently{" "}
-          <strong>Flutter Developer</strong>, I am allowed to earn a living
-          doing what I love, what makes my eyes shine. If you want to{" "}
-          <strong>hire me</strong> or <strong>give me an assignment</strong>, so
-          I can share my passion with you, fill in the form at the end of the
-          website or just go into one of my social medias and message me. If you
-          want to get to know me better, click <strong>there</strong>.
-        </p>
-      </div>
+      <Navbar
+        scrollY={scrollY}
+        currentPage={currentPage}
+        setCurrentPage={setCurrentPage}
+        goHome={goHome}
+        goAbout={goAbout}
+        goProjects={goProjects}
+        goSkills={goSkills}
+        goContact={goContact}
+      />
+      <div ref={homeRef}><LandingPage scrollY={scrollY} /></div>
+      <div ref={aboutRef}><About/></div>
+      <div ref={projectsRef}>
+
       <div className="projects-page">
         <h1
           style={{
@@ -98,6 +63,8 @@ const App = () => {
           PROJECTS
         </h1>
       </div>
+      </div>
+      <div ref={skillsRef}>
       <div className="skills-page">
         <h1
           style={{
@@ -114,6 +81,8 @@ const App = () => {
           SKILLS
         </h1>
       </div>
+      </div>
+      <div ref={contactRef}>
       <div className="contact-page">
         <h1
           style={{
@@ -190,7 +159,7 @@ const App = () => {
           </button>
         </form>
       </div>
-      <div className="footer"></div>
+      </div>
     </div>
   );
 };
