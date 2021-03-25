@@ -1,0 +1,115 @@
+{
+    "header": {
+        "home": "STRONA GŁÓWNA",
+        "about": "O MNIE",
+        "skills": "TECHNOLOGIE",
+        "projects": "PROJEKTY",
+        "contact": "KONTAKT"
+    },
+    "landing": {
+        "welcome": "Cześć!",
+        "nameis": "Nazywam się Wojtek!",
+        "more": "Dowiedz się więcej",
+        "aboutme": "CV",
+        "contact": "Kontakt"
+    },
+    "aboutme": {
+        "header": "O MNIE",
+        "greeting": "Cześć!",
+        "mynameis": "Nazywam się",
+        "content": "Jestem studentem Informatyki Stosowanej i Systemów Pomiarowych, UWr. Moją pasją jest tworzenie miłych dla oka aplikacji webowych z użyciem nowoczesnych technologii. Pasja ta została zapoczątkowana podczas licznych indywidualnych i studenckich projektów. W każdym z nich wykazałem się kreatywnością, konsekwencją oraz dbałością o jakość aplikacji i kodu. Podczas moich studiów miałem również okazję uczestniczyć w praktyce oraz stażu programistycznym. Podczas ich trwania nauczyłem się specyfiki pracy w systemie SCRUM, komunikacji z klientem podczas otrzymywania zlecenia oraz jak programować z zachowaniem nowoczesnych standardów. Aktualnie pracuję w ACN, gdzie tworzę aplikacje oraz skrypty automatyzujące przy użyciu technologii opartych na jęzuku JavaScript. \nWięcej informacji "
+    },
+    "skills": {
+        "header": "TECHNOLOGIE"
+    },
+    "projects": {
+        "header": "PROJEKTY",
+        "opqnAbout": "Aplikacja mobilna dla dietetyków",
+        "obbsysAbout": "Aplikacja webowa dla weterynarza",
+        "fittrackerAbout": "Aplikacja webowa dla dietetyków"
+    },
+    "contact": {
+        "header": "Kontakt",
+        "box": "SKONTAKTUJ SIĘ",
+        "firstLine": "Jesteś zainteresowana/y pracą ze mną lub masz jakieś pytanie?",
+        "contactMe": "Napisz na adres:",
+        "or": "/",
+        "phone": "Zadzwoń:",
+        "mail": "Email",
+        "subject": "Temat",
+        "message": "Wiadomość",
+        "success": "Wysłano",
+        "subsuccess": "Odpowiem najszybciej jak to tylko możliwe",
+        "send": "WYŚLIJ"
+    },
+    "footer": {
+        "text": "Strona stworzona przez"
+    },
+    "javascript": {
+        "1": "ES6+",
+        "2": "Modyfikacja DOM",
+        "3": "Programowanie funkcyjne",
+        "4": "Async",
+        "5": "Podstawy typescript-u"
+    },
+    "python": {
+        "1": "Podstawowa znajomość składni",
+        "2": "Podstawowe funkcjonalności",
+        "3": "Proste aplikacje webowe"
+    },
+    "reactjs": {
+        "1": "React Hooks", 
+        "2": "Programowanie Funkcyjne", 
+        "3": "Programowanie Obiektowe", 
+        "4": "Integracja z bibliotekami",
+        "5": "Podstawy Redux"
+    },
+    "nodejs": {
+        "1": "ExpressJS",
+        "2": "REST API",
+        "3": "MVC",
+        "4": "Sequelize"
+    },
+    "html": {
+        "1": "Średnio-zaaw. składnia"
+    },
+    "css": {
+        "1": "CSS Grid",
+        "2": "Flexbox",
+        "3": "SASS",
+        "4": "Animacje"
+    },
+    "flutter": {
+        "1": "Programowanie obiektowe",
+        "2": "Tworzenie widoków oraz logiki aplikacji",
+        "3": "Implementacja i modyfikacja paczek",
+        "4": "Animacje",
+        "5": "Architektura BLoC-a"
+    },
+    "android": {
+        "1": "Basic native functionalities"
+    },
+    "bootstrap": {
+        "desc": "Użytkowanie,Edycja"
+    },
+    "postgres": {
+        "1": "Zaaw. składnia", 
+        "2": "T-SQL"
+    },
+    "mysql": {
+        "1": "Zaaw. składnia"
+    },
+    "download": {
+        "cv": "CV"
+    },
+    "tooltip": {
+        "info": "Więcej informacji po kliknięciu",
+        "copied": "Skopiowano!"
+    },
+    "here": {
+        "text": "tutaj"
+    },
+    "subinfo": {
+        "content": "oraz inne aplikacje studenckie / wykonane w pracy"
+    }
+}

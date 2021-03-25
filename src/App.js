@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Navbar, LandingPage } from "./components/Components";
+import { IoMdSend } from "react-icons/io";
+import Loader from "react-loader-spinner";
 
 import "./App.css";
 
@@ -40,22 +42,44 @@ const App = () => {
             fontFamily: "'Roboto', sans-serif",
             fontWeight: "400",
             lineHeight: "30px",
+            wordSpacing: "2px",
+            marginBottom: "30px",
           }}
         >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Nunc eget
-          lorem dolor sed viverra ipsum nunc aliquet bibendum. Pharetra magna ac
-          placerat vestibulum lectus mauris ultrices eros. Justo nec ultrices
-          dui sapien eget. Ante in nibh mauris cursus mattis molestie a. Sit
-          amet cursus sit amet dictum sit amet justo donec. Id nibh tortor id
-          aliquet lectus. Cursus in hac habitasse platea dictumst quisque. Enim
-          facilisis gravida neque convallis a cras. Netus et malesuada fames ac
-          turpis egestas integer eget aliquet. Scelerisque in dictum non
-          consectetur a erat nam. Velit scelerisque in dictum non consectetur a
-          erat nam at. Sit amet porttitor eget dolor morbi. Elementum tempus
-          egestas sed sed. Cursus euismod quis viverra nibh cras pulvinar.
-          Nullam non nisi est sit amet. Cursus sit amet dictum sit amet justo
-          donec.
+          Hi! My name is <strong>Wojtek Kubiak</strong> and I'm a{" "}
+          <strong>developer</strong>. In my career I had opportunity to create{" "}
+          <strong>web</strong> and <strong>mobile</strong> applications, both{" "}
+          <strong>client</strong> and <strong>server side</strong>.
+        </p>
+        <p
+          style={{
+            fontSize: "20px",
+            fontFamily: "'Roboto', sans-serif",
+            fontWeight: "400",
+            lineHeight: "30px",
+            wordSpacing: "2px",
+            textAlign: "justify",
+            textJustify: "inter-word",
+          }}
+        >
+          Ok, but <strong>how it all started?</strong> <br />I used to draw a
+          lot in my childhood - and I am doing that until now. Later, in high
+          school I was creating building designs. There was always that one
+          particle inside of me which makes me enjoy creating things. After high
+          school fate wanted me to start <strong>study programming</strong>. Of
+          course the first thing that caught my eye was web and mobile
+          development. From that first weeks - even days - all I'm doing is
+          thinking about what fancy application I could do, that would be{" "}
+          <strong>nice looking</strong> and <strong>functional</strong>.
+          <br />I <strong>accept</strong> various types of{" "}
+          <strong>orders</strong>, I am working <strong>full time</strong> job
+          as a <strong>programmer</strong> - currently{" "}
+          <strong>Flutter Developer</strong>, I am allowed to earn a living
+          doing what I love, what makes my eyes shine. If you want to{" "}
+          <strong>hire me</strong> or <strong>give me an assignment</strong>, so
+          I can share my passion with you, fill in the form at the end of the
+          website or just go into one of my social medias and message me. If you
+          want to get to know me better, click <strong>there</strong>.
         </p>
       </div>
       <div className="projects-page">
@@ -105,12 +129,68 @@ const App = () => {
         >
           HAVE A QUESTION?
         </h1>
-        <input style={{marginTop: "30px", marginBottom: "50px", width: "60%", left: "20%", position: "relative", fontSize: "38px", backgroundColor: "transparent", border: "none", borderBottom: "2px solid white"}} placeholder="Email"></input>
-        <input style={{marginTop: "30px", marginBottom: "50px", width: "60%", left: "20%", position: "relative", fontSize: "38px", backgroundColor: "transparent", border: "none", borderBottom: "2px solid white"}} placeholder="Subject"></input>
-        <textarea style={{marginTop: "30px", marginBottom: "50px", width: "60%", left: "20%", position: "relative", fontSize: "24px", backgroundColor: "transparent", border: "none", minHeight: "200px", borderBottom: "2px solid white"}} placeholder="Your message"></textarea>
+        <form>
+          <input
+            style={{
+              marginTop: "30px",
+              marginBottom: "50px",
+              width: "60%",
+              left: "20%",
+              position: "relative",
+              fontSize: "26px",
+              backgroundColor: "transparent",
+              border: "none",
+              borderBottom: "2px solid white",
+            }}
+            placeholder="Email"
+          ></input>
+          <input
+            style={{
+              marginTop: "30px",
+              marginBottom: "50px",
+              width: "60%",
+              left: "20%",
+              position: "relative",
+              fontSize: "26px",
+              backgroundColor: "transparent",
+              border: "none",
+              borderBottom: "2px solid white",
+            }}
+            placeholder="Subject"
+          ></input>
+          <textarea
+            style={{
+              marginTop: "30px",
+              marginBottom: "50px",
+              width: "60%",
+              left: "20%",
+              position: "relative",
+              fontSize: "22px",
+              letterSpacing: "1px",
+              backgroundColor: "transparent",
+              border: "none",
+              minHeight: "200px",
+              borderBottom: "2px solid white",
+            }}
+            placeholder="Your message"
+          ></textarea>
+          <button
+            type="submit"
+            style={{
+              width: "100%",
+              position: "relative",
+              backgroundColor: "transparent",
+              border: "none",
+              outline: "none",
+              marginBottom: "50px",
+            }}
+          >
+            {/* <IoMdSend size={62} color="white" /> */}
+            <Loader type="Grid" color="#FFFFFF" height="62" width="62" />
+          </button>
+        </form>
       </div>
-      <div className="footer">
-      </div>
+      <div className="footer"></div>
     </div>
   );
 };
