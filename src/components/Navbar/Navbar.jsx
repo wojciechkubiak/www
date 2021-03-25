@@ -1,5 +1,11 @@
 import React, { useEffect, useState, useRef } from "react";
 import { ImMenu, ImCross } from "react-icons/im";
+import {
+  FaLinkedin,
+  FaGitSquare,
+  FaFacebookSquare,
+  FaInstagramSquare,
+} from "react-icons/fa";
 import gsap from "gsap";
 import "./Navbar.css";
 
@@ -21,7 +27,7 @@ const Navbar = (props) => {
         onComplete: () => (document.body.style.overflow = "hidden"),
       });
     } else {
-      t1.to(fullscreenMenu, { marginLeft: "-1920px", duration: 1 });
+      t1.to(fullscreenMenu, { marginLeft: "-3860px", duration: 1 });
       document.body.style.overflow = "visible";
     }
   }, [showMenu]);
@@ -88,9 +94,25 @@ const Navbar = (props) => {
               {menuItem("skills")}
               {menuItem("contact")}
             </div>
+            <div className="navbar-social" style={{height: "42px", position: "relative", right: "0%"}}>
+              <div style={{position: "absolute", display: "flex", justifyContent: "space-between",  width: "200px", right: "5px"}}>
+              <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                <FaLinkedin color="white" size={42} />
+              </a>
+              <a href="https://www.github.com/wojciechkubiak">
+                <FaGitSquare color="white" size={42} />
+              </a>
+              <a href="https://www.facebook.com/wojciechkubiakfb">
+                <FaFacebookSquare color="white" size={42} />
+              </a>
+              <a href="https://www.instagram.com/biaqe/">
+                <FaInstagramSquare color="white" size={42} />
+              </a>
+              </div>
+            </div>
           </div>
-          <div style={{ width: "800px" }}>
-            <h1></h1>
+          <div style={{ width: "1000px" }}>
+            <div className="home-tile-top"></div>
           </div>
         </div>
       </div>

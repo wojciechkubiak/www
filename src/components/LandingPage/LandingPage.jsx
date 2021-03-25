@@ -12,14 +12,14 @@ useEffect(() => {
     if(value > 0 && value < 2560) {
         parallax0.style.top = `${value * 0.1}px`;
         parallax1.style.bottom = `${-100 + value * 0.1}px`;
-        parallax2.style.bottom = `${-150 + value * 0.05}px`;
+        parallax2.style.bottom = `${-150 + value * 0.08}px`;
     }
 }, [props.scrollY]);
 
   return (
     <div className="landing-page">
       <div ref={(r) => (parallax0 = r)} className="landing-page-parallax-0">
-        <h1>Your dev</h1>
+        <h1>Your Dev</h1>
         <h2>Your Future</h2>
       </div>
       <div

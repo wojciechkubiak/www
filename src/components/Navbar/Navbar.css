@@ -37,7 +37,7 @@
 }
 
 .navbar-hide-btn:hover {
-  transform: scale(1.1)
+  transform: scale(1.1);
 }
 
 .navbar-show-btn {
@@ -50,7 +50,7 @@
   height: 100vh;
   background-color: rgb(27, 27, 27);
   position: fixed;
-  margin-left: -1920px;
+  margin-left: -3860px;
 }
 
 .navbar-option {
@@ -105,4 +105,9 @@
   flex-direction: column;
   justify-content: center;
   height: 50vh;
+}
+
+.home-tile-top {
+  height: 800px;
+  background-image: url("./../../images/220699.jpg");
 }
