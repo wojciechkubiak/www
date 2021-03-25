@@ -1,7 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Navbar, LandingPage, About } from "./components/Components";
-import { IoMdSend } from "react-icons/io";
-import Loader from "react-loader-spinner";
+import { Navbar, LandingPage, About, Contact } from "./components/Components";
 
 import "./App.css";
 
@@ -83,82 +81,7 @@ const App = () => {
       </div>
       </div>
       <div ref={contactRef}>
-      <div className="contact-page">
-        <h1
-          style={{
-            fontFamily: "'Poppins', sans-serif",
-            padding: "40px",
-            paddingTop: "82px",
-            fontStyle: "italic",
-            fontWeight: "700",
-            fontSize: "84px",
-            textAlign: "center",
-            color: "rgba(255, 255, 255, 1)",
-          }}
-        >
-          HAVE A QUESTION?
-        </h1>
-        <form>
-          <input
-            style={{
-              marginTop: "30px",
-              marginBottom: "50px",
-              width: "60%",
-              left: "20%",
-              position: "relative",
-              fontSize: "26px",
-              backgroundColor: "transparent",
-              border: "none",
-              borderBottom: "2px solid white",
-            }}
-            placeholder="Email"
-          ></input>
-          <input
-            style={{
-              marginTop: "30px",
-              marginBottom: "50px",
-              width: "60%",
-              left: "20%",
-              position: "relative",
-              fontSize: "26px",
-              backgroundColor: "transparent",
-              border: "none",
-              borderBottom: "2px solid white",
-            }}
-            placeholder="Subject"
-          ></input>
-          <textarea
-            style={{
-              marginTop: "30px",
-              marginBottom: "50px",
-              width: "60%",
-              left: "20%",
-              position: "relative",
-              fontSize: "22px",
-              letterSpacing: "1px",
-              backgroundColor: "transparent",
-              border: "none",
-              minHeight: "200px",
-              borderBottom: "2px solid white",
-            }}
-            placeholder="Your message"
-          ></textarea>
-          <button
-            type="submit"
-            style={{
-              width: "100%",
-              position: "relative",
-              backgroundColor: "transparent",
-              border: "none",
-              outline: "none",
-              marginBottom: "50px",
-            }}
-          >
-            {/* <IoMdSend size={62} color="white" /> */}
-            <Loader type="Grid" color="#FFFFFF" height="62" width="62" />
-          </button>
-        </form>
-      </div>
+      <Contact/>
       </div>
     </div>
   );

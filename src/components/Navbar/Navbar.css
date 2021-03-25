@@ -35,6 +35,11 @@
   left: 20px;
   top: 20px;
 }
+
+.navbar-hide-btn:hover {
+  transform: scale(1.1)
+}
+
 .navbar-show-btn {
   position: absolute;
   top: 20px;
