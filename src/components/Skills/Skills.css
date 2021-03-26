@@ -67,7 +67,6 @@
   justify-content: center;
 }
 
-
 .skills-tile-description > p {
   text-align: center;
   padding: 20px;
@@ -118,7 +117,7 @@
     flex-direction: column;
     justify-content: center;
   }
-  
+
   .skills-tile-description-mobile > p {
     text-align: center;
     padding: 20px;
@@ -127,8 +126,12 @@
     font-size: 14px;
     background-color: rgb(36, 36, 36);
   }
-  
+
   .skills-tile-description-mobile {
     color: white;
+  }
+
+  .skills-tiles > div {
+    opacity: 1;
   }
 }

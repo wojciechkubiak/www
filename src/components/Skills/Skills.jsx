@@ -29,7 +29,6 @@ const Skills = (props) => {
       setShowDescription(false);
 
     }
-
   }
 
   const skillsList = [

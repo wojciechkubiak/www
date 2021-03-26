@@ -197,4 +197,9 @@ textarea {
   .contact-data > div > span > h1 {
     margin-top: 20px;
   }
+
+  .contact-content {
+    opacity: 1;
+  }
+  
 }
