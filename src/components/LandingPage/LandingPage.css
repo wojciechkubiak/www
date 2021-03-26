@@ -65,4 +65,8 @@
     font-size: 82px;
   }
 
+  .landing-page {
+    background-attachment: initial;
+    background-size: cover;
+  }
 }

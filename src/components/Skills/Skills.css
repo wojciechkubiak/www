@@ -76,9 +76,17 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .skills-page {
+    padding-bottom: 160px;
+  }
   .skills-header {
     font-size: 42px;
     margin-bottom: 20px;
     text-align: center;
+  }
+
+  .skills-tiles {
+    left: 10%;
+    width: 80%;
   }
 }
