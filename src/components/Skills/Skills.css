@@ -41,6 +41,7 @@
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
   position: relative;
   opacity: 0;
+  z-index: 15;
 }
 
 .skills-tiles > div > img {
@@ -59,22 +60,31 @@
 }
 
 .skills-tile-description {
-  background-color: white;
-  position: absolute;
-  width: 260px;
-  margin-left: -30px;
-  top: 210px;
-  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
   z-index: 150;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
+
 
 .skills-tile-description > p {
   text-align: center;
-  /* margin-top: 0px; */
   padding: 20px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
+  background-color: rgb(36, 36, 36);
+  border-left: 1px solid rgb(36, 36, 36);
+  border-right: 2px solid rgb(36, 36, 36);
+  color: white;
+}
+.skills-tile-description > p:first-child {
+  border-left: 2px solid rgb(36, 36, 36);
+}
+
+.skills-tile-description > p:last-child {
+  border-right: 2px solid rgb(36, 36, 36);
 }
 
 @media only screen and (max-width: 600px) {
@@ -91,5 +101,34 @@
     left: 10%;
     width: 80%;
     opacity: 1;
+  }
+
+  .skills-tiles > div {
+    height: auto;
+  }
+
+  .skills-tiles > p {
+    height: auto;
+  }
+
+  .skills-tile-description-mobile {
+    position: relative;
+    z-index: 150;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .skills-tile-description-mobile > p {
+    text-align: center;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: rgb(36, 36, 36);
+  }
+  
+  .skills-tile-description-mobile {
+    color: white;
   }
 }
