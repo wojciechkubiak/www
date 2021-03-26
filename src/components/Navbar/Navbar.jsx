@@ -95,7 +95,7 @@ const Navbar = (props) => {
               {menuItem("contact")}
             </div>
             <div className="navbar-social" style={{height: "42px", position: "relative", right: "0%"}}>
-              <div style={{position: "absolute", display: "flex", justifyContent: "space-between",  width: "200px", right: "5px"}}>
+              <div className="navbar-social-items">
               <a href="https://www.linkedin.com/in/wojciechkubiakin">
                 <FaLinkedin color="white" size={42} />
               </a>
@@ -111,7 +111,7 @@ const Navbar = (props) => {
               </div>
             </div>
           </div>
-          <div style={{ width: "1000px" }}>
+          <div className="navbar-home">
             <div className="home-tile-top"></div>
           </div>
         </div>

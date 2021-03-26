@@ -69,6 +69,10 @@
   font-size: 66px;
 }
 
+.navbar-home {
+  width: 1000px;
+}
+
 .navbar-option-not-active:hover {
   transform-origin: right;
   transform: scale(1.1);
@@ -100,6 +104,14 @@
   min-width: 500px;
 }
 
+.navbar-social-items {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  right: 5px;
+}
+
 .navbar-picker {
   display: flex;
   flex-direction: column;
@@ -110,4 +122,35 @@
 .home-tile-top {
   height: 800px;
   background-image: url("./../../images/220699.jpg");
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-home {
+    visibility: hidden;
+    display: none;
+  }
+  .navbar-decoration {
+    width: 100%;
+    min-width: 0;
+    border: none;
+  }
+
+  .navbar-content {
+    padding-top: 0;
+    margin-top: 80px;
+  }
+
+  .navbar-option,
+  .navbar-header {
+    padding: 0;
+    text-align: center;
+  }
+
+  .navbar-social-items {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    right: 10%;
+  }
 }

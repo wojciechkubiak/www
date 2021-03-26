@@ -52,3 +52,17 @@
   transform: translateX(-50%);
   /* right: 20%; */
 }
+
+@media only screen and (max-width: 600px) {
+  .landing-page-parallax-0 {
+    position: fixed;
+    min-width: 100vw;
+    margin-top: 100px;
+  }
+
+  .landing-page-parallax-0 > h1,
+  .landing-page-parallax-0 > h2 {
+    font-size: 82px;
+  }
+
+}
