@@ -33,10 +33,9 @@ const App = () => {
         goSkills={goSkills}
         goContact={goContact}
       />
-      <div ref={homeRef}><LandingPage/></div>
-      <div ref={aboutRef}><About/></div>
+      <div ref={homeRef}><LandingPage setCurrentPage={setCurrentPage}/></div>
+      <div ref={aboutRef}><About setCurrentPage={setCurrentPage}/></div>
       <div ref={projectsRef}>
-
       <div className="projects-page">
         <h1
           className="projects-header"
@@ -46,10 +45,10 @@ const App = () => {
       </div>
       </div>
       <div ref={skillsRef}>
-      <Skills />
+      <Skills setCurrentPage={setCurrentPage}/>
       </div>
       <div ref={contactRef}>
-      <Contact/>
+      <Contact setCurrentPage={setCurrentPage}/>
       </div>
     </div>
   );

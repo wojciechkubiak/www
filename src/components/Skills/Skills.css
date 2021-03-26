@@ -26,6 +26,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  /* opacity: 0; */
 }
 
 .skills-tiles > div {
@@ -39,6 +40,7 @@
   justify-content: space-evenly;
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.2);
   position: relative;
+  opacity: 0;
 }
 
 .skills-tiles > div > img {
@@ -88,5 +90,6 @@
   .skills-tiles {
     left: 10%;
     width: 80%;
+    opacity: 1;
   }
 }

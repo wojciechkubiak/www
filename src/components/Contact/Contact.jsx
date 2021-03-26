@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useInView } from "react-intersection-observer";
+import { isMobile } from "react-device-detect";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 import { ImLocation } from "react-icons/im";
@@ -16,7 +18,13 @@ const Contact = (props) => {
   const [content, setContent] = useState("");
   const [inputDisabled, setInputDisabled] = useState(false);
   const [mailSend, setMailSend] = useState(false);
+  const [animated, setAnimated] = useState(false);
 
+  const { ref, inView, entry } = useInView({
+    threshold: isMobile ? 0.1 : 0.4,
+  });
+
+  let contactRef = useRef(null);
   let mailSendRef = useRef(null);
 
   useEffect(() => {
@@ -34,6 +42,23 @@ const Contact = (props) => {
         });
     }
   }, [mailSend]);
+
+  useEffect(() => {
+    if (inView) {
+      props.setCurrentPage("contact");
+    }
+
+    if (inView && !animated && !isMobile) {
+      const t1 = gsap.timeline();
+
+      t1.to(contactRef, { y: 50, duration: 0.2 }).to(contactRef, {
+        opacity: 1,
+        duration: 1,
+        y: 0,
+        onComplete: () => setAnimated(true),
+      });
+    }
+  }, [inView]);
 
   const clearData = () => {
     setEmail("");
@@ -67,9 +92,9 @@ const Contact = (props) => {
   };
 
   return (
-    <div className="contact-page">
+    <div className="contact-page" ref={ref}>
       <h1 className="contact-header">HAVE A QUESTION?</h1>
-      <div className="contact-content">
+      <div className="contact-content" ref={(r) => (contactRef = r)}>
         <div className="contact-data">
           <div>
             <span>

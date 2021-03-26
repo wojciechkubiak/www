@@ -1,10 +1,39 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { useInView } from "react-intersection-observer";
+import { isMobile } from "react-device-detect";
+import gsap from "gsap";
 import "./About.css";
 
-const About = () => {
+const About = (props) => {
+  const [animated, setAnimated] = useState(false);
+
+  const { ref, inView, entry } = useInView({
+    threshold: isMobile ? 0.1 : 0.2,
+  });
+
+  let aboutRef = useRef(null);
+
+  useEffect(() => {
+    if (inView) {
+      props.setCurrentPage("about");
+    }
+
+    if (inView && !animated && !isMobile) {
+      const t1 = gsap.timeline();
+
+      t1.to(aboutRef, { y: 50, duration: 0.2 }).to(aboutRef, {
+        opacity: 1,
+        duration: 1,
+        y: 0,
+        onComplete: () => setAnimated(true),
+      });
+    }
+  }, [inView]);
+
   return (
-    <div className="about-page">
+    <div className="about-page" ref={ref}>
       <h1 className="about-header">ABOUT ME</h1>
+      <div ref={r => aboutRef = r} style={{opacity: 0}}>
       <p className="about-intro">
         Hi! My name is <strong>Wojtek Kubiak</strong> and I'm a{" "}
         <strong>developer</strong>. In my career I had opportunity to create{" "}
@@ -31,6 +60,7 @@ const About = () => {
         website or just go into one of my social medias and message me. If you
         want to get to know me better, click <strong>there</strong>.
       </p>
+      </div>
     </div>
   );
 };
