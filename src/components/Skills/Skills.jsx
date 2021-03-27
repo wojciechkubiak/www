@@ -14,6 +14,7 @@ import CSSImg from "./../../images/cssb.png";
 
 const Skills = (props) => {
   const [showDescription, setShowDescription] = useState(false);
+  const [description, setDescription] = useState([]);
 
   const { ref, inView, entry } = useInView({
     threshold: isMobile ? 0.1 : 0.4,
@@ -22,59 +23,55 @@ const Skills = (props) => {
   let descriptionRef = useRef(null);
 
   const descriptionHandler = (show) => {
-    console.log(show);
-    if(show) {
+    const t1 = gsap.timeline();
+
+    if (show) {
       setShowDescription(true);
     } else {
       setShowDescription(false);
-
     }
-  }
+  };
 
-  const skillsList = [
-    {
+  useEffect(() => {
+    console.log(description);
+  }, [description]);
+
+  const skillsList = {
+    ReactJS: {
       img: ReactImg,
-      name: "ReactJS",
-      description: ["Test", "test", "Test"],
+      description: ["Test", "test", "Test1"],
     },
-    {
+    Flutter: {
       img: FlutterImg,
-      name: "Flutter",
-      description: ["Test", "test", "Test"],
+      description: ["Test", "test", "Test2"],
     },
-    {
+    NodeJS: {
       img: NodeImg,
-      name: "NodeJS",
-      description: ["Test", "test", "Test"],
+      description: ["Test", "test", "Test3"],
     },
-    {
+    JavaScript: {
       img: JavaScriptImg,
-      name: "JavaScript",
-      description: ["Test", "test", "Test"],
+      description: ["Test", "test", "Test5"],
     },
-    {
+    Python: {
       img: PythonImg,
-      name: "Python",
       description: ["Test", "test", "Test"],
     },
-    {
+    SQL: {
       img: SQLImg,
-      name: "SQL",
       description: ["Test", "test", "Test"],
     },
-    {
+    HTML: {
       img: HTMLImg,
-      name: "HTML",
       description: ["Test", "test", "Test"],
     },
-    {
+    CSS: {
       img: CSSImg,
-      name: "CSS",
       description: ["Test", "test", "Test"],
     },
-  ];
+  };
 
-  const Tile = (img, name, index) => {
+  const Tile = (img, name, index, description) => {
     const [animated, setAnimated] = useState(false);
 
     let contentRef = useRef(null);
@@ -100,18 +97,23 @@ const Skills = (props) => {
       <div
         ref={(r) => (contentRef = r)}
         key={`tile-${name}`}
-        onMouseOver={() => descriptionHandler(true)}
-        onMouseOut={() => descriptionHandler(false)}
+        onMouseOver={() => {
+          setDescription(description);
+          descriptionHandler(true);
+        }}
+        onMouseOut={() => {
+          descriptionHandler(false);
+        }}
       >
         <img src={img} alt={name} />
-        <h1>{name}</h1> 
-        {isMobile && <div
-            className="skills-tile-description-mobile"
-          >
-            <p>Description dsa dsa dsa dsa </p>
-            <p>Description das  dsa</p>
-            <p>Descriptiond sa sa dsa dsa dsa dsa dsa</p>
-          </div>}
+        <h1>{name}</h1>
+        {isMobile && (
+          <div className="skills-tile-description-mobile">
+            {description.map((element) => {
+              return <p>{element}</p>;
+            })}
+          </div>
+        )}
       </div>
     );
   };
@@ -120,20 +122,20 @@ const Skills = (props) => {
     <div className="skills-page" ref={ref}>
       <h1 className="skills-header">SKILLS</h1>
       <div className="skills-tiles">
-        {skillsList.map((element, index) => {
-          return Tile(element.img, element.name, index);
+        {Object.entries(skillsList).map((value, index) => {
+          return Tile(value[1].img, value[0], index, value[1].description);
         })}
       </div>
       {showDescription && !isMobile && (
-          <div
-            className="skills-tile-description"
-            ref={(r) => (descriptionRef = r)}
-          >
-            <p>Description dsa dsa dsa dsa </p>
-            <p>Description das  dsa</p>
-            <p>Descriptiond sa sa dsa dsa dsa dsa dsa</p>
-          </div>
-        )}
+        <div
+          className="skills-tile-description"
+          ref={(r) => (descriptionRef = r)}
+        >
+          {description.map((element) => {
+            return <p>{element}</p>;
+          })}
+        </div>
+      )}
     </div>
   );
 };
