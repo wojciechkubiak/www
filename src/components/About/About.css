@@ -8,6 +8,10 @@
   padding-top: 60px;
 }
 
+.about-container {
+  opacity: 0;
+}
+
 .about-header {
   font-family: "Poppins", sans-serif;
   font-style: italic;
@@ -39,8 +43,13 @@
   .about-page {
     padding: 40px;
   }
+
   .about-header {
     font-size: 42px;
     margin-bottom: 20px;
+  }
+
+  .about-container {
+    opacity: 1;
   }
 }

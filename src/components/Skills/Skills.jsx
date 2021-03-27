@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { isMobile } from "react-device-detect";
 import gsap from "gsap";
+import Translations from "./../../translations/translations";
 import "./Skills.css";
 import ReactImg from "./../../images/reactb.png";
 import NodeImg from "./../../images/nodeb.png";
@@ -32,42 +33,38 @@ const Skills = (props) => {
     }
   };
 
-  useEffect(() => {
-    console.log(description);
-  }, [description]);
-
   const skillsList = {
     ReactJS: {
       img: ReactImg,
-      description: ["Test", "test", "Test1"],
+      description: Translations.Skills.React,
     },
     Flutter: {
       img: FlutterImg,
-      description: ["Test", "test", "Test2"],
+      description: Translations.Skills.Flutter,
     },
     NodeJS: {
       img: NodeImg,
-      description: ["Test", "test", "Test3"],
+      description: Translations.Skills.NodeJS,
     },
     JavaScript: {
       img: JavaScriptImg,
-      description: ["Test", "test", "Test5"],
+      description: Translations.Skills.JavaScript,
     },
     Python: {
       img: PythonImg,
-      description: ["Test", "test", "Test"],
+      description: Translations.Skills.Python,
     },
     SQL: {
       img: SQLImg,
-      description: ["Test", "test", "Test"],
+      description: Translations.Skills.PostgreSQL,
     },
     HTML: {
       img: HTMLImg,
-      description: ["Test", "test", "Test"],
+      description: Translations.Skills.HTML,
     },
     CSS: {
       img: CSSImg,
-      description: ["Test", "test", "Test"],
+      description: Translations.Skills.CSS,
     },
   };
 
@@ -110,7 +107,7 @@ const Skills = (props) => {
         {isMobile && (
           <div className="skills-tile-description-mobile">
             {description.map((element) => {
-              return <p>{element}</p>;
+              return <p>{props.t(element, { framework: "react-i18next" })}</p>;
             })}
           </div>
         )}
@@ -132,7 +129,7 @@ const Skills = (props) => {
           ref={(r) => (descriptionRef = r)}
         >
           {description.map((element) => {
-            return <p>{element}</p>;
+            return <p>{props.t(element, { framework: "react-i18next" })}</p>;
           })}
         </div>
       )}

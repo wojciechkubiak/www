@@ -97,27 +97,27 @@ const Contact = (props) => {
       <div className="contact-content" ref={(r) => (contactRef = r)}>
         <div className="contact-data">
           <div>
-            <span>
-              <ImLocation size={28} color="white" />
+            <span className="contact-subheader">
               <h1>ADDRESS</h1>
+              <ImLocation size={28} color="white" />
             </span>
             <p>
               Wroclaw, <strong>Poland</strong>
             </p>
           </div>
           <div>
-            <span>
-              <FaPhoneAlt size={28} color="white" />
+            <span className="contact-subheader">
               <h1>LETS TALK</h1>
+              <FaPhoneAlt size={28} color="white" />
             </span>
             <p>
               <strong>+48</strong> 726823405
             </p>
           </div>
           <div>
-            <span>
-              <GrMail size={28} color="white" />
+            <span className="contact-subheader">
               <h1>EMAIL</h1>
+              <GrMail size={28} color="white" />
             </span>
             <a href="mailto:wgkubiak@gmail.com">wgkubiak@gmail.com</a>
           </div>

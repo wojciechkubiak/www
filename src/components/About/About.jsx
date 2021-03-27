@@ -33,7 +33,7 @@ const About = (props) => {
   return (
     <div className="about-page" ref={ref}>
       <h1 className="about-header">ABOUT ME</h1>
-      <div ref={r => aboutRef = r} style={{opacity: 0}}>
+      <div ref={r => aboutRef = r} className="about-container">
       <p className="about-intro">
         Hi! My name is <strong>Wojtek Kubiak</strong> and I'm a{" "}
         <strong>developer</strong>. In my career I had opportunity to create{" "}
