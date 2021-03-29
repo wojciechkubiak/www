@@ -1,5 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Navbar, LandingPage, About, Contact, Skills } from "./components/Components";
+import {
+  Navbar,
+  LandingPage,
+  About,
+  Contact,
+  Skills,
+  Projects
+} from "./components/Components";
 import { withTranslation } from "react-i18next";
 
 import "./App.css";
@@ -37,8 +44,6 @@ const App = (props) => {
     i18n.changeLanguage(lang);
   }, [lang, i18n]);
 
-
-
   return (
     <div className="App">
       <Navbar
@@ -51,22 +56,20 @@ const App = (props) => {
         goContact={goContact}
         t={t}
       />
-      <div ref={homeRef}><LandingPage setCurrentPage={setCurrentPage} t={t}/></div>
-      <div ref={aboutRef}><About setCurrentPage={setCurrentPage} t={t}/></div>
-      <div ref={projectsRef}>
-      <div className="projects-page">
-        <h1
-          className="projects-header"
-        >
-          PROJECTS
-        </h1>
+      <div ref={homeRef}>
+        <LandingPage setCurrentPage={setCurrentPage} t={t} />
       </div>
+      <div ref={aboutRef}>
+        <About setCurrentPage={setCurrentPage} t={t} />
+      </div>
+      <div ref={projectsRef}>
+        <Projects setCurrentPage={setCurrentPage} t={t} />
       </div>
       <div ref={skillsRef} t={t}>
-      <Skills setCurrentPage={setCurrentPage} t={t}/>
+        <Skills setCurrentPage={setCurrentPage} t={t} />
       </div>
       <div ref={contactRef}>
-      <Contact setCurrentPage={setCurrentPage} t={t}/>
+        <Contact setCurrentPage={setCurrentPage} t={t} />
       </div>
     </div>
   );

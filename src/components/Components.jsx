@@ -3,5 +3,6 @@ import LandingPage from './LandingPage/LandingPage.jsx';
 import About from './About/About.jsx';
 import Contact from "./Contact/Contact.jsx";
 import Skills from "./Skills/Skills.jsx";
+import Projects from "./Projects/Projects.jsx";
 
-export { Navbar, LandingPage, About, Contact, Skills };
+export { Navbar, LandingPage, About, Contact, Skills, Projects };
