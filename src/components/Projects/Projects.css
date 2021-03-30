@@ -52,6 +52,31 @@
 
 }
 
+.projects-type-picker {
+  position: relative;
+  min-width: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 50px;
+}
+
+.projects-type-picker > button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.projects-type-header {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 42px;
+  color: white;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+ 
 @media only screen and (max-width: 600px) {
   .projects-header {
     font-size: 42px;
