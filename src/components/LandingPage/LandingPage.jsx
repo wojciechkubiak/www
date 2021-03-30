@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
+import {isMobile} from "react-device-detect";
 
 import "./LandingPage.css";
 
@@ -15,7 +16,7 @@ const LandingPage = (props) => {
 
   useEffect(() => {
     const value = scrollY;
-    if (value > 0 && value < 2560) {
+    if (value > 0 && value < 2560 && !isMobile) {
       parallax0.style.top = `${value * 0.1}px`;
       parallax1.style.bottom = `${-100 + value * 0.1}px`;
       parallax2.style.bottom = `${-150 + value * 0.08}px`;

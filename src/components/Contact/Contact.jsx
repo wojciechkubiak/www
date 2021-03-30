@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import { isMobile } from "react-device-detect";
 import { RiSendPlaneFill } from "react-icons/ri";
-import { IoMdCheckmarkCircleOutline } from "react-icons/io";
+import { IoMdCheckmarkCircleOutline, IoMdSend } from "react-icons/io";
 import { ImLocation } from "react-icons/im";
 import { FaPhoneAlt } from "react-icons/fa";
 import { GrMail } from "react-icons/gr";
@@ -152,7 +152,8 @@ const Contact = (props) => {
             required
           ></textarea>
           <button type="submit" className="contact-btn">
-            {!inputDisabled && <RiSendPlaneFill size={62} color="white" />}
+            {!inputDisabled && !isMobile && <RiSendPlaneFill size={62} color="white" />}
+            {!inputDisabled && isMobile && <IoMdSend size={64} color="white" />}
             {inputDisabled && (
               <Loader type="Grid" color="#FFFFFF" height="62" width="62" />
             )}
