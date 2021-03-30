@@ -8,6 +8,9 @@ import "./Projects.css";
 import Meditate from "./../../images/1.jpg";
 import Animacare from "./../../images/2.jpg";
 import Opqn from "./../../images/3.jpg";
+import Obb from "./../../images/1w.png";
+import Energe from "./../../images/2w.png";
+import OpqnWeb from "./../../images/3w.png";
 
 const Projects = (props) => {
   const [projectsType, setProjectsType] = useState("MOBILE");
@@ -16,9 +19,26 @@ const Projects = (props) => {
     <div className="projects-page">
       <h1 className="projects-header">PROJECTS</h1>
       <div className="projects-content">
-        <img className="projects-mobile-img" src={Meditate} />
-        <img className="projects-mobile-img" src={Animacare} />
-        <img className="projects-mobile-img" src={Opqn} />
+        {projectsType === "MOBILE" && (
+          <>
+            <img className="projects-mobile-img" src={Meditate} />
+            <img className="projects-mobile-img" src={Animacare} />
+            <img className="projects-mobile-img" src={Opqn} />
+          </>
+        )}
+        {projectsType !== "MOBILE" && (
+          <div className="projects-web">
+            <img className="projects-web-img projects-web-img-obb" src={Obb} />
+            <img
+              className="projects-web-img projects-web-img-opqn"
+              src={OpqnWeb}
+            /> 
+            <img
+              className="projects-web-img projects-web-img-en"
+              src={Energe}
+            />
+          </div>
+        )}
       </div>
       <div className="projects-type-picker">
         <div className="projects-type-picker">
