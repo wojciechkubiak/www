@@ -59,7 +59,6 @@
   left: 50%;
   transform: translateX(-50%);
   border: 2px solid white;
-
 }
 
 .projects-web-img-en {
@@ -95,7 +94,6 @@
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
   z-index: 50;
-  margin-top: -5px;
 }
 
 .projects-type-picker {
@@ -142,5 +140,19 @@
     -webkit-clip-path: none;
     clip-path: none;
     box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.4);
+  }
+
+  .projects-web-img-en, .projects-web-img-obb, .projects-web-img-opqn {
+    clip-path: none;
+  }
+
+  .projects-web-img {
+    position: relative;
+    max-width: 80vw;
+    margin: 0;
+    filter: grayscale(1);
+    transition-property: all;
+    transition-duration: 1s;
+    border: 2px solid white;
   }
 }
