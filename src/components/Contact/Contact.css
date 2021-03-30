@@ -186,7 +186,7 @@ textarea {
   }
   .contact-form {
     width: 100vw;
-    min-width: 460px;
+    min-width: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -198,7 +198,7 @@ textarea {
 
   .contact-input,
   .contact-textarea {
-    width: 60%;
+    width: 80%;
   }
   .contact-data > div {
     margin-bottom: 80px;
@@ -225,7 +225,7 @@ textarea {
     text-align: right;
     min-height: 400px;
   }
-  
+
   .contact-data > div > span > h1 {
     font-size: 28px;
     font-family: "Roboto", sans-serif;
@@ -233,9 +233,8 @@ textarea {
     margin-bottom: 10px;
     color: white;
   }
-  
-  .contact-data > div > p
-   {
+
+  .contact-data > div > p {
     font-size: 16px;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -244,12 +243,13 @@ textarea {
     text-align: center;
   }
 
-  .contact-data > div  {
+  .contact-data > div {
     text-align: center;
   }
 
-  .contact-input, .contact-textarea {
-    left: 18%;
+  .contact-input,
+  .contact-textarea {
+    left: 8%;
   }
 
   .contact-subheader {
@@ -257,7 +257,7 @@ textarea {
     flex-direction: row;
     justify-content: center;
   }
-  
+
   .contact-content {
     opacity: 1;
   }

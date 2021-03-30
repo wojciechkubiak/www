@@ -64,16 +64,19 @@
 .projects-web-img-en {
   -webkit-clip-path: polygon(0% 0, 100% 0%, 100% 5%, 0% 40%); 
   clip-path: polygon(0% 0, 100% 0%, 100% 5%, 0% 40%);
+  z-index: 47;
 }
 
 .projects-web-img-opqn {
   -webkit-clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
   clip-path: polygon(0% 40%, 100% 5%, 100% 55%, 0% 90%);
+  z-index: 48;
 }
 
 .projects-web-img-obb {
   -webkit-clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
   clip-path: polygon(0% 90%, 100% 55%, 100% 100%, 0% 100%);
+  z-index: 49;
 }
 
 .projects-web-img-en:hover,
