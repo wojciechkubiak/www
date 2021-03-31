@@ -6,6 +6,7 @@ import Translations from "./../../translations/translations";
 import { ImArrowLeft, ImArrowRight } from "react-icons/im";
 import { FaGithubSquare } from "react-icons/fa";
 import { FiMonitor } from "react-icons/fi";
+import { IoLogoGooglePlaystore, IoLogoApple } from "react-icons/io5";
 import "./Projects.css";
 import Meditate from "./../../images/1.jpg";
 import Animacare from "./../../images/2.jpg";
@@ -23,9 +24,55 @@ const Projects = (props) => {
       <div className="projects-content">
         {projectsType === "MOBILE" && (
           <>
-            <img className="projects-mobile-img" src={Meditate} />
-            <img className="projects-mobile-img" src={Animacare} />
-            <img className="projects-mobile-img" src={Opqn} />
+            <div className="projects-mobile-img-container">
+              <img className="projects-mobile-img" src={Meditate} />
+              <div className="projects-mobile-description">
+                <h1>MEDITATE</h1>
+                <p>
+                  Project that supports user wellbeing through multiple
+                  exercises and by creating statistics that can be later used by
+                  user. Technology used by me: <strong>Flutter</strong>.
+                </p>
+                <div className="projects-mobile-description-icons">
+                  <IoLogoGooglePlaystore size={48} color="rgba(27, 27, 27)" />
+                  <IoLogoApple size={48} color="rgba(27, 27, 27)" />
+                </div>
+              </div>
+            </div>
+            <div className="projects-mobile-img-container">
+              <img className="projects-mobile-img" src={Opqn} />
+              <div className="projects-mobile-description">
+                <h1>OPQN</h1>
+                <p>
+                  Study project that allows user to share health data with
+                  dietitians made with <strong>Java</strong> and{" "}
+                  <strong>NodeJS</strong> (including <strong>PostgreSQL</strong>
+                  ).
+                </p>
+                <div className="projects-mobile-description-icons">
+                  <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
+                  <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
+                </div>
+              </div>
+            </div>
+            <div className="projects-mobile-img-container">
+              <img className="projects-mobile-img" src={Animacare} />
+              <div className="projects-mobile-description">
+                <h1>ANIMACARE</h1>
+                <p>
+                  My own project I'm currently working on. Application for
+                  people that love their animals and want to compare them with
+                  other users, track their data and more. Technologies used by
+                  me are <strong>Flutter</strong> and <strong>NodeJS</strong>{" "}
+                  (including <strong>PostgreSQL</strong>
+                  ).
+                </p>
+                <div className="projects-mobile-description-icons">
+                  <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
+                  <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
+                </div>
+              </div>
+            </div>
           </>
         )}
         {projectsType !== "MOBILE" && (
