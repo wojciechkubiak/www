@@ -40,22 +40,6 @@ const Projects = (props) => {
               </div>
             </div>
             <div className="projects-mobile-img-container">
-              <img className="projects-mobile-img" src={Opqn} />
-              <div className="projects-mobile-description">
-                <h1>OPQN</h1>
-                <p>
-                  Study project that allows user to share health data with
-                  dietitians made with <strong>Java</strong> and{" "}
-                  <strong>NodeJS</strong> (including <strong>PostgreSQL</strong>
-                  ).
-                </p>
-                <div className="projects-mobile-description-icons">
-                  <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
-                  <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
-                </div>
-              </div>
-            </div>
-            <div className="projects-mobile-img-container">
               <img className="projects-mobile-img" src={Animacare} />
               <div className="projects-mobile-description">
                 <h1>ANIMACARE</h1>
@@ -65,6 +49,22 @@ const Projects = (props) => {
                   other users, track their data and more. Technologies used by
                   me are <strong>Flutter</strong> and <strong>NodeJS</strong>{" "}
                   (including <strong>PostgreSQL</strong>
+                  ).
+                </p>
+                <div className="projects-mobile-description-icons">
+                  <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
+                  <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
+                </div>
+              </div>
+            </div>
+            <div className="projects-mobile-img-container">
+              <img className="projects-mobile-img" src={Opqn} />
+              <div className="projects-mobile-description">
+                <h1>OPQN</h1>
+                <p>
+                  Study project that allows user to share health data with
+                  dietitians made with <strong>Java</strong> and{" "}
+                  <strong>NodeJS</strong> (including <strong>PostgreSQL</strong>
                   ).
                 </p>
                 <div className="projects-mobile-description-icons">
