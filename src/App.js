@@ -63,7 +63,7 @@ const App = (props) => {
         <About setCurrentPage={setCurrentPage} t={t} />
       </div>
       <div ref={projectsRef}>
-        <Projects setCurrentPage={setCurrentPage} t={t} />
+        <Projects setCurrentPage={setCurrentPage} goProjects={goProjects} t={t} />
       </div>
       <div ref={skillsRef} t={t}>
         <Skills setCurrentPage={setCurrentPage} t={t} />
