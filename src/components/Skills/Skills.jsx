@@ -18,7 +18,7 @@ const Skills = (props) => {
   const [description, setDescription] = useState([]);
 
   const { ref, inView, entry } = useInView({
-    threshold: isMobile ? 0.1 : 0.4,
+    threshold: isMobile ? 0.1 : 0.2,
   });
 
   let descriptionRef = useRef(null);

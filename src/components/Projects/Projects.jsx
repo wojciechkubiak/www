@@ -34,10 +34,10 @@ const Projects = (props) => {
                   user. Technology used by me: <strong>Flutter</strong>.
                 </p>
                 <div className="projects-mobile-description-icons">
-                  <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                  <a href="https://www.google.com">
                     <IoLogoGooglePlaystore size={48} color="rgba(27, 27, 27)" />
                   </a>
-                  <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                  <a href="https://www.apple.com">
                     <IoLogoApple size={48} color="rgba(27, 27, 27)" />
                   </a>
                 </div>
@@ -56,10 +56,7 @@ const Projects = (props) => {
                   ).
                 </p>
                 <div className="projects-mobile-description-icons">
-                  <a href="https://www.linkedin.com/in/wojciechkubiakin">
-                    <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
-                  </a>
-                  <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                  <a href="https://github.com/wojciechkubiak/animal_care">
                     <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
                   </a>
                 </div>
@@ -76,10 +73,10 @@ const Projects = (props) => {
                   ).
                 </p>
                 <div className="projects-mobile-description-icons">
-                  <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                  <a href="https://github.com/wojciechkubiak/opqn-mobile">
                     <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
                   </a>
-                  <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                  <a href="https://github.com/wojciechkubiak/opqn-api">
                     <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
                   </a>
                 </div>
@@ -109,10 +106,10 @@ const Projects = (props) => {
                   with <strong>ReactJS</strong> and <strong>NodeJS</strong>{" "}
                   (including <strong>PostgreSQL</strong>).
                 </p>
-                <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                <a href="https://github.com/wojciechkubiak/obb-api">
                   <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
                 </a>
-                <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                <a href="https://github.com/wojciechkubiak/obb-web">
                   <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
                 </a>
               </div>
@@ -135,7 +132,7 @@ const Projects = (props) => {
                   It takes clients data, counts new usage values and sends them
                   to the company through ZOHO CRM.
                 </p>
-                <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                <a href="https://distracted-booth-ae59fb.netlify.app/">
                   <FiMonitor size={48} color="rgba(228, 228, 228)" />
                 </a>
                 <p style={{ fontSize: "10px" }}>(no public repositories)</p>
@@ -166,10 +163,7 @@ const Projects = (props) => {
                   <strong>NodeJS</strong> (including <strong>PostgreSQL</strong>
                   ).
                 </p>
-                <a href="https://www.linkedin.com/in/wojciechkubiakin">
-                  <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
-                </a>
-                <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                <a href="https://github.com/wojciechkubiak/opqn-web">
                   <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
                 </a>
               </div>
