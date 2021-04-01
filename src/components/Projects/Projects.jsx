@@ -34,8 +34,12 @@ const Projects = (props) => {
                   user. Technology used by me: <strong>Flutter</strong>.
                 </p>
                 <div className="projects-mobile-description-icons">
-                  <IoLogoGooglePlaystore size={48} color="rgba(27, 27, 27)" />
-                  <IoLogoApple size={48} color="rgba(27, 27, 27)" />
+                  <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                    <IoLogoGooglePlaystore size={48} color="rgba(27, 27, 27)" />
+                  </a>
+                  <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                    <IoLogoApple size={48} color="rgba(27, 27, 27)" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -52,8 +56,12 @@ const Projects = (props) => {
                   ).
                 </p>
                 <div className="projects-mobile-description-icons">
-                  <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
-                  <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
+                  <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                    <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
+                  </a>
+                  <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                    <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -68,8 +76,12 @@ const Projects = (props) => {
                   ).
                 </p>
                 <div className="projects-mobile-description-icons">
-                  <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
-                  <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
+                  <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                    <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
+                  </a>
+                  <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                    <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -97,8 +109,12 @@ const Projects = (props) => {
                   with <strong>ReactJS</strong> and <strong>NodeJS</strong>{" "}
                   (including <strong>PostgreSQL</strong>).
                 </p>
-                <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
-                <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
+                <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                  <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
+                </a>
+                <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                  <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
+                </a>
               </div>
             </div>
             <div className="projects-web-mid">
@@ -119,7 +135,9 @@ const Projects = (props) => {
                   It takes clients data, counts new usage values and sends them
                   to the company through ZOHO CRM.
                 </p>
-                <FiMonitor size={48} color="rgba(228, 228, 228)" />
+                <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                  <FiMonitor size={48} color="rgba(228, 228, 228)" />
+                </a>
                 <p style={{ fontSize: "10px" }}>(no public repositories)</p>
               </div>
               <img
@@ -148,8 +166,12 @@ const Projects = (props) => {
                   <strong>NodeJS</strong> (including <strong>PostgreSQL</strong>
                   ).
                 </p>
-                <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
-                <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
+                <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                  <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
+                </a>
+                <a href="https://www.linkedin.com/in/wojciechkubiakin">
+                  <FaGithubSquare size={48} color="rgba(27, 27, 27)" />
+                </a>
               </div>
             </div>
           </div>

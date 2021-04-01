@@ -171,7 +171,7 @@ textarea {
   resize: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1580px) {
   .contact-page {
     width: 100vw;
   }
