@@ -65,6 +65,14 @@
     font-size: 82px;
   }
 
+  .landing-page-parallax-1 {
+    width: 100%;
+    bottom: -200px;
+  }
+  .landing-page-parallax-2 {
+    display: none;
+  }
+
   .landing-page {
     background-attachment: initial;
     background-size: cover;

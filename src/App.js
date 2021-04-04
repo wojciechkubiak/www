@@ -5,7 +5,8 @@ import {
   About,
   Contact,
   Skills,
-  Projects
+  Projects,
+  Footer
 } from "./components/Components";
 import { withTranslation } from "react-i18next";
 

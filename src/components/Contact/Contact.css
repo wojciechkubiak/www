@@ -5,6 +5,7 @@
   z-index: 40;
   background-color: #474747;
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
+  padding-bottom: 50px;
 }
 
 .contact-content {
@@ -17,16 +18,21 @@
 }
 
 .contact-data {
-  min-width: 600px;
+  min-width: 400px;
   width: 20%;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 50px;
-  padding-bottom: 180px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   text-align: right;
   min-height: 400px;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.3);
+
+  padding-right: 40px;
 }
 
 .contact-data > div > span > h1 {
@@ -54,7 +60,8 @@
 
 .contact-form {
   min-width: 600px;
-  width: 60%;
+  width: 40%;
+  background-color: rgba(36, 36, 36, 1);
 }
 
 .contact-header {
@@ -105,7 +112,7 @@
   background-color: transparent;
   border: none;
   outline: none;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .contact-subheader {
@@ -171,6 +178,16 @@ textarea {
   resize: none;
 }
 
+@media only screen and (max-width: 600px) {
+  .contact-page {
+    z-index: 40;
+  }
+
+  .contact-header {
+    font-size: 42px;
+  }
+}
+
 @media only screen and (max-width: 1580px) {
   .contact-page {
     width: 100vw;
@@ -179,6 +196,8 @@ textarea {
   .contact-data {
     min-width: 100vw;
     width: auto;
+    box-shadow: none;
+    padding-right: 0px;
   }
 
   .contact-content {
@@ -192,9 +211,6 @@ textarea {
     justify-content: center;
   }
 
-  .contact-header {
-    font-size: 42px;
-  }
 
   .contact-input,
   .contact-textarea {

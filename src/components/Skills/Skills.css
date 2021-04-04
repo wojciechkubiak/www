@@ -90,6 +90,7 @@
 @media only screen and (max-width: 600px) {
   .skills-page {
     padding-bottom: 160px;
+    z-index: 40;
   }
   .skills-header {
     font-size: 42px;

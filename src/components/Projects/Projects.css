@@ -237,6 +237,10 @@
 
 
 @media only screen and (max-width: 600px) {
+  .projects-page {
+    z-index: 30;
+  }
+  
   .projects-header {
     font-size: 42px;
     margin-bottom: 20px;

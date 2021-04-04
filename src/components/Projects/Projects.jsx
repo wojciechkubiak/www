@@ -18,10 +18,28 @@ import OpqnWeb from "./../../images/3w.png";
 const Projects = (props) => {
   const [projectsType, setProjectsType] = useState("MOBILE");
 
+  let projectsRef = useRef(null);
+
+  const swapSection = (next) => {
+    const t1 = gsap.timeline();
+    t1.fromTo(
+      projectsRef,
+      { opacity: 1 },
+      {
+        opacity: 0,
+        duration: 1,
+        onComplete: () => {
+          setProjectsType(next);
+        },
+      }
+    );
+    t1.fromTo(projectsRef, { opacity: 0 }, { opacity: 1, duration: 1 });
+    setTimeout(() => props.goProjects(), 100);
+  };
   return (
     <div className="projects-page">
       <h1 className="projects-header">PROJECTS</h1>
-      <div className="projects-content">
+      <div className="projects-content" ref={(node) => (projectsRef = node)}>
         {projectsType === "MOBILE" && (
           <>
             <div className="projects-mobile-img-container">
@@ -176,8 +194,7 @@ const Projects = (props) => {
           <button
             disabled={projectsType === "MOBILE"}
             onClick={() => {
-              setProjectsType("MOBILE");
-              setTimeout(() => props.goProjects(), 100);
+              swapSection("MOBILE");
             }}
           >
             <ImArrowLeft
@@ -189,8 +206,7 @@ const Projects = (props) => {
           <button
             disabled={projectsType !== "MOBILE"}
             onClick={() => {
-              setProjectsType("WEB");
-              setTimeout(() => props.goProjects(), 100);
+              swapSection("WEB");
             }}
           >
             <ImArrowRight

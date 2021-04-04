@@ -126,6 +126,7 @@ const Contact = (props) => {
           className="contact-form"
           onSubmit={(event) => handleSubmit(event)}
         >
+          <h1 style={{color: "white", textAlign: "center", marginTop: "25px", marginBottom: "25px"}}>GET IN TOUCH</h1>
           <input
             className="contact-input"
             placeholder="Email"
