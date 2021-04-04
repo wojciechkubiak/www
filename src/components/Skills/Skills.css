@@ -112,6 +112,11 @@
     height: auto;
   }
 
+  .skills-tiles > div > h1 {
+    margin-top: 15px;
+  }
+
+
   .skills-tile-description-mobile {
     position: relative;
     z-index: 150;
