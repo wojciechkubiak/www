@@ -1,7 +1,7 @@
 <h1 align="center">Portfolio</h1>
 <p align="center">My personal website</p>
 <p align="center">
-  <img src="https://github.com/wojciechkubiak/www/blob/master/MySite.png"/>
+  <img src="https://github.com/wojciechkubiak/www/blob/main/MySite.png"/>
 </p>
 
 <p align="center">
@@ -18,7 +18,7 @@
 * CSS 
 
 ## What this app is about
-The main assumption of the website [wojciechkubiak.com](https://wojciechkubiak.com) is to show you at which level my programming skills are. Additionally
+The main assumption of the website [wojciechkubiak.com](https://wojciechkubiak.com) is to show you at which level my programming skills are.
 
 ## Live
 
@@ -30,7 +30,7 @@ The main assumption of the website [wojciechkubiak.com](https://wojciechkubiak.c
 <br />
 
 <p align="center">
- <img src="https://github.com/wojciechkubiak/www/blob/master/landing.png"/>
+ <img src="https://github.com/wojciechkubiak/www/blob/main/landing.png"/>
 </p>
 
 <br />
@@ -40,7 +40,7 @@ The main assumption of the website [wojciechkubiak.com](https://wojciechkubiak.c
 <br />
 
 <p align="center">
- <img src="https://github.com/wojciechkubiak/www/blob/master/menu.png"/>
+ <img src="https://github.com/wojciechkubiak/www/blob/main/menu.png"/>
 </p>
 
 <br />
@@ -50,7 +50,7 @@ The main assumption of the website [wojciechkubiak.com](https://wojciechkubiak.c
 <br />
 
 <p align="center">
-  <img src="https://github.com/wojciechkubiak/www/blob/master/skills.png"/>
+  <img src="https://github.com/wojciechkubiak/www/blob/main/skills.png"/>
 </p>
 <br />
 
@@ -60,7 +60,7 @@ Additionally, on this page you will find all repository addresses and websites f
 <br />
 
 <p align="center">
- <img src="https://github.com/wojciechkubiak/www/blob/master/projects.png"/>
+ <img src="https://github.com/wojciechkubiak/www/blob/main/projects.png"/>
 </p>
 
 <br />
@@ -70,7 +70,7 @@ Additionally, on this page you will find all repository addresses and websites f
 <br />
 
 <p align="center">
- <img src="https://github.com/wojciechkubiak/www/blob/master/contact.png"/>
+ <img src="https://github.com/wojciechkubiak/www/blob/main/contact.png"/>
 </p>
 
 ## Translation
