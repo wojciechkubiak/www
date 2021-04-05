@@ -30,7 +30,7 @@ The main assumption of the website [wojciechkubiak.com](https://wojciechkubiak.c
 <br />
 
 <p align="center">
- <img src="https://github.com/wojciechkubiak/www/blob/master/landing.png?raw=true"/>
+ <img src="https://github.com/wojciechkubiak/www/blob/master/landing.png"/>
 </p>
 
 <br />
@@ -40,7 +40,7 @@ The main assumption of the website [wojciechkubiak.com](https://wojciechkubiak.c
 <br />
 
 <p align="center">
- <img src="https://github.com/wojciechkubiak/www/blob/master/menu.png?raw=true"/>
+ <img src="https://github.com/wojciechkubiak/www/blob/master/menu.png"/>
 </p>
 
 <br />
@@ -50,7 +50,7 @@ The main assumption of the website [wojciechkubiak.com](https://wojciechkubiak.c
 <br />
 
 <p align="center">
-  <img src="https://github.com/wojciechkubiak/www/blob/master/skills.png?raw=true"/>
+  <img src="https://github.com/wojciechkubiak/www/blob/master/skills.png"/>
 </p>
 <br />
 
@@ -60,7 +60,7 @@ Additionally, on this page you will find all repository addresses and websites f
 <br />
 
 <p align="center">
- <img src="https://github.com/wojciechkubiak/www/blob/master/projects.png?raw=true"/>
+ <img src="https://github.com/wojciechkubiak/www/blob/master/projects.png"/>
 </p>
 
 <br />
@@ -70,7 +70,7 @@ Additionally, on this page you will find all repository addresses and websites f
 <br />
 
 <p align="center">
- <img src="https://github.com/wojciechkubiak/www/blob/master/contact.png?raw=true"/>
+ <img src="https://github.com/wojciechkubiak/www/blob/master/contact.png"/>
 </p>
 
 ## Translation
