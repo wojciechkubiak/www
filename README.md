@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+<h1 align="center">Portfolio</h1>
+<p align="center">My personal website</p>
+<p align="center">
+  <img src="https://github.com/wojciechkubiak/my-site/blob/master/MySite.png"/>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img src="https://img.shields.io/badge/Made%20by-wojciechkubiak-blue"/>
+  <img src="https://img.shields.io/website?url=https%3A%2F%2Fwojciechkubiak.com"/>
+  <img src="https://img.shields.io/netlify/d192f684-c78b-4c8f-ad71-692827ce7e3a"/>
+  <img src="https://img.shields.io/badge/react-16.13.1-informational"/>
+</p>
 
-## Available Scripts
+## Technologies used
+* ReactJS (React Hooks)
+* I18next
+* HTML
+* CSS 
 
-In the project directory, you can run:
+## What this app is about
+The main assumption of the website [wojciechkubiak.com](https://wojciechkubiak.com) is to show you at which level my programming skills are. Additionally
 
-### `npm start`
+## Live
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<p>The page has been divided into four parts, switched using a vertical menu.</p>
+<br />
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* <b>Landing page</b> - here you can read everything about me. At which university am I studying, what is my passion and more.
 
-### `npm test`
+<br />
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center">
+ <img src="https://github.com/wojciechkubiak/my-site/blob/master/landing.png?raw=true"/>
+</p>
 
-### `npm run build`
+<br />
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* <b>Menu</b> - here you can move between sections.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<br />
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<p align="center">
+ <img src="https://github.com/wojciechkubiak/my-site/blob/master/menu.png?raw=true"/>
+</p>
 
-### `npm run eject`
+<br />
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* <b>Skills</b> - here you can find everything about my programming skills.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+<p align="center">
+  <img src="https://github.com/wojciechkubiak/my-site/blob/master/skills.png?raw=true"/>
+</p>
+<br />
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* <b>Projects</b> - If you want to see what my designs look like without searching over my github, this place was created for that. 
+Additionally, on this page you will find all repository addresses and websites for each project.
 
-## Learn More
+<br />
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<p align="center">
+ <img src="https://github.com/wojciechkubiak/my-site/blob/master/projects.png?raw=true"/>
+</p>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br />
 
-### Code Splitting
+* <b>Contact</b> - here you can find my phone number, resumes in both english and polish version, and my email adress.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<br />
 
-### Analyzing the Bundle Size
+<p align="center">
+ <img src="https://github.com/wojciechkubiak/my-site/blob/master/contact.png?raw=true"/>
+</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Translation
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+My website has two language versions, Polish and English, implemented with I18next.
