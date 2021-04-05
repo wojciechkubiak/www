@@ -1,7 +1,7 @@
 <h1 align="center">Portfolio</h1>
 <p align="center">My personal website</p>
 <p align="center">
-  <img src="https://github.com/wojciechkubiak/my-site/blob/master/MySite.png"/>
+  <img src="https://github.com/wojciechkubiak/www/blob/master/MySite.png"/>
 </p>
 
 <p align="center">
@@ -30,7 +30,7 @@ The main assumption of the website [wojciechkubiak.com](https://wojciechkubiak.c
 <br />
 
 <p align="center">
- <img src="https://github.com/wojciechkubiak/my-site/blob/master/landing.png?raw=true"/>
+ <img src="https://github.com/wojciechkubiak/www/blob/master/landing.png?raw=true"/>
 </p>
 
 <br />
@@ -40,7 +40,7 @@ The main assumption of the website [wojciechkubiak.com](https://wojciechkubiak.c
 <br />
 
 <p align="center">
- <img src="https://github.com/wojciechkubiak/my-site/blob/master/menu.png?raw=true"/>
+ <img src="https://github.com/wojciechkubiak/www/blob/master/menu.png?raw=true"/>
 </p>
 
 <br />
@@ -50,7 +50,7 @@ The main assumption of the website [wojciechkubiak.com](https://wojciechkubiak.c
 <br />
 
 <p align="center">
-  <img src="https://github.com/wojciechkubiak/my-site/blob/master/skills.png?raw=true"/>
+  <img src="https://github.com/wojciechkubiak/www/blob/master/skills.png?raw=true"/>
 </p>
 <br />
 
@@ -60,7 +60,7 @@ Additionally, on this page you will find all repository addresses and websites f
 <br />
 
 <p align="center">
- <img src="https://github.com/wojciechkubiak/my-site/blob/master/projects.png?raw=true"/>
+ <img src="https://github.com/wojciechkubiak/www/blob/master/projects.png?raw=true"/>
 </p>
 
 <br />
@@ -70,7 +70,7 @@ Additionally, on this page you will find all repository addresses and websites f
 <br />
 
 <p align="center">
- <img src="https://github.com/wojciechkubiak/my-site/blob/master/contact.png?raw=true"/>
+ <img src="https://github.com/wojciechkubiak/www/blob/master/contact.png?raw=true"/>
 </p>
 
 ## Translation
