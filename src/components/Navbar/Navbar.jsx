@@ -78,7 +78,7 @@ const Navbar = (props) => {
   return (
     <div className="navbar">
       <button className="navbar-show-btn" onClick={() => setShowMenu(true)}>
-        <ImMenu size={48} />
+        <ImMenu size={48} color="black"/>
       </button>
       <div ref={(r) => (fullscreenMenu = r)} className="navbar-menu">
         <button className="navbar-hide-btn" onClick={() => setShowMenu(false)}>

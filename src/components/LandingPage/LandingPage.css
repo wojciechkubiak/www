@@ -35,7 +35,7 @@
   height: 500px;
   position: absolute;
   z-index: 20;
-  bottom: -100px;
+  bottom: -50px;
 }
 
 .landing-page-parallax-2 {
@@ -69,6 +69,7 @@
     width: 100%;
     bottom: -200px;
   }
+
   .landing-page-parallax-2 {
     display: none;
   }

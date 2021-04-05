@@ -25,6 +25,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 0;
 }
 
 .projects-mobile-img {
@@ -152,6 +153,10 @@
 }
 
 @media only screen and (max-width: 1200px) {
+  .projects-page {
+    opacity: 1;
+  }
+  
   .projects-header {
     font-size: 42px;
     margin-bottom: 20px;
@@ -239,6 +244,7 @@
 @media only screen and (max-width: 600px) {
   .projects-page {
     z-index: 30;
+    opacity: 1;
   }
   
   .projects-header {

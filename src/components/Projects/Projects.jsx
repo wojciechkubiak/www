@@ -17,6 +17,11 @@ import OpqnWeb from "./../../images/3w.png";
 
 const Projects = (props) => {
   const [projectsType, setProjectsType] = useState("MOBILE");
+  const [animated, setAnimated] = useState(false);
+
+  const { ref, inView, entry } = useInView({
+    threshold: isMobile ? 0.1 : 0.2,
+  });
 
   let projectsRef = useRef(null);
 
@@ -36,8 +41,25 @@ const Projects = (props) => {
     t1.fromTo(projectsRef, { opacity: 0 }, { opacity: 1, duration: 1 });
     setTimeout(() => props.goProjects(), 100);
   };
+
+  useEffect(() => {
+    if (inView) {
+      props.setCurrentPage("projects");
+    }
+
+    if (inView && !animated && !isMobile) {
+      const t1 = gsap.timeline();
+
+      t1.to(projectsRef, {
+        opacity: 1,
+        duration: 1,
+        onComplete: () => setAnimated(true),
+      });
+    }
+  }, [inView]);
+
   return (
-    <div className="projects-page">
+    <div className="projects-page" ref={ref}>
       <h1 className="projects-header">PROJECTS</h1>
       <div className="projects-content" ref={(node) => (projectsRef = node)}>
         {projectsType === "MOBILE" && (
