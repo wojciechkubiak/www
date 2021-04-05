@@ -9,7 +9,7 @@
 .landing-page-parallax-0 {
   position: fixed;
   min-width: 100vw;
-  margin-top: -50px;
+  margin-top: 0px;
 }
 .landing-page-parallax-0 > h1 {
   font-size: 20em;
