@@ -153,4 +153,9 @@
     width: 80%;
     right: 10%;
   }
+
+
+.navbar-option-active {
+  font-size: 56px;
+}
 }
