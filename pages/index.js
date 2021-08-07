@@ -1,21 +1,30 @@
-import {useState} from "react";
+import { useState } from "react";
 
-import Navbar from "../containers/navbar";
 import Landing from "../containers/landing";
 import LandingSkills from "../containers/landing-skills";
-import Footer from "../containers/footer";
+import Wrapper from "../containers/wrapper";
+import { pages } from "./../utils/constants";
 
-export default function Home() {
+const Home = () => {
+  const handleTransparency = (value) => setIsTransparent(value);
   const [isTransparent, setIsTransparent] = useState(true);
 
-  const handleTransparency = (value) => setIsTransparent(value);
+  const body = (
+    <>
+      <Landing setIsTransparent={handleTransparency} />
+      <LandingSkills />
+    </>
+  );
 
   return (
     <div className="home">
-      <Navbar isTransparent={isTransparent} />
-      <Landing setIsTransparent={handleTransparency} />
-      <LandingSkills />
-      <Footer />
+      <Wrapper
+        body={body}
+        isTransparent={isTransparent}
+        currentPage={pages.HOME}
+      />
     </div>
   );
-}
+};
+
+export default Home;
