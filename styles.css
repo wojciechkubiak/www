@@ -333,8 +333,8 @@ body {
   }
 
   .navbar-dropdown-btns {
-    padding-left: 10px !important;
-    padding-right: 10px !important;
+    padding-left: 50px !important;
+    padding-right: 50px !important;
   }
 
   .lottie-container,
@@ -362,12 +362,6 @@ body {
   }
 }
 
-@media only screen and (max-width: 1000px) {
-  .navbar-dropdown-btns {
-    padding-left: 100px !important;
-    padding-right: 100px !important;
-  }
-}
 
 @media only screen and (max-width: 1200px) {
   .navbar-btns {
@@ -415,8 +409,8 @@ body {
     background-color: white;
     padding-top: 80px;
     padding-bottom: 20px;
-    padding-left: 150px;
-    padding-right: 150px;
+    padding-left: 200px;
+    padding-right: 200px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
