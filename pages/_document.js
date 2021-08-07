@@ -13,7 +13,7 @@ class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Montserrat"
             rel="stylesheet"
           />
-          <title>Wojciech Kubiak | Website</title>
+          <title>Wojciech Kubiak | Site</title>
         </Head>
         <body>
           <Main />
