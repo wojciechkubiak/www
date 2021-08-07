@@ -220,7 +220,6 @@ body {
   text-shadow: 1px 1px #8e8e8f;
 }
 
-
 .landing-btn {
   font-family: "Montserrat", sans-serif;
   outline: none !important;
@@ -327,11 +326,29 @@ body {
   }
 }
 
-
 @media only screen and (max-width: 800px) {
+  .home {
+    background: url("./public/bgm.jpg") no-repeat;
+    background-size: 100%;
+  }
+
   .navbar-dropdown-btns {
     padding-left: 50px !important;
     padding-right: 50px !important;
+  }
+
+  .lottie-container, .lottie-container > div {
+    max-width: 100vw;
+    height: 360px;
+  }
+  
+  .lottie-container > div > svg {
+    width: 80% !important;
+    height: 80% !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate3d(-50%, -50%, 0px) !important;
+    position: absolute !important;
   }
 }
 
@@ -341,7 +358,6 @@ body {
     padding-right: 100px !important;
   }
 }
-
 
 @media only screen and (max-width: 1200px) {
   .navbar-btns {
