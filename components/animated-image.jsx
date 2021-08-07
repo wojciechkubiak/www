@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 
 const AnimatedImage = (props) => {
   const { ref, inView, entry } = useInView({
-    threshold: 0.3,
+    threshold: 0.6,
   });
 
   return (
