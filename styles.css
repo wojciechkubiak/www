@@ -22,6 +22,16 @@ body {
   background: #3e8a3b;
 }
 
+.wrapper {
+  opacity: 1;
+  transition: 1s all;
+}
+
+.wrapper-opacity {
+  opacity: 0;
+  transition: 1s all;
+}
+
 .navbar {
   z-index: 1000;
 }
@@ -210,6 +220,7 @@ body {
   text-shadow: 1px 1px #8e8e8f;
 }
 
+
 .landing-btn {
   font-family: "Montserrat", sans-serif;
   outline: none !important;
@@ -219,10 +230,8 @@ body {
   padding-right: 40px;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-size: 32px;
+  font-size: 26px;
   color: rgba(0, 0, 0, 0.6);
-  width: 300px;
-  height: 60px;
   text-align: center;
   background: transparent;
   background: linear-gradient(to left, transparent 50%, white 50%);
