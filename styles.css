@@ -1,29 +1,3 @@
-@font-face {
-  font-family: "Quicksand";
-  src: url("/public/fonts/Quicksand-Light.ttf");
-  font-weight: lighter;
-}
-@font-face {
-  font-family: "Quicksand";
-  src: url("/public/fonts/Quicksand-Regular.ttf");
-  font-weight: normal;
-}
-@font-face {
-  font-family: "Quicksand";
-  src: url("/public/fonts/Quicksand-Medium.ttf");
-  font-weight: bold;
-}
-@font-face {
-  font-family: "Quicksand";
-  src: url("/public/fonts/Quicksand-SemiBold.ttf");
-  font-weight: bold;
-}
-@font-face {
-  font-family: "Quicksand";
-  src: url("/public/fonts/Quicksand-Bold.ttf");
-  font-weight: bold;
-}
-
 html,
 body {
   margin: 0 !important;
@@ -219,18 +193,25 @@ body {
   text-align: center;
   margin: 0 !important;
   text-shadow: 1px 1px #6c6c6e;
+  transition: 500ms all;
+}
+
+.landing-header-opacity {
+  opacity: 0;
+  transition: 500ms all;
 }
 
 .landing-subheader {
   color: white;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 38px;
   text-align: center;
-  text-shadow: 1px 1px #6c6c6e;
+  text-shadow: 1px 1px #8e8e8f;
 }
 
 .landing-btn {
+  font-family: "Montserrat", sans-serif;
   outline: none !important;
   box-shadow: none !important;
   border: 3px solid white;
@@ -275,8 +256,8 @@ body {
 
 .landing-skills-subheader {
   text-align: center;
-  color: rgba(0, 0, 0, 0.8);
-  font-family: "Quicksand", sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+  font-family: "Montserrat", sans-serif;
   font-weight: lighter;
   margin-bottom: 60px;
 }

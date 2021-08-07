@@ -5,12 +5,13 @@ import { RiMenuLine } from "react-icons/ri";
 
 import { pages } from "../utils/constants";
 
+
+
 const Navbar = (props) => {
   const [isTransparent, setIsTransparent] = useState(
     props.isTransparent ?? false
   );
   const [showDropdown, setShowDropdown] = useState(false);
-
   const [navbarStyle, setNavbarStyle] = useState("navbar navbar-in");
 
   useEffect(() => {
