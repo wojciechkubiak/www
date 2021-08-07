@@ -356,6 +356,10 @@ body {
     padding-top: 30px;
     padding-bottom: 30px;
   }
+
+  .message-btn {
+    box-shadow: 0 0 1px 1px rgba(58, 40, 40, 0.3);
+  }
 }
 
 @media only screen and (max-width: 1000px) {
