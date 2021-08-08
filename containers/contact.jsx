@@ -22,6 +22,7 @@ const Contact = (props) => {
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
     const check = re.test(String(mail).toLowerCase());
+
     return check;
   };
 
@@ -32,11 +33,10 @@ const Contact = (props) => {
   };
 
   const checkData = async () => {
-    setWrongEmail(!validation(email));
+    const check = validation(email);
+    setWrongEmail(!check);
     setIsShortSubcject(subject.length < 5);
     setIsShortContent(content.length < 10);
-
-    return !isWrongEmail && !isShortSubcject && !isShortContent;
   };
 
   const sendEmail = async (event) => {
@@ -50,9 +50,9 @@ const Contact = (props) => {
       content: content,
     };
 
-    const isProperData = await checkData();
+    checkData();
 
-    if (isProperData) {
+    if (validation(email) && subject.length > 5 && content.length > 10) {
       axios
         .post(`https://portolio-email-sender.herokuapp.com/`, { mail })
         .then((res) => {
