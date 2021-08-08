@@ -14,7 +14,6 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="shortcut icon" href="/favicon.ico" />
-          <title>Wojciech Kubiak | Site</title>
         </Head>
         <body>
           <Main />
