@@ -426,9 +426,8 @@ textarea {
   }
 
   .message-input {
-
-    margin-left: 42px;
-    margin-right: 42px;
+    margin-left: 22px;
+    margin-right: 22px;
     margin-top: 42px;
   }
 }
@@ -472,7 +471,6 @@ textarea {
   }
 
   .message-input {
-
     margin-left: 72px;
     margin-right: 72px;
     margin-top: 42px;
