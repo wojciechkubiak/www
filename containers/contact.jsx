@@ -15,16 +15,14 @@ const Contact = (props) => {
   const [isShortContent, setIsShortContent] = useState(true);
   const [isInitial, setIsInitial] = useState(true);
 
-  const clickHandler = () => {
-    if (!isClicked) return <RiSendPlaneLine size={42} />;
-
-    return <ClipLoader size={60} />;
-  };
-
   const validation = (mail) => {
+    if (mail.length < 5) return false;
+
     const re =
       /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return re.test(String(mail).toLowerCase());
+
+    const check = re.test(String(mail).toLowerCase());
+    return check;
   };
 
   const clearData = () => {
@@ -34,7 +32,7 @@ const Contact = (props) => {
   };
 
   const checkData = async () => {
-    setWrongEmail(email.length < 5 || validation(email));
+    setWrongEmail(!validation(email));
     setIsShortSubcject(subject.length < 5);
     setIsShortContent(content.length < 10);
 
@@ -126,17 +124,17 @@ const Contact = (props) => {
               />
             </div>
           </div>
-          <div className="message-send">
-            <button
-              type="submit"
-              className="message-send-btn"
-              onClick={(event) => sendEmail(event)}
-              disabled={isClicked}
-            >
-              {clickHandler()}
-            </button>
-          </div>
         </form>
+      )}
+      {props.showForm && (
+        <button
+          className="message-send-btn"
+          onClick={(event) => sendEmail(event)}
+          disabled={isClicked}
+        >
+          {isClicked && <ClipLoader size={36} />}
+          {!isClicked && <RiSendPlaneLine size={36} />}
+        </button>
       )}
       <MessageIcon setShowForm={props.handleShowForm} isForm={props.showForm} />
     </>

@@ -7,7 +7,7 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
-        <title>Wojciech Kubiak | Site</title>
+        <title>Wojciech Kubiak - Site</title>
       </Head>
       <Component {...pageProps} />
     </>
