@@ -27,15 +27,15 @@ const Contact = (props) => {
           <div className="message-form-inputs">
             <div className="message-input">
               <h4 className="message-label">Email</h4>
-              <input placeholder="your email."></input>
+              <input disabled={isClicked} placeholder="your email."></input>
             </div>
             <div className="message-input">
               <h4 className="message-label">Subject</h4>
-              <input placeholder="your subject."></input>
+              <input disabled={isClicked} placeholder="your subject."></input>
             </div>
             <div className="message-input">
               <h4 className="message-label">Message</h4>
-              <textarea placeholder="your message."/>
+              <textarea disabled={isClicked} placeholder="your message."/>
             </div>
           </div>
           <div className="message-send">

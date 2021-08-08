@@ -1,8 +1,6 @@
-
-
 * {
-  margin: 0 ;
-  padding: 0 ;
+  margin: 0;
+  padding: 0;
 }
 
 ::-webkit-scrollbar {
@@ -287,9 +285,11 @@ textarea {
   font-size: 38px;
   text-align: center;
   text-shadow: 1px 1px #8e8e8f;
+  margin-top: 32px;
+  margin-bottom: 32px;
 }
 
-.landing-btn {
+.landing-btn, .landing-btn-skills {
   font-family: "Montserrat", sans-serif;
   outline: none !important;
   box-shadow: none !important;
@@ -307,10 +307,11 @@ textarea {
   background-position: right bottom;
 }
 
+
 .landing-btn:hover {
   background-position: left bottom;
   transition: 500ms;
-  color: rgba(61, 138, 59, 0.8);
+  color: #3d8a3bcc;
 }
 
 .landing-skills {
@@ -329,6 +330,8 @@ textarea {
   color: rgba(0, 0, 0, 0.8);
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
+  margin-top: 32px;
+  margin-bottom: 16px;
 }
 
 .landing-skills-subheader {
