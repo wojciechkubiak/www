@@ -1,18 +1,76 @@
 import { useState } from "react";
-import MessageIcon from "./../components/message-icon";
 import { FiArrowLeft } from "react-icons/fi";
 import { RiSendPlaneLine } from "react-icons/ri";
+import MessageIcon from "./../components/message-icon";
 import ClipLoader from "react-spinners/ClipLoader";
+import axios from "axios";
 
 const Contact = (props) => {
   const [isClicked, setIsClicked] = useState(false);
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [content, setContent] = useState("");
+  const [isWrongEmail, setWrongEmail] = useState(true);
+  const [isShortSubcject, setIsShortSubcject] = useState(true);
+  const [isShortContent, setIsShortContent] = useState(true);
+  const [isInitial, setIsInitial] = useState(true);
 
   const clickHandler = () => {
-    if(!isClicked) return <RiSendPlaneLine size={42} />;
+    if (!isClicked) return <RiSendPlaneLine size={42} />;
 
-    return <ClipLoader size={60} />
+    return <ClipLoader size={60} />;
+  };
 
-  }
+  const validation = (mail) => {
+    const re =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(mail).toLowerCase());
+  };
+
+  const clearData = () => {
+    setEmail("");
+    setSubject("");
+    setContent("");
+  };
+
+  const checkData = async () => {
+    setWrongEmail(email.length < 5 || validation(email));
+    setIsShortSubcject(subject.length < 5);
+    setIsShortContent(content.length < 10);
+
+    return !isWrongEmail && !isShortSubcject && !isShortContent;
+  };
+
+  const sendEmail = async (event) => {
+    event.preventDefault();
+    setIsClicked(true);
+    setIsInitial(false);
+
+    const mail = {
+      mail: email,
+      subject: subject,
+      content: content,
+    };
+
+    const isProperData = await checkData();
+
+    if (isProperData) {
+      axios
+        .post(`https://portolio-email-sender.herokuapp.com/`, { mail })
+        .then((res) => {
+          clearData();
+          setIsClicked(false);
+          props.handleShowForm(false);
+          console.log(res);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+
+    setIsClicked(false);
+  };
+
   return (
     <>
       {props.showForm && (
@@ -27,21 +85,52 @@ const Contact = (props) => {
           <div className="message-form-inputs">
             <div className="message-input">
               <h4 className="message-label">Email</h4>
-              <input disabled={isClicked} placeholder="your email."></input>
+              <input
+                className={isWrongEmail && !isInitial ? "input-error" : ""}
+                disabled={isClicked}
+                placeholder="your email."
+                value={email}
+                onChange={(event) => {
+                  setEmail(event.target.value);
+                  if (isWrongEmail) setWrongEmail(false);
+                }}
+                required
+              ></input>
             </div>
             <div className="message-input">
               <h4 className="message-label">Subject</h4>
-              <input disabled={isClicked} placeholder="your subject."></input>
+              <input
+                disabled={isClicked}
+                className={isShortSubcject && !isInitial ? "input-error" : ""}
+                placeholder="your subject."
+                value={subject}
+                onChange={(event) => {
+                  setSubject(event.target.value);
+                  if (isShortSubcject) setIsShortSubcject(false);
+                }}
+                required
+              ></input>
             </div>
             <div className="message-input">
               <h4 className="message-label">Message</h4>
-              <textarea disabled={isClicked} placeholder="your message."/>
+              <textarea
+                disabled={isClicked}
+                className={isShortContent && !isInitial ? "input-error" : ""}
+                placeholder="your message."
+                value={content}
+                onChange={(event) => {
+                  setContent(event.target.value);
+                  if (isShortContent) setIsShortContent(false);
+                }}
+                required
+              />
             </div>
           </div>
           <div className="message-send">
             <button
+              type="submit"
               className="message-send-btn"
-              onClick={() => setIsClicked(true)}
+              onClick={(event) => sendEmail(event)}
               disabled={isClicked}
             >
               {clickHandler()}

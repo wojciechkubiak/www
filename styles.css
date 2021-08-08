@@ -45,6 +45,10 @@ textarea {
   height: 160px;
 }
 
+.input-error {
+  border: 2px solid #8a3b3b !important;
+}
+
 .wrapper {
   opacity: 1;
   transition: 1s all;
@@ -289,7 +293,8 @@ textarea {
   margin-bottom: 32px;
 }
 
-.landing-btn, .landing-btn-skills {
+.landing-btn,
+.landing-btn-skills {
   font-family: "Montserrat", sans-serif;
   outline: none !important;
   box-shadow: none !important;
@@ -306,7 +311,6 @@ textarea {
   background-size: 200% 100%;
   background-position: right bottom;
 }
-
 
 .landing-btn:hover {
   background-position: left bottom;
