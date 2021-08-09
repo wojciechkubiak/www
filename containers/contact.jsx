@@ -60,13 +60,17 @@ const Contact = (props) => {
           setIsClicked(false);
           props.handleShowForm(false);
           console.log(res);
+
+          setIsClicked(false);
         })
         .catch((error) => {
           console.log(error);
-        });
-    }
 
-    setIsClicked(false);
+          setIsClicked(false);
+        });
+    } else {
+      setIsClicked(false);
+    }
   };
 
   return (

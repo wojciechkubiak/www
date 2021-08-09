@@ -1,9 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { RiMessage3Line, RiCloseLine } from "react-icons/ri";
 
 const MessageIcon = (props) => {
-  const [isClicked, setIsClicked] = useState(false);
   const [btnClass, setBtnClass] = useState("message-btn");
 
   const icon = () => {
@@ -16,13 +15,14 @@ const MessageIcon = (props) => {
 
   const handleClick = () => {
     props.setShowForm();
+  };
 
-    isClicked
+  useEffect(() => {
+    !props.isForm
       ? setBtnClass("message-btn")
       : setBtnClass("message-btn message-btn-active");
-
-    setIsClicked(!isClicked);
-  };
+ 
+  }, [props.isForm]);
 
   return (
     <button className={btnClass} onClick={() => handleClick()}>

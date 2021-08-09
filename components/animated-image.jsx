@@ -17,7 +17,7 @@ const AnimatedImage = (props) => {
           isPaused={!inView}
         />
       </div>
-      <h2 className="landing-skills-name">{props.text}</h2>
+      {props.text && <h2 className="landing-skills-name">{props.text}</h2>}
     </div>
   );
 };
