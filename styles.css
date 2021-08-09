@@ -332,6 +332,16 @@ textarea {
   background-position: right bottom;
 }
 
+.landing-btn > a {
+  text-decoration: none !important;
+  color:rgba(0, 0, 0, 0.67);
+  font-weight: bold;
+}
+
+.landing-btn > a:hover {
+  color: #3d8a3bcc;
+}
+
 .landing-btn:hover {
   background-position: left bottom;
   transition: 500ms;

@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
@@ -50,7 +52,7 @@ const Landing = (props) => {
     <div className="landing" ref={ref}>
       <h1 className={headerStyle}>{currentHeader}</h1>
       <h2 className="landing-subheader">developer</h2>
-      <button className="landing-btn">Find out more</button>
+      <button className="landing-btn"><Link href="/about">Find out more</Link></button>
     </div>
   );
 };
