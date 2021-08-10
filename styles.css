@@ -435,7 +435,7 @@ textarea {
   font-size: 36px;
 }
 
-.about {
+.about, .skills, .projects {
   padding-top: 80px;
 }
 
@@ -602,6 +602,7 @@ textarea {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   color: rgba(0, 0, 0, 0.67);
+  line-height: 24px;
 }
 
 .career-card-img {
