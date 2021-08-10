@@ -1,6 +1,7 @@
 import SectionHeader from "../components/section-header";
 import Wrapper from "../containers/wrapper";
 import Bio from "../containers/about";
+import Career from "../containers/career";
 
 import { pages } from "../utils/constants";
 
@@ -10,7 +11,7 @@ export default function About() {
       <SectionHeader text="ABOUT" />
       <Bio />
       <SectionHeader text="CAREER" />
-      <div style={{ height: "300px" }}></div>
+      <Career />
     </>
   );
 

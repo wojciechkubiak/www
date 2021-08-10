@@ -334,7 +334,7 @@ textarea {
 
 .landing-btn > a {
   text-decoration: none !important;
-  color:rgba(0, 0, 0, 0.67);
+  color: rgba(0, 0, 0, 0.67);
   font-weight: bold;
 }
 
@@ -503,6 +503,125 @@ textarea {
   text-align: justify;
   text-justify: inter-word;
   color: rgba(0, 0, 0, 0.8);
+}
+
+.career {
+  position: relative;
+  width: 100%;
+  margin-top: 62px;
+  margin-bottom: 62px;
+}
+
+.career-line {
+  position: absolute;
+  width: 49.5%;
+  border-right: 5px solid rgba(0, 0, 0, 0.3);
+  height: 100%;
+}
+
+.career-card-left {
+  position: relative;
+  min-width: 400px;
+  width: 30%;
+  left: 50%;
+  transform: translateX(-80%);
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  margin-top: 42px;
+  text-align: end;
+}
+
+.career-card-right {
+  position: relative;
+  min-width: 400px;
+  width: 30%;
+  left: 50%;
+  transform: translateX(-20%);
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  margin-top: 42px;
+}
+
+.career-card-left,
+.career-card-right {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.career-card-left > div:nth-child(2), .career-card-right > div:nth-child(1) {
+  width: 60%;
+  min-width: 320px;
+}
+
+.career-card-right {
+  flex-wrap: wrap-reverse !important;
+}
+
+.career-card-left > div > h2,
+.career-card-right > div > h2 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 12px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.career-card-left > div > h3,
+.career-card-right > div > h3 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 4px;
+  color: rgba(0, 0, 0, 0.67);
+}
+
+.career-card-left > div > h4,
+.career-card-right > div > h4 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  margin-bottom: 4px;
+  color: rgba(0, 0, 0, 0.67);
+}
+
+.career-card-left > div > h5,
+.career-card-right > div > h5 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 12px;
+  margin-bottom: 12px;
+  color: rgba(0, 0, 0, 0.67);
+}
+
+.career-card-left > div > p,
+.career-card-right > div > p {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.67);
+}
+
+.career-card-img {
+  width: 100px !important;
+  height: 100px !important;
+  min-width: auto !important;
+  min-height: auto !important;
+  transition: 500ms all;
+}
+
+.career-card-img:hover {
+  width: 110px !important;
+  height: 110px !important;
+  transition: 500ms all;
+}
+
+.career-card-right > div > div,
+.career-card-left > div > div {
+  width: 140px !important;
+  height: 140px !important;
 }
 
 .social-medias {
@@ -691,6 +810,17 @@ textarea {
     min-width: 300px !important;
     padding: 0px !important;
     padding-top: 20px !important;
+  }
+
+  .career-card-left,
+  .career-card-right {
+    transform: translateX(-50%);
+  }
+
+  .career-card-left,
+  .career-card-right {
+    text-align: center;
+    min-width: 300px;
   }
 }
 
