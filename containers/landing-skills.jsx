@@ -21,9 +21,9 @@ const LandingSkills = () => {
       <h1 className="landing-skills-header">Skills.</h1>
       <h3 className="landing-skills-subheader">What do I feel best in.</h3>
       <div className="landing-skills-animations">
-        <AnimatedImage options={webOptions} height={200} width={400} text="Web."/>
-        <AnimatedImage options={mobileOptions} height={400} width={200} text="Mobile."/>
-        <AnimatedImage options={drawOptions} height={260} width={260} text="Drawings."/>
+        <AnimatedImage options={webOptions} height={200} width={400} text="Web." href="/projects"/>
+        <AnimatedImage options={mobileOptions} height={400} width={200} text="Mobile." href="/projects"/>
+        <AnimatedImage options={drawOptions} height={260} width={260} text="Drawings." href="https://www.deviantart.com/biakku"/>
       </div>
     </div>
   );

@@ -332,6 +332,36 @@ textarea {
   background-position: right bottom;
 }
 
+.bio-btn {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: "Montserrat", sans-serif;
+  outline: none !important;
+  box-shadow: none !important;
+  border: 3px solid rgba(0, 0, 0, 0.6);
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  background-color: white;
+  background-position: right bottom;
+  margin-bottom: 50px;
+  margin-top: 16px;
+  transition: 1s all;
+
+}
+
+
+.bio-btn-text-color {
+  color: white !important;
+  background-color: #4f8660 !important;
+  transition: 1s all;
+}
+
 .landing-btn > a {
   text-decoration: none !important;
   color: rgba(0, 0, 0, 0.67);
@@ -406,6 +436,10 @@ textarea {
   transform: translate(-50%, -50%);
 }
 
+.lottie-main {
+  cursor: pointer !important;
+}
+
 .lottie-main:nth-child(2) {
   border-left: 2px solid rgba(0, 0, 0, 0.2);
   border-right: 2px solid rgba(0, 0, 0, 0.2);
@@ -435,7 +469,9 @@ textarea {
   font-size: 36px;
 }
 
-.about, .skills, .projects {
+.about,
+.skills,
+.projects {
   padding-top: 80px;
 }
 
@@ -521,7 +557,7 @@ textarea {
 
 .career-card-left {
   position: relative;
-  min-width: 400px;
+  min-width: 500px;
   width: 30%;
   left: 50%;
   transform: translateX(-80%);
@@ -535,7 +571,7 @@ textarea {
 
 .career-card-right {
   position: relative;
-  min-width: 400px;
+  min-width: 500px;
   width: 30%;
   left: 50%;
   transform: translateX(-20%);
@@ -553,7 +589,8 @@ textarea {
   justify-content: center;
 }
 
-.career-card-left > div:nth-child(2), .career-card-right > div:nth-child(1) {
+.career-card-left > div:nth-child(2),
+.career-card-right > div:nth-child(1) {
   width: 60%;
   min-width: 320px;
 }
@@ -654,6 +691,11 @@ textarea {
     padding-left: 0px !important;
     padding-right: 0px !important;
   }
+
+  .career-card-left,
+  .career-card-right {
+    min-width: 500px;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -728,6 +770,12 @@ textarea {
   .message-btn,
   .message-send-btn {
     left: 90%;
+  }
+
+  .career-card-left,
+  .career-card-right {
+    text-align: center;
+    min-width: 400px;
   }
 }
 
