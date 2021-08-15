@@ -684,6 +684,65 @@ textarea {
   transition: 500ms all;
 }
 
+.skill-tile {
+  position: relative;
+  width: 130px;
+  background-color: white;
+  margin: 20px;
+}
+
+.skill-name {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  bottom: 0;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 8px;
+  background-color: #242424;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  z-index: 30;
+}
+
+.skill-tile > div:nth-child(2) {
+  width: 130px;
+  height: 130px;
+}
+
+.skill-tile-img {
+  width: 120px !important;
+  height: 120px !important;
+  min-width: auto !important; 
+  min-height: auto !important;
+  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.3);
+  transition: 1s;
+  padding: 12px !important;
+  border-radius: 12px;
+}
+
+.skill-tile-img-disabled {
+  filter:grayscale(1) saturate(100%);
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0);
+  transition: 1s;
+}
+
+.skills-container {
+  padding: 80px;
+  min-height: 60vh;
+}
+
+.skills-tiles-container {
+  width: 40%;
+  min-width: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 @media only screen and (max-width: 1500px) {
   .lottie-main:nth-child(2) {
     border-left: none !important;
@@ -871,10 +930,16 @@ textarea {
     text-align: center;
     min-width: 300px;
   }
+
+  .skills-container {
+    padding: 0 !important;
+    min-height: 60vh;
+  }
 }
 
 @media only screen and (max-width: 700px) {
   .landing-skills-subheader {
     margin-bottom: 20px;
   }
+  
 }
