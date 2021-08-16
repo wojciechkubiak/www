@@ -687,6 +687,7 @@ textarea {
 .skill-tile {
   position: relative;
   width: 130px;
+  height: 130px;
   background-color: white;
   margin: 20px;
 }
@@ -731,12 +732,14 @@ textarea {
 }
 
 .skills-container {
-  padding: 80px;
-  min-height: 60vh;
+  padding: 120px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
 
 .skills-tiles-container {
-  width: 40%;
+  width: 60%;
   min-width: 320px;
   display: flex;
   flex-wrap: wrap;
