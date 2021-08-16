@@ -18,6 +18,11 @@ const SkillTile = (props) => {
     );
   };
 
+  const setSkill = () => {
+    props.setSkill(props.value);
+    props.setCurrentSkill(props.skill);
+  }
+
   return (
     <div
       className="skill-tile"
@@ -28,7 +33,7 @@ const SkillTile = (props) => {
         <p>{skillToUpperCase()}</p>
       </div>
       <Image
-        onClick={() => props.setCurrentSkill(props.skill)}
+        onClick={() => setSkill()}
         className={
           isActive ? "skill-tile-img" : "skill-tile-img skill-tile-img-disabled"
         }

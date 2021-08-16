@@ -25,7 +25,7 @@ const Bio = (props) => {
     <>
       <div className="bio">
         <div className="bio-social">
-          <AnimatedImage options={options} height={400} width={400} />
+        <AnimatedImage options={options} height={400} width={400} />
           <div className="bio-personal">
             <div>
               <MdPerson size={23} />
