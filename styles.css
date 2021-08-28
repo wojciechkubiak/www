@@ -383,7 +383,7 @@ textarea {
 .home {
   padding-top: 100px;
   max-width: 100vw;
-  background: url("./public/bg.jpg") no-repeat center center fixed;
+  background: url("./public/bg.webp") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1017,9 +1017,16 @@ textarea {
   }
 }
 
+@media only screen and (max-width: 1921px) {
+  .home {
+    background: url("./public/bgfullhd.webp") no-repeat;
+    background-size: 100%;
+  }
+}
+
 @media only screen and (max-width: 800px) {
   .home {
-    background: url("./public/bgm.jpg") no-repeat;
+    background: url("./public/bgm.webp") no-repeat;
     background-size: 100%;
   }
 
