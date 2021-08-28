@@ -115,7 +115,7 @@ textarea {
 }
 
 .switch__toggle__path {
-  box-shadow: 0 0 2px 2px rgba(83, 83, 83, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   position: absolute;
   width: 90%;
   height: 12px;
@@ -146,15 +146,13 @@ textarea {
 
 .switch__toggle__marker--disabled {
   background-color: #e0e0e0;
-  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.3);
-  transition: 500ms all;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .switch__toggle__marker--active {
   background-color: #4e8661;
   right: 0px !important;
-  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.4);
-  transition: 500ms all;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 .input-error {
@@ -190,7 +188,8 @@ textarea {
   width: 100%;
   height: 80px;
   background-color: white;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   top: 0;
   left: 0;
   transition: all 500ms;
@@ -271,6 +270,8 @@ textarea {
   border-radius: 50%;
   transition: 300ms;
   z-index: 2200;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .message-send-btn {
@@ -282,6 +283,8 @@ textarea {
   background-color: #55be78;
   border: none !important;
   border-radius: 50%;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   transition: 300ms;
   z-index: 2200;
 }
@@ -307,7 +310,8 @@ textarea {
 .message-form {
   position: fixed;
   background-color: white;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   padding: 10px;
   width: 600px;
   right: 50px;
@@ -369,7 +373,8 @@ textarea {
 .message-btn-active {
   background-color: white;
   z-index: 2000;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .message-btn-active > svg {
@@ -449,8 +454,9 @@ textarea {
   transform: translateX(-50%);
   font-family: "Montserrat", sans-serif;
   outline: none !important;
-  box-shadow: none !important;
-  border: 3px solid rgba(0, 0, 0, 0.6);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  border: 2px solid rgba(0, 0, 0, 0.5);
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 10px;
@@ -462,12 +468,6 @@ textarea {
   background-position: right bottom;
   margin-bottom: 50px;
   margin-top: 16px;
-  transition: 1s all;
-}
-
-.bio-btn-text-color {
-  color: white !important;
-  background-color: #4f8660 !important;
   transition: 1s all;
 }
 
@@ -672,8 +672,8 @@ textarea {
   transform: translateX(-80%);
   padding: 20px;
   background-color: white;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   margin-top: 42px;
   text-align: end;
 }
@@ -686,7 +686,8 @@ textarea {
   transform: translateX(-20%);
   padding: 20px;
   background-color: white;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   border-radius: 12px;
   margin-top: 42px;
 }
@@ -896,12 +897,13 @@ textarea {
   font-family: "Montserrat", sans-serif;
   color: rgba(0, 0, 0, 0.8);
   margin-bottom: 20px;
-  margin-top: 12px;
+  margin-top: 22px;
 }
 
 .skill__description {
   background-color: white;
-  box-shadow: 0 0 1px 1px rgba(21, 21, 21, 0.2);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -991,7 +993,8 @@ textarea {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   }
 
   .navbar-btn {
