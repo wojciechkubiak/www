@@ -22,16 +22,6 @@ const skills = {
       "Animations",
     ],
   },
-  react: {
-    img: ReactImg,
-    description: [
-      "React Hooks",
-      "Functional programming",
-      "Objective programming",
-      "External libraries implementation",
-      "Basics of Redux",
-    ],
-  },
   javasript: {
     img: JavascriptImg,
     description: [
@@ -72,6 +62,16 @@ const skills = {
   sql: {
     img: SQLImg,
     description: ["MySQL / PostgreSQL syntax", "Joins", "T-SQL"],
+  },
+  react: {
+    img: ReactImg,
+    description: [
+      "React Hooks",
+      "Functional programming",
+      "Objective programming",
+      "External libraries implementation",
+      "Basics of Redux",
+    ],
   },
 };
 

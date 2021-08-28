@@ -1,66 +1,62 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import SkillTile from "../components/skill-tile";
-import AnimatedImage from "../components/animated-image";
-import * as gearData from "../public/gear.json";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const SkillsContainer = (props) => {
-  const [skill] = useState(Object.keys(props.values)[0]);
-  const [currentSkill, setCurrentSkill] = useState(skill);
-  const [currentSkillValue, setCurrentSkillValue] = useState(
-    props.values[skill]
-  );
-
-  const options = {
-    loop: true,
-    autoplay: true,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-    animatedData: gearData,
-  };
-
-  useEffect(() => {
-    const skill = Object.keys(props.values)[0];
-
-    setCurrentSkill(skill);
-    setCurrentSkillValue(props.values[skill]);
-  }, [props.values]);
+  const width = useWidth();
 
   return (
-    <div className="skills-container">
-     
-      <div className="skills-tiles-container">
+    <div>
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={width > 1000 ? 3 : 1}
+        loop={true}
+        onSlideChange={() => console.log("slide change")}
+        onActiveIndexChange={(slider) => console.log(slider.activeIndex)}
+        onSwiper={(swiper) => console.log(swiper)}
+      >
         {props.values &&
           Object.entries(props.values).map(([key, value]) => {
             return (
-              <SkillTile
-                key={`skill-${key}`}
-                skill={key}
-                currentSkill={currentSkill}
-                setCurrentSkill={setCurrentSkill}
-                setSkill={setCurrentSkillValue}
-                value={value}
-                img={value["img"]}
-              />
+              <SwiperSlide>
+                <div className="skill__container">
+                  <Image className="skill__img" src={value.img}></Image>
+                  <h1 className="skill__header">{key.toUpperCase()}</h1>
+                  <div className="skill__description">
+                    {value.description.map((v) => (
+                      <p key={`skilldesc-${v}`} className="skill__paragraph">
+                        {v}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              </SwiperSlide>
             );
           })}
-        <AnimatedImage options={options} height={400} width={400} />
-      </div>
-      <div className="skill__container">
-        <Image className="skill__img" src={currentSkillValue.img}></Image>
-        <h1 className="skill__header">{currentSkill.toUpperCase()}</h1>
-        <div className="skill__description">
-          {currentSkillValue.description.map((value) => (
-            <p key={`skilldesc-${value}`} className="skill__paragraph">
-              {value}
-            </p>
-          ))}
-        </div>
-      </div>
-
+        <p className="swipe__tip">Swipe for more</p>
+      </Swiper>
     </div>
   );
+};
+
+const useWidth = () => {
+  const [width, setWidth] = useState();
+
+  useEffect(() => {
+    if (!width) {
+      setWidth(window.innerWidth);
+    }
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  });
+
+  return width;
 };
 
 export default SkillsContainer;

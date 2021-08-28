@@ -3,6 +3,22 @@
   padding: 0;
 }
 
+image,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -19,6 +35,18 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: #3e8a3b;
+}
+
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  position: relative;
+  width: 200px;
+  flex: 0 0 50%;
 }
 
 input,
@@ -70,7 +98,7 @@ textarea {
 }
 
 .switch__option--disabled {
-  color:rgba(0, 0, 0, 0.67);
+  color: rgba(0, 0, 0, 0.67);
 }
 
 .switch__option--active {
@@ -87,10 +115,10 @@ textarea {
 }
 
 .switch__toggle__path {
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px 2px rgba(83, 83, 83, 0.2);
   position: absolute;
   width: 90%;
-  height: 16px;
+  height: 12px;
   border-radius: 12px;
   left: 50%;
   top: 50%;
@@ -103,7 +131,7 @@ textarea {
 }
 
 .switch__toggle__path--active {
-  background-color: #669166;
+  background-color: #729272;
   transition: 500ms all;
 }
 
@@ -770,7 +798,7 @@ textarea {
   width: 130px;
   height: 130px;
   background-color: white;
-  margin: 20px;
+  /* margin: 20px; */
 }
 
 .skill-name {
@@ -812,8 +840,7 @@ textarea {
 }
 
 .skills-container {
-  
-  position:relative; 
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
   padding: 80px;
@@ -829,6 +856,9 @@ textarea {
   min-width: 320px;
   text-align: center;
   position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
 }
 
 .skill__container > div {
@@ -840,31 +870,38 @@ textarea {
   font-size: 28px;
   margin-top: 12;
   margin-bottom: 24px;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.67);
   font-weight: bold;
 }
 
 .skill__img {
-  width: 200px !important;
-  height: 200px !important;
+  width: 140px !important;
+  height: 140px !important;
   min-width: auto !important;
   min-height: auto !important;
 }
 
-.skills__animation {}
-
 .skill__paragraph {
-  margin-top: 16px;
-  margin-bottom: 8px;
+  margin-top: 4px;
   font-size: 18px;
   font-family: "Montserrat", sans-serif;
-  color: white;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.075);
+  color: rgba(0, 0, 0, 0.8);
   padding-bottom: 8px;
+  line-height: 28px;
+}
+
+.swipe__tip {
+  text-align: center;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+  margin-top: 12px;
 }
 
 .skill__description {
-  background-color: #436e52;
+  background-color: white;
+  box-shadow: 0 0 1px 1px rgba(21, 21, 21, 0.2);
   position: relative;
   left: 50%;
   transform: translateX(-50%);
