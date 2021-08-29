@@ -12,9 +12,11 @@ const Logo = (props) => {
 
   return (
     <>
-      <h4 className={isTransparent ? "logo-in" : "logo-out"}>
-        WOJCIECH KUBIAK
-      </h4>
+      <a href="https://wojciechkubiak.com">
+        <h4 className={isTransparent ? "logo-in" : "logo-out"}>
+          WOJCIECH KUBIAK
+        </h4>
+      </a>
     </>
   );
 };
