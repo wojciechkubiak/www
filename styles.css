@@ -303,7 +303,7 @@ textarea {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   padding: 10px;
-  width: 600px;
+  width: 620px;
   right: 50px;
   bottom: 50px;
   z-index: 2000;
@@ -461,6 +461,12 @@ textarea {
   transition: 1s all;
 }
 
+.bio-btn:hover {
+  border: 2px solid rgba(0, 0, 0, 0.8);
+  color: #4e8661;
+  transition: 1s all;
+}
+
 .landing-btn > a {
   text-decoration: none !important;
   color: rgba(0, 0, 0, 0.67);
@@ -593,6 +599,10 @@ textarea {
   width: 200px;
   left: 50%;
   transform: translateX(-50%);
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .bio-personal > div {
@@ -601,18 +611,24 @@ textarea {
   margin-top: 10px;
 }
 
-.bio-personal > div > h4 {
-  font-family: "Quicksand", sans-serif;
-  font-weight: bold;
-  font-size: 16px;
-  letter-spacing: 1px;
-  margin-left: 7px;
+.bio-personal > div > svg {
   color: rgba(0, 0, 0, 0.67);
 }
 
+.bio-personal > div > h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-left: 7px;
+  color: rgba(0, 0, 0, 0.6);
+  min-width: 160px;
+}
+
 .bio-personal > div:first-child > h4 {
-  color: black !important;
-  font-size: 18px;
+  color: rgba(0, 0, 0, 0.87);
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
   margin-left: 4px;
 }
 
@@ -636,7 +652,6 @@ textarea {
   font-family: "Montserrat", sans-serif;
   font-weight: lighter;
   text-align: justify;
-  text-justify: inter-word;
   color: rgba(0, 0, 0, 0.8);
 }
 
@@ -1031,7 +1046,8 @@ textarea {
   .lottie-container,
   .lottie-container > div {
     max-width: 100vw;
-    height: 360px;
+    height: 300px;
+    width: 300px;
   }
 
   .lottie-container > div > svg {
@@ -1078,12 +1094,12 @@ textarea {
   }
 
   .bio-personal > div > h4 {
-    text-align: center !important;
+    text-align: right !important;
   }
 
   .social-medias {
     padding-bottom: 12px;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+    padding-top: 24px;
   }
 
   .bio {
