@@ -687,6 +687,7 @@ textarea {
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   margin-top: 42px;
   text-align: end;
+  border-radius: 12px;
 }
 
 .career-card-right {
@@ -1111,7 +1112,9 @@ textarea {
   .bio {
     padding-top: 0px !important;
   }
+  
   .bio-social {
+    width: 80%;
     min-width: 340px !important;
   }
 
