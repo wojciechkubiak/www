@@ -52,7 +52,9 @@ const Landing = (props) => {
     <div className="landing" ref={ref}>
       <h1 className={headerStyle}>{currentHeader}</h1>
       <h2 className="landing-subheader">developer</h2>
-      <button className="landing-btn"><Link href="/about">Find out more</Link></button>
+      <Link href="/about">
+        <button className="landing-btn">Find out more</button>
+      </Link>
     </div>
   );
 };

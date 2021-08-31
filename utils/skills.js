@@ -66,7 +66,7 @@ const skills = {
   react: {
     img: ReactImg,
     description: [
-      "React Hooks",
+      "React Hooks, Context API",
       "Functional programming",
       "Objective programming",
       "External libraries implementation",

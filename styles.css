@@ -436,6 +436,11 @@ textarea {
   background: linear-gradient(to left, transparent 50%, white 50%);
   background-size: 200% 100%;
   background-position: right bottom;
+  transition: 1s;
+}
+
+.landing-btn {
+  cursor: pointer;
 }
 
 .bio-btn {
@@ -446,15 +451,16 @@ textarea {
   outline: none !important;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-  border: 2px solid rgba(0, 0, 0, 0.5);
+  border: none !important;
+  border-radius: 28px;
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 26px;
-  color: rgba(0, 0, 0, 0.6);
   text-align: center;
-  background-color: white;
+  background-color: #55be78;
+  color: white;
   background-position: right bottom;
   margin-bottom: 50px;
   margin-top: 16px;
@@ -462,9 +468,9 @@ textarea {
 }
 
 .bio-btn:hover {
-  border: 2px solid rgba(0, 0, 0, 0.8);
-  color: #4e8661;
+  color: white;
   transition: 1s all;
+  background-color: #4e8661;
 }
 
 .landing-btn > a {
