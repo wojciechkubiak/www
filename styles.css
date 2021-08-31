@@ -629,6 +629,7 @@ textarea {
   margin-left: 7px;
   color: rgba(0, 0, 0, 0.6);
   min-width: 160px;
+  text-align: right !important;
 }
 
 .bio-personal > div:first-child > h4 {
@@ -687,7 +688,6 @@ textarea {
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   margin-top: 42px;
   text-align: end;
-  border-radius: 12px;
 }
 
 .career-card-right {
@@ -1045,6 +1045,17 @@ textarea {
     background-size: 100%;
   }
 
+  .bio-personal {
+    width: 60%;
+    min-width: 240px;
+  }
+
+  .bio-personal > div:nth-child(1),
+  .bio-personal > div:nth-child(2),
+  .bio-personal > div:nth-child(3) {
+    justify-content: space-between !important;
+  }
+
   .navbar-dropdown-btns {
     padding-left: 50px !important;
     padding-right: 50px !important;
@@ -1112,10 +1123,9 @@ textarea {
   .bio {
     padding-top: 0px !important;
   }
-  
+
   .bio-social {
-    width: 80%;
-    min-width: 340px !important;
+    min-width: 300px !important;
   }
 
   .bio-info {
