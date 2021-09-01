@@ -21,7 +21,7 @@ const SkillTile = (props) => {
   const setSkill = () => {
     props.setSkill(props.value);
     props.setCurrentSkill(props.skill);
-  }
+  };
 
   return (
     <div
@@ -37,6 +37,7 @@ const SkillTile = (props) => {
         className={
           isActive ? "skill-tile-img" : "skill-tile-img skill-tile-img-disabled"
         }
+        priority={true}
         src={props.img}
         alt=""
       />

@@ -20,7 +20,11 @@ const SkillsContainer = (props) => {
             return (
               <SwiperSlide>
                 <div className="skill__container">
-                  <Image className="skill__img" src={value.img}></Image>
+                  <Image
+                    className="skill__img"
+                    src={value.img}
+                    priority={true}
+                  />
                   <h1 className="skill__header">{key.toUpperCase()}</h1>
                   <div className="skill__description">
                     {value.description.map((v) => (

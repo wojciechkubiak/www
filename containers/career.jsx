@@ -21,10 +21,10 @@ const Career = (props) => {
             database) and created my own player.
           </p>
         </div>
-        <Image src={XBerry} className="career-card-img" />
+        <Image src={XBerry} className="career-card-img" priority={true} />
       </div>
       <div className="career-card-left">
-        <Image src={ACN} className="career-card-img" />
+        <Image src={ACN} className="career-card-img" priority={true} />
         <div>
           <h2>IT Intern / Application Support</h2>
           <h3>ACN</h3>
@@ -49,10 +49,10 @@ const Career = (props) => {
             already tested in the Biomedical Research Center.
           </p>
         </div>
-        <Image src={Bm} className="career-card-img" />
+        <Image src={Bm} className="career-card-img" priority={true} />
       </div>
       <div className="career-card-left">
-        <Image src={Oak} className="career-card-img" />
+        <Image src={Oak} className="career-card-img" priority={true} />
         <div>
           <h2>Java Developer</h2>
           <h3>OAK Fusion</h3>
