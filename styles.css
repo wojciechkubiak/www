@@ -105,7 +105,7 @@ textarea {
 }
 
 .switch__toggle__path {
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
   position: absolute;
   width: 90%;
   height: 12px;
@@ -136,7 +136,7 @@ textarea {
 
 .switch__toggle__marker--disabled {
   background-color: #e0e0e0;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px, rgba(0, 0, 0, 0.24) 0 1px 2px;
 }
 
 .switch__toggle__marker--active {
@@ -425,10 +425,7 @@ textarea {
   outline: none !important;
   box-shadow: none !important;
   border: 3px solid white;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 40px;
   font-size: 26px;
   color: rgba(0, 0, 0, 0.6);
   text-align: center;
@@ -453,10 +450,7 @@ textarea {
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   border: none !important;
   border-radius: 28px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 40px;
   font-size: 26px;
   text-align: center;
   background-color: #55be78;
@@ -687,6 +681,7 @@ textarea {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   margin-top: 42px;
+  border-radius: 12px;
   text-align: end;
 }
 
@@ -820,10 +815,7 @@ textarea {
   transform: translateX(-50%);
   text-align: center;
   bottom: 0;
-  padding-top: 4px;
-  padding-bottom: 4px;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding: 4px 8px;
   border-radius: 8px;
   background-color: #242424;
   color: white;
@@ -881,7 +873,7 @@ textarea {
 .skill__header {
   font-family: "Quicksand", sans-serif;
   font-size: 28px;
-  margin-top: 12;
+  margin-top: 12px;
   margin-bottom: 24px;
   color: rgba(0, 0, 0, 0.67);
   font-weight: bold;
@@ -998,10 +990,7 @@ textarea {
 
   .navbar-dropdown-btns {
     background-color: white;
-    padding-top: 80px;
-    padding-bottom: 20px;
-    padding-left: 200px;
-    padding-right: 200px;
+    padding: 80px 200px 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
