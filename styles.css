@@ -1044,6 +1044,8 @@ textarea {
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   margin-top: 40px;
   margin-bottom: 80px;
+  margin-left: 12px;
+  margin-right: 12px;
   padding: 40px;
   min-height: 660px;
   display: flex;
@@ -1204,6 +1206,7 @@ textarea {
   .projects__card__container {
     padding: 0;
     padding-bottom: 40px;
+    padding-top: 20px;
   }
 }
 
@@ -1214,8 +1217,12 @@ textarea {
   }
 
   .bio-personal {
-    width: 60%;
+    width: 96%;
     min-width: 240px;
+  }
+
+  .projects__card__container {
+    border-radius: 16px;
   }
 
   .bio-personal > div:nth-child(1),
@@ -1229,12 +1236,37 @@ textarea {
     padding-right: 50px !important;
   }
 
+  .skill__card {
+    min-width: 300px;
+    width: 100%;
+    margin-left: 16px;
+    margin-right: 16px;
+    border-radius: 16px;
+  }
+
+  .navigation__back,
+  .navigation__forward {
+    opacity: 0.2;
+    transform: translateY(-80%);
+  }
+
   .lottie-container,
   .lottie-container > div {
     max-width: 100vw;
     height: 300px;
     width: 300px;
   }
+/* 
+  .lottie-main {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+      rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+    width: 100%;
+    margin-left: 16px;
+    margin-right: 16px;
+    border-radius: 16px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+  } */
 
   .lottie-container > div > svg {
     width: 80% !important;
