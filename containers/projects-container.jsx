@@ -6,15 +6,18 @@ import { v4 as uuidv4 } from "uuid";
 
 const ProjectsContainer = (props) => {
   const [swipe, setSwipe] = useState({});
-  const showNavigation =
-    (props.isMobile && Object.keys(props.values).length > 3) ||
-    (!props.isMobile && Object.keys(props.values).length > 2);
+  const [showPrev, setShowPrev] = useState(false);
+  const [showNext, setShowNext] = useState(true);
 
   const width = useWidth();
+  const showNavigation =
+    (props.isMobile && Object.keys(props.values).length > 3) ||
+    (!props.isMobile && Object.keys(props.values).length > 2) ||
+    width <= 1422;
 
   return (
     <div className="skills__cards__container">
-      {showNavigation && (
+      {showNavigation && showPrev && (
         <NavigationButton isBack={true} onClick={() => swipe.slidePrev()} />
       )}
       <Swiper
@@ -22,6 +25,17 @@ const ProjectsContainer = (props) => {
         slidesPerView={width > 1422 ? (props.isMobile ? 3 : 2) : 1}
         loop={false}
         onInit={(handler) => setSwipe(handler)}
+        onActiveIndexChange={(slider) => {
+          const l = Object.keys(props.values).length;
+          setShowPrev(slider.activeIndex !== 0);
+          if (width <= 1422) {
+            setShowNext(slider.activeIndex + 1 !== l);
+          } else {
+            if (!props.isMobile) {
+              setShowNext(slider.activeIndex + 2 !== l);
+            }
+          }
+        }}
       >
         {props.values &&
           Object.entries(props.values).map(([key, value]) => {
@@ -38,7 +52,7 @@ const ProjectsContainer = (props) => {
             );
           })}
       </Swiper>
-      {showNavigation && (
+      {showNavigation && showNext && (
         <NavigationButton isBack={false} onClick={() => swipe.slideNext()} />
       )}
       <p className="swipe__info">(swipe for more)</p>
