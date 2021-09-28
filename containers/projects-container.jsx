@@ -22,7 +22,7 @@ const ProjectsContainer = (props) => {
       )}
       <Swiper
         spaceBetween={100}
-        slidesPerView={width > 1422 ? (props.isMobile ? 3 : 2) : 1}
+        slidesPerView={width > 1422 ? 3 : 1}
         loop={false}
         onInit={(handler) => setSwipe(handler)}
         onActiveIndexChange={(slider) => {
@@ -30,10 +30,8 @@ const ProjectsContainer = (props) => {
           setShowPrev(slider.activeIndex !== 0);
           if (width <= 1422) {
             setShowNext(slider.activeIndex + 1 !== l);
-          } else {
-            if (!props.isMobile) {
-              setShowNext(slider.activeIndex + 2 !== l);
-            }
+          } else {           
+            setShowNext(slider.activeIndex + 3 !== l);
           }
         }}
       >

@@ -9,10 +9,10 @@ import SkillsContainer from "../containers/skills-container";
 export default function Skills() {
   const body = (
     <>
-      <SectionHeader text="HIRE" />
-      <SkillsContainer values={skills} />
       <SectionHeader text="ORDER" />
       <SkillsContainer values={order} />
+      <SectionHeader text="HIRE" />
+      <SkillsContainer values={skills} />
     </>
   );
 
