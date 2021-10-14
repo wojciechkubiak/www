@@ -9,6 +9,9 @@ import Anima from "./../public/3m.png";
 import Energe from "./../public/1w.png";
 import ObbSys from "./../public/2w.png";
 import Opqn from "./../public/3w.png";
+import CopySearcher from "./../public/4w.png";
+import Acare from "./../public/5w.png";
+import POTG from "./../public/6w.png";
 
 const mobile = {
   meditate: {
@@ -55,6 +58,17 @@ const mobile = {
 };
 
 const web = {
+  acare: {
+    img: Acare,
+    description:
+      "Website that allows pet shops and private users to store their loved ones data. Stack: NextJS, Prisma, PostgreSQL.",
+    links: [
+      {
+        img: FaGitSquare,
+        url: "https://github.com/wojciechkubiak/acare/",
+      },
+    ],
+  },
   energe: {
     img: Energe,
     description:
@@ -93,28 +107,12 @@ const web = {
     ],
   },
   copysearcher: {
-    img: FlutterBg,
-    description: "(Team Project)",
-    links: [
-      {
-        img: FaGitSquare,
-        url: "test",
-      },
-      {
-        img: FaGitSquare,
-        url: "test",
-      },
-    ],
+    img: CopySearcher,
+    description: "(Team Project) Application that allows user to check for plagiarism.",
   },
   potg: {
-    img: FlutterBg,
-    description: "(Team Project)",
-    links: [
-      {
-        img: FaGitSquare,
-        url: "test",
-      },
-    ],
+    img: POTG,
+    description: "(Team Project) Website that looks for available taxis and allows user to book them.",
   },
 };
 

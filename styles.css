@@ -1015,9 +1015,8 @@ textarea {
   transform: translateY(-50%);
   background-color: white;
   border: none !important;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   height: 92px;
   width: 92px;
   z-index: 950;
@@ -1051,6 +1050,7 @@ textarea {
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
+  /* border-radius: 20px; */
 }
 
 .projects__card__container > h1 {
@@ -1084,7 +1084,8 @@ textarea {
 }
 
 .projects__card__image > div {
-  max-height: 520px;
+  max-height: 500px;
+  background-color: #474747;
   left: 50%;
   transform: translateX(-50%);
 }
