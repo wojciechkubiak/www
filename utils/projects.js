@@ -72,7 +72,7 @@ const web = {
   energe: {
     img: Energe,
     description:
-      "Website for dutch renovating company created. It takes clients data, counts new usage values and sends them to the company through ZOHO CRM.",
+      "Website for dutch renovating company which takes clients data, counts new usage values and sends them to the company through ZOHO CRM.",
     links: [
       {
         img: CgEnter,

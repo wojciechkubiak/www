@@ -456,7 +456,7 @@ textarea {
   background-color: #55be78;
   color: white;
   background-position: right bottom;
-  margin-bottom: 50px;
+  bottom: 32px !important;
   margin-top: 16px;
   transition: 1s all;
 }
@@ -465,6 +465,26 @@ textarea {
   color: white;
   transition: 1s all;
   background-color: #4e8661;
+}
+
+.cv__download {
+  width: 100%;
+  padding-top: 20px;
+  justify-content: center;
+}
+
+.cv__download > a {
+  text-align: center;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.67);
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 1px;
+}
+
+.cv__download > a:hover {
+  color: #3c664a;
 }
 
 .landing-btn > a {
@@ -653,6 +673,9 @@ textarea {
 }
 
 .bio-info > p {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 18px;
   line-height: 32px;
   letter-spacing: 1px;
@@ -1334,6 +1357,7 @@ textarea {
   }
 
   .bio-info {
+    width: 80%;
     min-width: 300px !important;
     padding: 0px !important;
     padding-top: 20px !important;
