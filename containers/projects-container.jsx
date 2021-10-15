@@ -13,7 +13,7 @@ const ProjectsContainer = (props) => {
   const showNavigation =
     (props.isMobile && Object.keys(props.values).length > 3) ||
     (!props.isMobile && Object.keys(props.values).length > 2) ||
-    width <= 1422;
+    width <= 1222;
 
   return (
     <div className="skills__cards__container">
@@ -22,13 +22,13 @@ const ProjectsContainer = (props) => {
       )}
       <Swiper
         spaceBetween={100}
-        slidesPerView={width > 1422 ? (props.isMobile ? 3 : 2) : 1}
+        slidesPerView={width > 1222 ? (props.isMobile ? 3 : 2) : 1}
         loop={false}
         onInit={(handler) => setSwipe(handler)}
         onActiveIndexChange={(slider) => {
           const l = Object.keys(props.values).length;
           setShowPrev(slider.activeIndex !== 0);
-          if (width <= 1422) {
+          if (width <= 1222) {
             setShowNext(slider.activeIndex + 1 !== l);
           } else {
             if (props.isMobile) {
