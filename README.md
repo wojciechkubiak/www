@@ -1,78 +1,46 @@
-<h1 align="center">Portfolio</h1>
-<p align="center">My personal website</p>
-<p align="center">
-  <img src="https://github.com/wojciechkubiak/www/blob/main/MySite.png"/>
-</p>
+# Getting Started with Create React App
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Made%20by-wojciechkubiak-blue"/>
-  <img src="https://img.shields.io/website?url=https%3A%2F%2Fwojciechkubiak.com"/>
-  <img src="https://img.shields.io/netlify/d192f684-c78b-4c8f-ad71-692827ce7e3a"/>
-  <img src="https://img.shields.io/badge/react-16.13.1-informational"/>
-</p>
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Technologies used
-* ReactJS (React Hooks)
-* I18next
-* HTML
-* CSS 
+## Available Scripts
 
-## What this app is about
-The main assumption of the website [wojciechkubiak.com](https://wojciechkubiak.com) is to show you at which level my programming skills are.
+In the project directory, you can run:
 
-## Live
+### `yarn start`
 
-<p>The page has been divided into four parts, switched using a vertical menu.</p>
-<br />
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-* <b>Landing page</b> - here you can read everything about me. At which university am I studying, what is my passion and more.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-<br />
+### `yarn test`
 
-<p align="center">
- <img src="https://github.com/wojciechkubiak/www/blob/main/landing.png"/>
-</p>
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-<br />
+### `yarn build`
 
-* <b>Menu</b> - here you can move between sections.
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-<br />
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-<p align="center">
- <img src="https://github.com/wojciechkubiak/www/blob/main/menu.png"/>
-</p>
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-<br />
+### `yarn eject`
 
-* <b>Skills</b> - here you can find everything about my programming skills.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-<br />
+If you are not satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-<p align="center">
-  <img src="https://github.com/wojciechkubiak/www/blob/main/skills.png"/>
-</p>
-<br />
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project, so you have full control over them. All the commands except `eject` will still work, but they will point to the copied scripts, so you can tweak them. At this point you’re on your own.
 
-* <b>Projects</b> - If you want to see what my designs look like without searching over my github, this place was created for that. 
-Additionally, on this page you will find all repository addresses and websites for each project.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However, we understand that this tool would not be useful if you could not customize it when you are ready for it.
 
-<br />
+## Learn More
 
-<p align="center">
- <img src="https://github.com/wojciechkubiak/www/blob/main/projects.png"/>
-</p>
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-<br />
-
-* <b>Contact</b> - here you can find my phone number, resumes in both english and polish version, and my email adress.
-
-<br />
-
-<p align="center">
- <img src="https://github.com/wojciechkubiak/www/blob/main/contact.png"/>
-</p>
-
-## Translation
-
-My website has two language versions, Polish and English, implemented with I18next.
+To learn React, check out the [React documentation](https://reactjs.org/).
