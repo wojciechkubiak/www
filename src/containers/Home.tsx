@@ -36,7 +36,7 @@ const Header = styled.h1`
   transition: 500ms all;
 
   @media only screen and (max-width: 1200px) {
-    font-size: 72px;
+    font-size: 80px;
   }
 `;
 
