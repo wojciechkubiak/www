@@ -19,6 +19,10 @@ const Skill = styled.div`
   margin: 50px;
   object-fit: cover;
   border-radius: 16px;
+
+  @media only screen and (max-width: 800px) {
+    height: 300px;
+  }
 `;
 
 const SkillBackground = styled.div`
