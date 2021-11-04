@@ -14,7 +14,7 @@ const Skill = styled.div`
   box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   width: 25%;
-  min-width: 370px;
+  min-width: 340px;
   height: 400px;
   margin: 50px;
   object-fit: cover;
@@ -66,7 +66,7 @@ const SkillDescription = styled.div`
   padding: 20px;
   left: 50%;
   transform: translateX(-50%);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+  box-shadow: rgba(50, 50, 93, 0.25) 0 30px 60px -12px,
     rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
   bottom: -220px;
   z-index: 900;
