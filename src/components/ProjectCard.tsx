@@ -105,6 +105,7 @@ const ProjectsMobileCardContainer = styled.div`
     display: flex;
     justify-content: space-between;
     width: 100%;
+    max-width: 450px;
   }
 `;
 
@@ -117,7 +118,7 @@ const CardMobileImage = styled.img`
   z-index: 500;
 
   @media only screen and (max-width: 700px) {
-    max-width: 200px;
+    max-width: 150px;
   }
 `;
 
