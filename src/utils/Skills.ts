@@ -6,9 +6,11 @@ import HTMLImg from "../assets/html.png";
 import CSSImg from "../assets/css.png";
 import PythonImg from "../assets/python.png";
 import SQLImg from "../assets/sql.png";
+import TypescriptImg from "../assets/typescript.png";
 
 import FlutterBg from "../assets/flutter-bg.png";
 import JavascriptBg from "../assets/javascript-bg.png";
+import TypescriptBg from "../assets/typescript-bg.png";
 import ReactBg from "../assets/react-bg.jpg";
 import HtmlBg from "../assets/html-bg.jpg";
 import CssBg from "../assets/css-bg.png";
@@ -44,6 +46,7 @@ const skills = {
       "Objective programming",
       "External libraries implementation",
       "Basics of Redux",
+      "NextJS",
     ],
   },
   javascript: {
@@ -58,8 +61,8 @@ const skills = {
     ],
   },
   typescript: {
-    img: JavascriptImg,
-    bg: JavascriptBg,
+    img: TypescriptImg,
+    bg: TypescriptBg,
     description: [
       "Javascript to Typescript conversion",
       "Semi-advanced syntax",
@@ -70,7 +73,13 @@ const skills = {
   node: {
     img: NodeImg,
     bg: NodeBg,
-    description: ["Basics of ExpressJS", "REST API", "MVC", "Sequelize"],
+    description: [
+      "Basics of ExpressJS",
+      "REST API",
+      "MVC",
+      "Sequelize",
+      "Prisma",
+    ],
   },
   html: {
     img: HTMLImg,

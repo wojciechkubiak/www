@@ -34,6 +34,10 @@ const Header = styled.h1`
   text-shadow: 1px 1px #6c6c6e;
   opacity: ${(props: Theme) => (props.isVisible ? "1" : "0")};
   transition: 500ms all;
+
+  @media only screen and (max-width: 1200px) {
+    font-size: 72px;
+  }
 `;
 
 const Subheader = styled.h2`
@@ -114,6 +118,10 @@ const HomeSkillsAnimations = styled.div`
   justify-content: space-evenly;
 `;
 
+const Link = styled.a`
+  text-decoration: none;
+`;
+
 const Home = () => {
   const [theme, setTheme] = useState<Theme>({
     isVisible: false,
@@ -132,6 +140,25 @@ const Home = () => {
     setTheme({ isVisible: true });
   }, []);
 
+  const scrollToAbout = () => {
+    if (
+      navigationContext?.refs[Page.ABOUT] &&
+      navigationContext.currentPage !== Page.ABOUT
+    ) {
+      const element: any = navigationContext?.refs[Page.ABOUT];
+      const y = element.getBoundingClientRect().top + window.scrollY - 70;
+      if (element) window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
+  const scrollToProjects = () => {
+    if (navigationContext.currentPage !== Page.PROJECTS) {
+      const element: any = navigationContext?.refs[Page.PROJECTS];
+      const y = element.getBoundingClientRect().top + window.scrollY - 70;
+      if (element) window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   const webOptions = {
     ...animationOptions,
     animationData: webData,
@@ -144,45 +171,39 @@ const Home = () => {
       <HomeContainer>
         <Header isVisible={theme.isVisible}>Flutter / Frontend</Header>
         <Subheader>developer</Subheader>
-        <Button
-          onClick={() => {
-            if (
-              navigationContext?.refs[Page.ABOUT] &&
-              navigationContext.currentPage !== Page.ABOUT
-            ) {
-              const element: any = navigationContext?.refs[Page.ABOUT];
-              const y =
-                element.getBoundingClientRect().top + window.scrollY - 70;
-              if (element) window.scrollTo({ top: y, behavior: "smooth" });
-            }
-          }}
-        >
-          Find out more
-        </Button>
+        <Button onClick={scrollToAbout}>Find out more</Button>
       </HomeContainer>
       <HomeSkills>
         <HomeSkillsHeader>Skills.</HomeSkillsHeader>
         <HomeSkillsSubheader>What do I feel best in.</HomeSkillsSubheader>
         <HomeSkillsAnimations>
           <AnimatedImage
+            onClick={scrollToProjects}
             options={webOptions}
             height={200}
             width={400}
             text="Web."
           />
           <AnimatedImage
+            onClick={scrollToProjects}
             options={mobileOptions}
             height={400}
             width={200}
             text="Mobile."
             isBorder={true}
           />
-          <AnimatedImage
-            options={drawOptions}
-            height={260}
-            width={260}
-            text="Drawings."
-          />
+          <Link
+            href="https://deviantart.com/biakku"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <AnimatedImage
+              options={drawOptions}
+              height={260}
+              width={260}
+              text="Drawings."
+            />
+          </Link>
         </HomeSkillsAnimations>
       </HomeSkills>
     </ThemeProvider>

@@ -85,24 +85,32 @@ export const animationOptions = {
   },
 };
 
-const AnimatedImage = (props: IAnimatedImage) => {
+const AnimatedImage = ({
+  onClick,
+  isBorder,
+  options,
+  height,
+  width,
+  text,
+}: IAnimatedImage) => {
   const { ref, inView } = useInView({
     threshold: 0.6,
   });
 
   return (
-    <Wrapper>
-      <LottieMain ref={ref} isBorder={props.isBorder || false}>
+    <Wrapper onClick={onClick}>
+      <LottieMain ref={ref} isBorder={isBorder || false}>
         <LottieContainer>
           <Lottie
-            options={props.options}
-            height={props.height}
-            width={props.width}
+            isClickToPauseDisabled={true}
+            options={options}
+            height={height}
+            width={width}
             isStopped={false}
             isPaused={!inView}
           />
         </LottieContainer>
-        {props.text && <h2 className="landing-skills-name">{props.text}</h2>}
+        {text && <h2 className="landing-skills-name">{text}</h2>}
       </LottieMain>
     </Wrapper>
   );
