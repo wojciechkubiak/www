@@ -1,5 +1,7 @@
 import styled, { ThemeProvider } from "styled-components";
-import Background from "../assets/bg.webp";
+import Background from "../assets/bgfullhd.webp";
+import Background4k from "../assets/bg.webp";
+
 import { useContext, useEffect, useState } from "react";
 import webData from "../assets/web.json";
 import mobileData from "../assets/phone.json";
@@ -22,6 +24,10 @@ const HomeContainer = styled.div`
   background-size: cover;
   padding-bottom: 160px;
   text-align: center;
+
+  @media only screen and (min-width: 1940px) {
+    background: url(${Background4k}) no-repeat center top;
+  }
 `;
 
 const Header = styled.h1`
