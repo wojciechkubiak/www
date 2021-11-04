@@ -118,8 +118,6 @@ const CardMobileImage = styled.img`
   z-index: 500;
 
   @media only screen and (max-width: 700px) {
-    margin-top: 40px;
-    margin-left: 10px;
     max-width: 150px;
   }
 `;
@@ -153,10 +151,14 @@ const ProjectsMobileInfo = styled.div`
   }
 
   @media only screen and (max-width: 700px) {
-    padding-left: 240px;
-    min-height: 420px;
-    top: auto;
+    position: relative;
+    top: 0;
     transform: none;
+    right: auto;
+    padding: 20px 0 0;
+    background-color: #27272f;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }
 `;
 

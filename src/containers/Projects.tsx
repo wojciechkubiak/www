@@ -20,6 +20,10 @@ const ProjectsContainer = styled.div`
   padding-bottom: 40px;
   padding-top: 40px;
   background-color: #3e3e4d;
+
+  @media only screen and (max-width: 800px) {
+    padding-top: 90px;
+  }
 `;
 
 const SwipperInfo = styled.p`
