@@ -20,17 +20,18 @@ const ProjectsWebCardContainer = styled.div`
   max-height: 660px;
   width: 600px;
   margin: 0 auto;
-  //background-color: #33333d;
 
   @media only screen and (max-width: 1400px) {
     padding: 20px;
   }
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 700px) {
     padding: 20px 0 40px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    width: 100%;
+    max-width: 450px;
   }
 `;
 
@@ -74,6 +75,11 @@ const ProjectsWebInfo = styled.div`
     text-justify: inter-word;
     padding: 16px;
     color: rgba(255, 255, 255, 0.6);
+  }
+
+  @media only screen and (max-width: 700px) {
+    width: 100%;
+    max-width: 450px;
   }
 `;
 

@@ -21,7 +21,7 @@ const Skill = styled.div`
   border-radius: 16px;
 
   @media only screen and (max-width: 800px) {
-    height: 300px;
+    height: 320px;
   }
 `;
 
