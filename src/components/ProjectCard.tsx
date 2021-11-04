@@ -32,6 +32,7 @@ const ProjectsWebCardContainer = styled.div`
     flex-direction: column;
     width: 100%;
     max-width: 450px;
+    min-height: 420px;
   }
 `;
 
@@ -94,17 +95,16 @@ const ProjectsMobileCardContainer = styled.div`
   width: 600px;
   margin: 0 auto;
   position: relative;
-  //background-color: #33333d;
 
   @media only screen and (max-width: 1400px) {
     padding: 20px;
   }
 
-  @media only screen and (max-width: 900px) {
+  @media only screen and (max-width: 700px) {
     padding: 20px 0 40px;
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    width: 100%;
   }
 `;
 
@@ -115,6 +115,10 @@ const CardMobileImage = styled.img`
   border: 5px solid #33333d;
   position: relative;
   z-index: 500;
+
+  @media only screen and (max-width: 700px) {
+    max-width: 200px;
+  }
 `;
 
 const ProjectsMobileInfo = styled.div`
@@ -143,6 +147,13 @@ const ProjectsMobileInfo = styled.div`
     text-justify: inter-word;
     padding: 16px;
     color: rgba(255, 255, 255, 0.6);
+  }
+
+  @media only screen and (max-width: 700px) {
+    padding-left: 240px;
+    min-height: 420px;
+    top: auto;
+    transform: none;
   }
 `;
 
