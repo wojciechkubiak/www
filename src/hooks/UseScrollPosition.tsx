@@ -5,9 +5,7 @@ const useScrollPosition = () => {
 
   useEffect(() => {
     const scrollHandler = () => setIsOut(window.scrollY > 0);
-
     window.addEventListener("scroll", scrollHandler);
-
     return () => window.removeEventListener("scroll", scrollHandler);
   });
 
@@ -19,9 +17,7 @@ export const useScrollPositionNumeric = () => {
 
   useEffect(() => {
     const scrollHandler = () => setPosition(window.scrollY);
-
     window.addEventListener("scroll", scrollHandler);
-
     return () => window.removeEventListener("scroll", scrollHandler);
   });
 

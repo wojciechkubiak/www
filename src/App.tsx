@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./App.css";
 import { Page } from "./context/NavigationContext";
 import Navbar from "./containers/Navbar";
@@ -18,6 +18,7 @@ const App = () => {
     navigationContext.currentPage
   );
   const [isForm, setIsForm] = useState<boolean>(false);
+  const [isChangedRecently, setIsChangedRecently] = useState<boolean>(false);
 
   const handleRef = (page: Page, element: Element | undefined) => {
     if (!refs[page]) {
@@ -29,11 +30,21 @@ const App = () => {
   };
 
   const handleCurrentPage = (page: Page) => {
-    setCurrentPage(page);
+    if (!isChangedRecently) {
+      setCurrentPage(page);
+      setIsChangedRecently(true);
+    }
   };
 
   const handleForm = () => setIsForm(!isForm);
   const hideForm = () => setIsForm(false);
+
+  useEffect(() => {
+    if (isChangedRecently)
+      setTimeout(() => {
+        setIsChangedRecently(false);
+      }, 200);
+  }, [isChangedRecently]);
 
   return (
     <div className="App">
