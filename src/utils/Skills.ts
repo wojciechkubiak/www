@@ -97,15 +97,15 @@ const skills = {
       "Responsive web design",
     ],
   },
-  python: {
-    img: PythonImg,
-    bg: PythonBg,
-    description: [
-      "Basic syntax",
-      "Basic functionalities",
-      "Simple web apps implementation",
-    ],
-  },
+  // python: {
+  //   img: PythonImg,
+  //   bg: PythonBg,
+  //   description: [
+  //     "Basic syntax",
+  //     "Basic functionalities",
+  //     "Simple web apps implementation",
+  //   ],
+  // },
   sql: {
     img: SQLImg,
     bg: SqlBg,
