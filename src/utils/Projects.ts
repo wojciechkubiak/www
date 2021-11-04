@@ -72,7 +72,7 @@ const projects: IProjectCard[] = [
     header: "Meditate",
     img: Meditate,
     description:
-      "(Team Project) Project that supports user wellbeing through multiple exercises and by creating statistics that can be later used by user.",
+      "(Team Project) App that supports user with multiple wellbeing exercises and statistics.",
     links: [
       {
         img: FaGooglePlay,

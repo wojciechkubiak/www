@@ -118,6 +118,8 @@ const CardMobileImage = styled.img`
   z-index: 500;
 
   @media only screen and (max-width: 700px) {
+    margin-top: 40px;
+    margin-left: 10px;
     max-width: 150px;
   }
 `;
