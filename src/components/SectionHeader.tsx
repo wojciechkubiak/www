@@ -13,7 +13,7 @@ const Section = styled.div`
 `;
 
 const SectionText = styled.h4`
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.8) !important;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
   font-size: 36px;

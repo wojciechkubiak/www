@@ -73,16 +73,7 @@ const projects: IProjectCard[] = [
     img: Meditate,
     description:
       "(Team Project) App that supports user with multiple wellbeing exercises and statistics.",
-    links: [
-      {
-        img: FaGooglePlay,
-        url: "https://google.com",
-      },
-      {
-        img: GrAppleAppStore,
-        url: "https://google.com",
-      },
-    ],
+    links: [],
     isMobile: true,
   },
   {

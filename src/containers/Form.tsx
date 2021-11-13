@@ -11,7 +11,7 @@ interface IForm {
 
 const MessageForm = styled.form`
   position: fixed;
-  background-color: white;
+  background-color: white !important;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   padding: 10px;
@@ -23,7 +23,7 @@ const MessageForm = styled.form`
   & > button:first-child {
     width: 40px;
     height: 40px;
-    background-color: transparent;
+    background-color: white !important;
     border: none !important;
     outline: none !important;
     box-shadow: none !important;

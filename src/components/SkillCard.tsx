@@ -19,6 +19,7 @@ const Skill = styled.div`
   margin: 50px;
   object-fit: cover;
   border-radius: 16px;
+  background-color: white !important;
 
   @media only screen and (max-width: 800px) {
     height: 320px;
@@ -44,13 +45,14 @@ const SkillName = styled.div`
   bottom: 0;
   left: 0;
   text-align: right;
+  color: rgba(0, 0, 0, 0.67) !important;
 
   & > h1 {
     padding-right: 24px;
     padding-top: 24px;
     font-family: "Quicksand", sans-serif;
     font-size: 32px;
-    color: rgba(0, 0, 0, 0.67);
+    color: rgba(0, 0, 0, 0.67) !important;
   }
 `;
 

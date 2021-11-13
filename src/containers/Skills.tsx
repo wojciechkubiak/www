@@ -13,6 +13,7 @@ const SkillsContainer = styled.div`
   justify-content: space-evenly;
   margin-bottom: 40px;
   margin-top: 40px;
+  background-color: white !important;
 
   @media only screen and (max-width: 900px) {
     margin-bottom: 100px;
