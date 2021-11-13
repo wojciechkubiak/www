@@ -33,8 +33,8 @@ const Navigation = styled.button`
 
   @media only screen and (max-width: 800px) {
     opacity: 0.2;
-    top: 40%;
-    transform: translateY(-100%);
+    top: 70%;
+    transform: translateY(-50%);
   }
 
   @media only screen and (max-width: 700px) {

@@ -202,7 +202,9 @@ const Career = () => (
           As Flutter Dev I was working on both views and logic of meditation
           app. I have implemented and modified external packages, worked with
           BLoC architecture, implemented tests, handled offline (local database)
-          and created my own player.
+          and created my own media player. As frontend developer I had an
+          opportunity to create and improve multiple web applications using
+          ReactJS and NextJS, with both Javascript and Typescript.
         </p>
       </div>
       <Image src={XBerry} alt="xberry" />
